@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+@@if (typeof title != 'undefined') {
+  <title>@@title</title>
+  <meta property="og:title" content="@@title">
+}
+
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" type="image/png" href="./img/common/favicon.png">
+
+@@if (typeof desc != 'undefined') {
+  <meta property="og:description" content="@@desc">
+}
+
+@@if (typeof ogImage == 'undefined') {
+  <meta property="og:image" content="./img/common/og.png">
+}
+@@if (typeof ogImage != 'undefined') {
+  <meta property="og:image" content="@@ogImage">
+}
+<meta property="twitter:card" content="summary_large_image">
+
+@@if (typeof siteName != 'undefined') {
+  <meta property="og:site_name" content="@@siteName">
+}
+@@if (typeof locale != 'undefined') {
+  <meta property="og:locale" content="ru_RU">
+}
+
+@@if (typeof ogType != 'undefined') {
+  <meta property="og:type" content="@@ogType">
+}
+@@if (typeof ogType == 'undefined') {
+  <meta property="og:type" content="website">
+}

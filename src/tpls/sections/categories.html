@@ -1,0 +1,52 @@
+
+<section class="categories@@if (typeof pageVariant != 'undefined') { categories--rastamozhka}" id="categories">
+  <div class="categories__container">
+    <div class="categories__panel">
+      <div class="section__head">
+        <h2 class="section-title"><b>Выгодная</b> логистика для вашего бизнеса</h2>
+        <p class="section-desc">Помогаем работать официально и зарабатывать больше селлерам маркетплейсов, владельцам магазинов и производств</p>
+      </div>
+
+      <ul class="categories__grid">
+      @@include('../cards/category-card.html', {
+        "image": "fmcg@2x.png",
+        "title": "Товары FMCG",
+        "text": "Товары широкого ассортимента с повседневным спросом, высокими ритмом поставок и оборачиваемостью"
+      })
+      @@include('../cards/category-card.html', {
+        "image": "electronics@2x.png",
+        "title": "Электроника",
+        "text": "Все, в чем есть провода и чипы: от комплектующих для ремонта до бытовой техники"
+      })
+      @@include('../cards/category-card.html', {
+        "image": "auto-parts@2x.png",
+        "title": "Автозапчасти",
+        "text": "Расходные материалы и комплектующие из Китая для автомобилей любых марок"
+      })
+      @@include('../cards/category-card.html', {
+        "image": "project-cargo@2x.png",
+        "title": "Проектные грузы",
+        "text": "Нестандартные поставки с большими объёмами, весом, габаритами или особыми условиями перевозки."
+      })
+      @@include('../cards/category-card.html', {
+        "image": "furniture@2x.png",
+        "title": "Мебель и товары для дома",
+        "text": "То, что делает жилые и коммерческие помещения удобными <br>и эстетичными"
+      })
+      @@include('../cards/category-card.html', {
+        "image": "raw-materials@2x.png",
+        "title": "Сырьё для производств",
+        "text": "Материалы, комплектующие и заготовки, которые используются в выпуске готовой продукции"
+      })
+      </ul>
+
+      @@if (typeof pageVariant != 'undefined') {
+      <div class="categories__media media media--cover">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/categories.bit/bg-loading-night.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+      }
+    </div>
+  </div>
+</section>

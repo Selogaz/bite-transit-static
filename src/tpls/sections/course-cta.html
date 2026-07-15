@@ -1,0 +1,86 @@
+
+<section class="course-cta section" id="course-cta">
+  <div class="course-cta__container section__container container">
+    <div class="course-cta__content">
+      <h2 class="audit-b__title course-cta__title">Начните изучение всех нюансов официальной схемы <b>в 4 клика</b></h2>
+
+      <p class="course-cta__subtitle">Курс реализован в Telegram и Max ботах. Вот как его получить:</p>
+
+      <ol class="course-cta__steps">
+        <li class="course-cta__step">
+          <span class="course-cta__step-num">01</span>
+          <p class="course-cta__step-text">Заполните простую форму.</p>
+        </li>
+        <li class="course-cta__step">
+          <span class="course-cta__step-num">02</span>
+          <p class="course-cta__step-text">На открывшейся странице выберите удобную платформу</p>
+        </li>
+        <li class="course-cta__step">
+          <span class="course-cta__step-num">03</span>
+          <p class="course-cta__step-text">Завершите активацию в боте</p>
+        </li>
+        <li class="course-cta__step course-cta__step--accent">
+          <span class="course-cta__step-num">04</span>
+          <p class="course-cta__step-text">Получите первый урок через 39 секунд</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="course-cta__visual">
+      <div class="course-cta__media media">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/course.bit/cta-phone@2x.jpg" alt="Рука держит телефон с открытым уроком курса рядом с секундомером" loading="lazy">
+        </picture>
+      </div>
+
+      <div class="course-cta__form-card audit__card js_form">
+        <input type="hidden" name="form_name" value="Курс — заявка на курс">
+
+        <p class="audit__card-title">
+          <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+        </p>
+
+        <div class="audit__card-fields">
+          @@include('../b/input.html', {
+            "className": "js_form__control",
+            "type": "text",
+            "name": "name",
+            "placeholder": "Имя",
+            "attributes": "required",
+            "error": "Поле должно быть заполнено!"
+          })
+          @@include('../b/input.html', {
+            "className": "js_form__control",
+            "type": "tel",
+            "name": "phone",
+            "placeholder": "+ 7 (___) ___ __ __",
+            "attributes": "required data-mask=\"phone\"",
+            "error": "Поле должно быть заполнено!"
+          })
+        </div>
+
+        <button class="audit__card-submit button button--primary button--block js_form__submit" type="button">
+          Получить аудит
+        </button>
+
+        <label class="checkbox audit__card-agreement js_form__control">
+          <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+          <span class="checkbox__check"></span>
+          <span class="checkbox__label">
+            Нажимая на кнопку, Вы принимаете условия
+            <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+          </span>
+        </label>
+
+        <label class="checkbox audit__card-agreement js_form__control">
+          <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+          <span class="checkbox__check"></span>
+          <span class="checkbox__label">
+            Нажимая на кнопку, Вы принимаете условия
+            <a class="checkbox__link" href="#">договора оферты</a>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>

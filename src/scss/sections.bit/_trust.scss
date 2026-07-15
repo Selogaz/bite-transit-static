@@ -1,0 +1,89 @@
+.trust {
+  position: relative;
+  z-index: 2;
+  padding-top: 3.52rem;
+  padding-bottom: 1.9rem;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.trust__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.4em;
+}
+
+.trust-card {
+  display: flex;
+  gap: 1.2em;
+  align-items: flex-start;
+}
+
+.trust-card__media {
+  flex-shrink: 0;
+  width: 8.4rem;
+  aspect-ratio: 1;
+  border: 0.1rem solid rgba(var(--border-app-light-rgb), 0.1);
+  border-radius: var(--radius-md);
+}
+
+.trust-card__text {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-trust);
+}
+
+.trust-card__text b {
+  font-weight: 700;
+}
+
+@media (max-width: $laptop) {
+  .trust__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+}
+
+@media (max-width: $tablet) {
+  .trust__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $mobile) {
+  .trust {
+    padding-top: 1.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .trust__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.6rem;
+    column-gap: 2rem;
+  }
+
+  .trust-card {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  // Только у trust-полосы (5 пунктов): крайняя нечётная карточка — во всю ширину по центру.
+  // Не глобально по `.trust-card`, иначе ломает чётные раскладки-реюзы (2×2).
+  .trust__list .trust-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .trust-card__media {
+    width: 6.1rem;
+    height: 4.9rem;
+    border: none;
+  }
+
+  .trust-card__text {
+    font-size: var(--fz-small);
+  }
+}

@@ -1,0 +1,39 @@
+
+<section class="case-more section" id="case-more">
+  <div class="case-more__container section__container container">
+    <h2 class="case-more__title section-title">Смотрите еще</h2>
+
+    <ul class="service-tabs" role="tablist">
+      @@include('../cards/service-tab.html', { "modifier": " service-tabs__link--active", "label": "Таможенное оформление" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Транспортно-экспедиционные услуги" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Сертификация, ввоз образцов" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Платежи" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Аутсорсинг ВЭД под ключ" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
+    </ul>
+
+    <ul class="case-more__list">
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+    </ul>
+  </div>
+</section>

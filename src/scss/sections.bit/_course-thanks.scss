@@ -1,0 +1,238 @@
+.course-thanks {
+  position: relative;
+  padding-top: 1.6rem;
+  padding-bottom: 0;
+  overflow: hidden;
+  background: var(--bg-app-light-secondary);
+}
+
+.course-thanks__container {
+  display: grid;
+  grid-template-columns: minmax(0, 462fr) minmax(0, 1048fr);
+  align-items: start;
+}
+
+.course-thanks__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.course-thanks__content > .breadcrumbs {
+  margin-bottom: 3.7rem;
+}
+
+.course-thanks__title {
+  margin-bottom: 2.1rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 300;
+  line-height: 0.945;
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+.course-thanks__title-mark {
+  display: inline-block;
+  padding: 0.05em 0.3em;
+  font-weight: 700;
+  color: var(--bg-app-light);
+  background: var(--c-primary-dark);
+  border-radius: var(--radius-sm);
+}
+
+.course-thanks__text {
+  max-width: 38.9rem;
+  margin-bottom: 1.7rem;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-hero);
+}
+
+.course-thanks__text b {
+  font-weight: 700;
+}
+
+.course-thanks__note {
+  max-width: 34.7rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--ff-regular);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-hero);
+}
+
+.course-thanks__note b {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+// Обе кнопки в один ряд. width:max-content снимает зажатие до ширины текстовой колонки
+// (иначе flex-fit ужимает и кнопки переносятся на две строки) — ряд берёт натуральную ширину.
+.course-thanks__actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.7rem;
+  width: max-content;
+}
+
+.course-thanks__action {
+  --fw: 400;
+
+  position: relative;
+  flex-shrink: 0;
+  gap: 1.1rem;
+  padding: 1.35em 1.67em;
+}
+
+.course-thanks__action b {
+  font-weight: 700;
+}
+
+.course-thanks__action::after {
+  position: absolute;
+  right: 5%;
+  bottom: -0.6em;
+  left: 5%;
+  z-index: -1;
+  height: 60%;
+  content: "";
+  background: var(--c-primary);
+  filter: blur(1.4rem);
+  border-radius: inherit;
+  opacity: 0.35;
+}
+
+.course-thanks__action-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  background: var(--bg-app-light);
+  border-radius: 50%;
+}
+
+.course-thanks__action-icon--telegram::before {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  content: "";
+  background-color: var(--c-primary-dark);
+  -webkit-mask: url("@img/socials/icon-telegram.svg") center / contain no-repeat;
+  mask: url("@img/socials/icon-telegram.svg") center / contain no-repeat;
+}
+
+.course-thanks__action-icon--max::before {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  content: "";
+  background-color: var(--c-primary-dark);
+  -webkit-mask: url("@img/socials/icon-max.svg") center / contain no-repeat;
+  mask: url("@img/socials/icon-max.svg") center / contain no-repeat;
+}
+
+// ── Правая колонка (фото) ───────────────────────────────────────
+// Высота — по соотношению ассета через aspect-ratio, а не min-height: при min-height
+// height:100% не резолвится, object-fit не срабатывает и снизу остаётся полоса фона.
+.course-thanks__media {
+  position: relative;
+  aspect-ratio: 1048 / 584;
+}
+
+.course-thanks__media .media__img {
+  object-fit: cover;
+}
+
+.course-thanks__media::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(to right, rgba(var(--bg-app-light-secondary-rgb), 1) 0%, rgba(var(--bg-app-light-secondary-rgb), 0) 15%);
+}
+
+@media (max-width: $tablet) {
+  .course-thanks__container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3.2rem;
+  }
+
+  .course-thanks__content {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-thanks {
+    padding-top: 2.4rem;
+  }
+
+  .course-thanks__container {
+    gap: 2.4rem;
+    padding-inline: 1rem;
+  }
+
+  .course-thanks__content > .breadcrumbs {
+    margin-bottom: 2rem;
+  }
+
+  // Плотнее десктопных 20px, иначе абзац не укладывается в макетную высоту.
+  .course-thanks__text {
+    max-width: none;
+    font-size: 1.6rem;
+  }
+
+  .course-thanks__note {
+    max-width: none;
+  }
+
+  .course-thanks__actions {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    align-self: stretch;
+    width: auto;
+  }
+
+  // Кнопки-мессенджеры на телефоне = размер мобильной CTA (300×51, шрифт 14px), кружок-иконка
+  // ужат до 27px с десктопных 38px — иначе иконка распирала кнопку выше 51px; контент центрируем группой.
+  .course-thanks__action {
+    gap: 1rem;
+    justify-content: center;
+    padding-block: 0.786em;
+    font-size: 1.4rem;
+  }
+
+  .course-thanks__action-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .course-thanks__action-icon--telegram::before {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .course-thanks__action-icon--max::before {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .course-thanks__media {
+    justify-self: center;
+    width: 54.6rem;
+    max-width: none;
+    aspect-ratio: 546 / 305;
+  }
+}

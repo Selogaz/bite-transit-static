@@ -1,0 +1,214 @@
+.categories {
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  background: var(--bg-app-light-secondary);
+
+  @media (max-width: $desktop-md) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+}
+
+.categories__container {
+  width: 100%;
+  max-width: 192rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: $mobile) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.categories__panel {
+  padding: 6.7rem 4rem;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-panel);
+
+  @media (max-width: $mobile) {
+    padding: 5rem 1rem;
+    border-radius: var(--radius-panel-mobile) var(--radius-panel-mobile) 0 0;
+  }
+}
+
+.categories .section-title {
+  max-width: 56.7rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 400;
+}
+
+.categories .section-title b {
+  font-weight: 700;
+}
+
+.categories .section__head {
+  @media (max-width: $mobile) {
+    margin-bottom: 2.2rem;
+    text-align: left;
+  }
+}
+
+.categories .section-desc {
+  max-width: 50.7rem;
+
+  @media (max-width: $mobile) {
+    font-size: var(--fz-small);
+  }
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+  max-width: var(--w-container);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.category-card {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+  padding: 1.7rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+
+  @media (max-width: $mobile) {
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0.8rem;
+  }
+}
+
+.category-card__media {
+  flex-shrink: 0;
+  width: 8.7rem;
+  // min-height, не height: на мобильном карточка растягивается по высоте соседнего
+  // `__body` (align-items: stretch), явная height сломала бы это растяжение.
+  min-height: 12.6rem;
+  border-radius: var(--radius-md);
+
+  @media (max-width: $mobile) {
+    width: 6.2rem;
+    min-height: 0;
+  }
+}
+
+.category-card__body {
+  min-width: 0;
+  max-width: 30.8rem;
+
+  @media (max-width: $mobile) {
+    max-width: none;
+  }
+}
+
+.category-card__title {
+  margin-bottom: 0.9rem;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+  white-space: nowrap;
+
+  @media (max-width: $mobile) {
+    font-size: var(--fz-regular);
+    white-space: normal;
+  }
+}
+
+.category-card__text {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+
+  @media (max-width: $mobile) {
+    font-size: var(--fz-xsmall);
+  }
+}
+
+.category-card__text br {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.categories--rastamozhka .categories__panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.categories--rastamozhka .categories__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.categories--rastamozhka .categories__media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(270deg, var(--bg-app-dark) 15.36%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),
+    linear-gradient(90deg, var(--bg-app-dark) 15.74%, rgba(var(--bg-app-dark-rgb), 0) 37.56%),
+    linear-gradient(0deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 11.13%),
+    linear-gradient(180deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 38.31%);
+}
+
+.categories--rastamozhka .section__head,
+.categories--rastamozhka .categories__grid {
+  position: relative;
+  z-index: 1;
+}
+
+.categories--rastamozhka .section-title {
+  color: var(--fg-app-dark);
+}
+
+.categories--rastamozhka .section-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: $mobile) {
+  .categories--rastamozhka .categories__panel {
+    padding-bottom: 0;
+    background: var(--bg-app-dark);
+  }
+
+  .categories--rastamozhka .categories__media {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 320 / 276;
+    margin: 0.6rem -1rem 0;
+  }
+
+  .categories--rastamozhka .categories__media::after {
+    background:
+      linear-gradient(90deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 14.69%),
+      linear-gradient(270deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),
+      linear-gradient(180deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 38.31%),
+      linear-gradient(0deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 11.13%);
+  }
+}

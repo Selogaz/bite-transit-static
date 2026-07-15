@@ -1,0 +1,48 @@
+<!-- Секция «team» — фото и подписи карточек плейсхолдерные, различаются только роли -->
+<section class="team section" id="team">
+  <div class="team__container">
+    <div class="team__card">
+      <div class="team__bg media">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/team.bit/bg-terminal.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+
+      <div class="section__head">
+        <h2 class="section-title"><b>Ключевые</b> члены команды</h2>
+      </div>
+
+      <div class="team__slider swiper">
+        <ul class="team__grid swiper-wrapper">
+          @@include('../cards/team-card.html', {
+            "role": "Лучший менеджер квартала"
+          })
+          @@include('../cards/team-card.html', {
+            "role": "Топ-юрист<br>квартала"
+          })
+          @@include('../cards/team-card.html', {
+            "role": "№1 экспедитор<br>квартала"
+          })
+          @@include('../cards/team-card.html', {
+            "role": "Первый аудитор<br>квартала"
+          })
+          @@include('../cards/team-card.html', {
+            "role": "Самый аккуратный<br>водитель квартала"
+          })
+          @@include('../cards/team-card.html', {
+            "role": "Генеральный<br>директор"
+          })
+        </ul>
+      </div>
+
+      <div class="team__nav">
+        <button class="nav-arrow team__arrow team__arrow--prev" type="button" aria-label="Назад">
+          <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+        </button>
+        <button class="nav-arrow team__arrow team__arrow--next" type="button" aria-label="Вперед">
+          <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

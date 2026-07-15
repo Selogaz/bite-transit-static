@@ -1,0 +1,58 @@
+
+<section class="course-benefits section section--dark" id="course-benefits">
+  <div class="course-benefits__bg media">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/course.bit/benefits-bg@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="course-benefits__bg-top media">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/course.bit/benefits-bg-mobile-top@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+  <div class="course-benefits__bg-bottom media">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/course.bit/benefits-bg-mobile-bottom@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="course-benefits__container section__container container">
+    <h2 class="course-benefits__title"><b>Официальная ВЭД</b> уже<br>не будет темным лесом</h2>
+
+    <ul class="course-benefits__list">
+      @@include('../cards/course-benefit-point.html', {
+        "variant": "top",
+        "image": "benefits-compass@2x.jpg",
+        "imageMobile": "benefits-compass-mobile@2x.jpg",
+        "text": "Поймёте, как вообще работает официальная ВЭД и <b>подходит ли она вашему бизнесу</b>"
+      })
+      @@include('../cards/course-benefit-point.html', {
+        "variant": "top",
+        "image": "benefits-scale@2x.jpg",
+        "imageMobile": "benefits-scale-mobile@2x.jpg",
+        "text": "Разберётесь в <b>контракте, расходах и поймете, как избежать переплат</b> при работе с подрядчиками"
+      })
+      @@include('../cards/course-benefit-point.html', {
+        "variant": "top",
+        "image": "benefits-tnved@2x.jpg",
+        "imageMobile": "benefits-tnved-mobile@2x.jpg",
+        "text": "Поймете, <b>какой код ТН ВЭД у вашего товара и какие документы</b> на самом деле нужны для официального ввоза"
+      })
+      @@include('../cards/course-benefit-point.html', {
+        "variant": "bottom",
+        "image": "benefits-lockers@2x.jpg",
+        "imageMobile": "benefits-lockers-mobile@2x.jpg",
+        "text": "<b>Разложите по полочкам сертификацию</b>, маркировку и требования к товару"
+      })
+      @@include('../cards/course-benefit-point.html', {
+        "variant": "bottom",
+        "image": "benefits-puppet@2x.jpg",
+        "imageMobile": "benefits-puppet-mobile@2x.jpg",
+        "text": "<b>Перестанете быть уязвимыми перед подрядчиками</b> – понимание всех процессов исключит возможность обмана"
+      })
+    </ul>
+
+    @@include('../cards/course-offer.html', { "formName": "Курс — блок ВЭД — забрать бесплатно" })
+  </div>
+</section>

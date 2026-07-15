@@ -1,0 +1,14 @@
+<li class="service-perk-card swiper-slide">
+  <div class="service-perk-card__body">
+    <p class="service-perk-card__title">@@title</p>
+    <div class="service-perk-card__text">@@text</div>
+  </div>
+  <div class="service-perk-card__media media media--cover">
+    <picture class="media__pic">
+      @@if (typeof imageMobile != 'undefined') {
+      <source media="(max-width: 991px)" srcset="@img/service-perks.bit/@@imageMobile">
+      }
+      <img class="media__img" src="@img/service-perks.bit/@@image" alt="" width="@@imageW" height="@@imageH" loading="lazy">
+    </picture>
+  </div>
+</li>

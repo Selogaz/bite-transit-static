@@ -1,0 +1,111 @@
+<section class="hero" id="hero">
+  <div class="hero__container container">
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span class="hero__eyebrow-icons" aria-hidden="true">
+          <span class="hero__eyebrow-avatar hero__eyebrow-avatar--faint"></span>
+          <span class="hero__eyebrow-avatar hero__eyebrow-avatar--muted"></span>
+          <span class="hero__eyebrow-avatar"></span>
+        </span>
+        для селлеров, товарного бизнеса и производств
+      </p>
+
+      <h1 class="hero__title">
+        Официальный импорт<br>
+        товаров из Китая.
+        <span class="hero__title-mark">Повысьте</span> <span class="hero__title-mark hero__title-mark-word">маржинальность<span class="hero__title-badge"><span class="hero__title-badge-plus">+</span><span class="hero__title-badge-percent">%</span></span></span><br>
+        и отладьте ритм поставок
+      </h1>
+
+      <p class="hero__subtitle">
+        <span class="hero__subtitle-accent">Организуйте поставки через 1 компанию.</span>
+        Нет цепочки подрядчиков — нет хаоса и издержек
+      </p>
+
+      <div class="hero__offer">
+        <div class="hero__offer-media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/hero.bit/offer.jpg" alt="" width="121" height="86" loading="lazy">
+          </picture>
+        </div>
+        <p class="hero__offer-text">
+          <b>Считаете свою логистику выгодной?</b> Закажите бесплатный аудит и мы найдем
+          как оптимизировать ваших расходы
+        </p>
+      </div>
+
+      <div class="hero__actions">
+        <button class="hero__action button button--primary" type="button" data-b_modal-open="audit-request" data-form-name="Hero — аудит">
+          <span class="button__icon hero__action-icon" aria-hidden="true"></span>
+          Получить аудит
+        </button>
+        <a class="hero__action-link button button--third" href="#services">
+          Консультация по ВЭД
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <div class="hero__photo media">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/hero.bit/hero-container@2x.png" alt="Красный морской контейнер с товарами — официальный импорт из Китая" width="846" height="699">
+        </picture>
+      </div>
+
+      <div class="hero__stage-row">
+        @@include('../cards/hero-stage-card.html', {
+          "className": "hero__stage--01",
+          "photo": "@img/hero.bit/stage-01.jpg",
+          "num": "01",
+          "label": "Выкуп товара"
+        })
+        @@include('../cards/hero-stage-card.html', {
+          "className": "hero__stage--02 hero-stage-card--wide",
+          "photo": "@img/hero.bit/stage-02.jpg",
+          "num": "02",
+          "label": "Погрузка на корабль"
+        })
+      </div>
+      <div class="hero__stage-row hero__stage-row--full">
+        @@include('../cards/hero-stage-card.html', {
+          "className": "hero__stage--03",
+          "photo": "@img/hero.bit/stage-03.jpg",
+          "num": "03",
+          "label": "Таможня"
+        })
+        @@include('../cards/hero-stage-card.html', {
+          "className": "hero__stage--04",
+          "photo": "@img/hero.bit/stage-04.jpg",
+          "num": "04",
+          "label": "Доставка"
+        })
+        @@include('../cards/hero-stage-card.html', {
+          "className": "hero__stage--05",
+          "photo": "@img/hero.bit/stage-05.jpg",
+          "num": "05",
+          "label": "Поставка груза"
+        })
+      </div>
+
+      <div class="hero__badge hero__badge--offer">
+        <span class="hero__badge-text">
+          <span class="hero__badge-lead">Выгода начинается</span>
+          <span class="hero__badge-accent">от 8000$</span> за поставку
+        </span>
+      </div>
+
+      <div class="hero__callout">
+        <div class="hero__callout-avatar media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/hero.bit/founder.jpg" alt="" width="67" height="67" loading="lazy">
+          </picture>
+        </div>
+        <span class="hero__callout-text"><b>Основатель не скрывается.</b> Почему?</span>
+        <button class="hero__callout-link" type="button" data-b_modal-open="founder">
+          <span class="hero__callout-link-text">Узнать ответ</span>
+          <span class="hero__callout-link-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

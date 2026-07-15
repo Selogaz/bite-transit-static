@@ -1,0 +1,101 @@
+<header class="header">
+
+  <div class="topbar">
+    <div class="topbar__container container">
+      <div class="topbar__timer timer timer--topbar" data-timer data-timer-deadline="">
+        <span class="timer__unit">
+          <span class="timer__num" data-timer-minutes>00</span>
+          <span class="timer__label">минут</span>
+        </span>
+        <span class="timer__unit">
+          <span class="timer__num" data-timer-seconds>00</span>
+          <span class="timer__label">секунд</span>
+        </span>
+      </div>
+
+      <p class="topbar__promo">
+        Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+      </p>
+
+      <a class="topbar__course button button--pill" href="page-course.html">Пройти курс</a>
+    </div>
+  </div>
+
+  <div class="header__bar">
+    <div class="header__container container">
+      <a class="header__logo logo" href="page-homepage.html" aria-label="Байт Транзит — на главную">
+        <img class="logo__img" src="@img/common.bit/logo.svg" alt="Байт Транзит" width="68" height="45" loading="lazy">
+      </a>
+
+      <div class="menu">
+
+        <a class="menu__logo logo" href="page-homepage.html" aria-label="Байт Транзит — на главную">
+          <img class="logo__img" src="@img/common.bit/logo.svg" alt="Байт Транзит" width="68" height="45" loading="lazy">
+        </a>
+        <hr class="menu__divider">
+
+        <nav class="menu__nav" aria-label="Основное меню">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="page-homepage.html" aria-current="page">Главная</a></li>
+            <li class="menu__item menu__item--has-sub">
+              <a class="menu__link menu__link--has-sub" href="page-homepage.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="menu-submenu-services">Услуги</a>
+              <ul class="menu__submenu" id="menu-submenu-services">
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service.html">Растаможка</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-teu.html">ТЭУ</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-samples.html">Ввоз образцов</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-payments.html">Платежи</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-outsourcing.html">Аутсорсинг ВЭД</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-fulfillment.html">Фулфилмент</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-delivery.html">Доставка</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="archive-post.html">Новости</a></li>
+            <li class="menu__item"><a class="menu__link" href="archive-case.html">Кейсы</a></li>
+            <li class="menu__item"><a class="menu__link" href="page-course.html">Курс</a></li>
+            <li class="menu__item menu__item--has-sub">
+              <a class="menu__link menu__link--has-sub" href="page-contacts.html" aria-haspopup="true" aria-expanded="false" aria-controls="menu-submenu-clients">Клиентам</a>
+              <ul class="menu__submenu" id="menu-submenu-clients">
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-contacts.html">Контакты</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-documents.html">Документы</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-calculator.html">Квиз</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-consult.html">Консультация</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-faq.html">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="menu__offer">
+          <div class="timer timer--topbar" data-timer data-timer-deadline="">
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-minutes>00</span>
+              <span class="timer__label">минут</span>
+            </span>
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-seconds>00</span>
+              <span class="timer__label">секунд</span>
+            </span>
+          </div>
+          <p class="menu__offer-promo">
+            Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+          </p>
+          <a class="menu__course button button--pill" href="page-course.html">Пройти курс</a>
+        </div>
+
+        <a class="menu__phone" href="tel:88007700040"><u>8 800 770-00-40</u></a>
+        @@include('cards/socials.html', { "className": "menu__socials" })
+        <button class="menu__cta button button--secondary" type="button" data-b_modal-open="callback" data-form-name="Шапка — расчёт поставки">Расчёт поставки</button>
+      </div>
+
+      <div class="menu-overlay"></div>
+
+      <a class="header__phone" href="tel:88007700040">8 800 770-00-40</a>
+
+      <button class="header__burger burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>

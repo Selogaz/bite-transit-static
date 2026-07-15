@@ -1,0 +1,11 @@
+<li class="course-benefit-point course-benefit-point--@@variant">
+  <p class="course-benefit-point__text">@@text</p>
+  <div class="course-benefit-point__media media">
+    <picture class="media__pic">
+      @@if (typeof imageMobile != 'undefined') {
+      <source media="(max-width: 991px)" srcset="@img/course.bit/@@imageMobile">
+      }
+      <img class="media__img" src="@img/course.bit/@@image" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>

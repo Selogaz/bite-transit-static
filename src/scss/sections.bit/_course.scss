@@ -1,0 +1,272 @@
+.course {
+  position: relative;
+  padding-top: 5.9rem;
+  padding-bottom: 5.5rem;
+  overflow: hidden;
+  background: var(--bg-app-light-secondary);
+
+  @media (max-width: $desktop-md) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile-xlg) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+}
+
+.course__container {
+  position: relative;
+}
+
+.course__glow {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  width: min(148rem, 100% - 2 * var(--p-container));
+  height: 20.4rem;
+  margin: 0 auto;
+  clip-path: polygon(0 0, 9.12rem 0, 9.12rem calc(100% - 9.71rem), calc(100% - 9.12rem) calc(100% - 9.71rem), calc(100% - 9.12rem) 0, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(to top, var(--c-glow-course) 0 1.2rem, rgba(var(--c-glow-course-rgb), 0) 100%);
+}
+
+.course__card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: 122.6rem;
+  min-height: 35.3rem;
+  padding: 3.8rem 5.1rem 3.8rem 8.7rem;
+  margin: 0 auto;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-card);
+}
+
+.course__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 48.3rem;
+}
+
+.course__title {
+  margin-bottom: 1.6rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: var(--fw-h2);
+  line-height: 1.045;
+  color: var(--fg-regular);
+}
+
+.course__title-thin {
+  font-weight: 400;
+}
+
+.course__desc {
+  max-width: 47.4rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
+.course__desc b {
+  font-weight: 700;
+}
+
+.course__offer {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: -3.3rem;
+}
+
+.course__offer-top {
+  display: flex;
+  gap: 8.3rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.course__timer {
+  margin-top: 7.6rem;
+}
+
+.course__offer-bottom {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -1.6rem;
+}
+
+.course__media {
+  position: relative;
+  flex-shrink: 0;
+  width: 29rem;
+  // min-height, не height: ассет 580×424 = 29×21.2rem, натуральный аспект совпадает
+  // с макетной рамкой — переполнения нет.
+  min-height: 21.2rem;
+  border-radius: var(--radius-md);
+}
+
+.course__media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(121deg, rgba(255, 255, 255, 0) 79%, var(--bg-app-light) 97%);
+}
+
+// line-height — как у заголовков: со строчным 1.4 от body строка цены была бы на 16px выше
+// и растягивала ряд с кнопкой.
+.course__price {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  line-height: 1.045;
+}
+
+.course__price-old {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--fg-app-light);
+  text-decoration: line-through;
+  white-space: nowrap;
+  opacity: 0.3;
+}
+
+.course__price-new {
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  color: var(--fg-app-light);
+  white-space: nowrap;
+}
+
+.course__cta {
+  --gap: 0.25em;
+
+  min-width: 30rem;
+  min-height: 7.9rem;
+  font-weight: 400;
+}
+
+.course__cta b {
+  font-weight: 700;
+}
+
+@media (max-width: $laptop) {
+  .course__card {
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 5rem;
+  }
+
+  .course__offer {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $tablet) {
+  .course__card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 3rem;
+  }
+
+  .course__offer {
+    width: 100%;
+  }
+
+  .course__offer-bottom {
+    margin-top: 2.4rem;
+  }
+}
+
+@media (max-width: $mobile-xxlg) {
+  .course__glow {
+    top: 0.4rem;
+    height: 5.2rem;
+    clip-path: polygon(0 0, 1.1rem 0, 1.1rem calc(100% - 1.3rem), calc(100% - 1.1rem) calc(100% - 1.3rem), calc(100% - 1.1rem) 0, 100% 0, 100% 100%, 0 100%);
+    background: linear-gradient(to top, var(--c-glow-course) 0 0.4rem, rgba(var(--c-glow-course-rgb), 0) 100%);
+  }
+
+  .course__card {
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 25.6rem;
+    padding: 1.8rem 1.1rem 0.7rem;
+    margin: 0 auto;
+  }
+
+  .course__text {
+    gap: 1.5rem;
+    max-width: none;
+    text-align: center;
+  }
+
+  .course__title {
+    margin-bottom: 0;
+    font-size: 2.2rem;
+  }
+
+  .course__desc {
+    font-size: 1.4rem;
+  }
+
+  .course__offer,
+  .course__offer-top,
+  .course__offer-bottom {
+    display: contents;
+  }
+
+  .course__timer {
+    order: 1;
+    margin-top: 1.9rem;
+  }
+
+  // На мобильном плашка ниже — 5rem; базовый --padding-block (1.2em) сам даёт 5.8rem,
+  // поэтому снимаем его и отдаём высоту min-height, текст центрирует флекс кнопки.
+  .course__cta {
+    --padding-block: 0;
+
+    display: flex;
+    order: 2;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 20.6rem;
+    min-height: 5rem;
+    margin-top: 1.9rem;
+  }
+
+  .course__price {
+    order: 3;
+    margin-top: 0.5rem;
+  }
+
+  .course__price-old {
+    font-size: 1.5rem;
+  }
+
+  .course__media {
+    order: 4;
+    width: 19rem;
+    min-height: 14.4rem;
+    margin-top: 1.9rem;
+  }
+
+  .course__media::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 79%, var(--bg-app-light) 97%);
+  }
+}

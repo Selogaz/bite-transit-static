@@ -1,0 +1,112 @@
+// Секция «videos»: белая плашка на весь экран + заголовок в 2 строки + ряд превью-карточек
+// со стрелками поверх краёв контейнера. Мобайл: не карусель — статичная сетка 2×2, стрелки
+// под сеткой одним рядом. Свайпер на этом брейкпоинте не создаётся — иначе он клипует 2-й
+// ряд по высоте, посчитанной под один ряд слайдов.
+.videos {
+  padding-top: 8.9rem;
+  background: var(--bg-app-light);
+
+  // На мобилке заголовок в 5rem от верха белой плашки (≈50px), а не в 8.9rem десктопа —
+  // иначе над «Вас может заинтересовать» зиял лишний отступ.
+  @media (max-width: $mobile) {
+    padding-top: 5rem;
+  }
+}
+
+.videos .section-title {
+  font-weight: 400;
+}
+
+.videos .section-title b {
+  font-weight: 700;
+}
+
+.videos__slider {
+  position: relative;
+}
+
+.videos__wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $mobile) {
+    justify-content: flex-start;
+  }
+}
+
+.video-card:not(:last-child) {
+  margin-right: 1.55rem;
+
+  @media (max-width: $mobile) {
+    margin-right: 0;
+  }
+}
+
+.videos__nav {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  @media (max-width: $mobile) {
+    position: static;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+.videos__arrow {
+  --size: 5.58rem;
+
+  position: absolute;
+  top: 50%;
+  pointer-events: auto;
+  transform: translateY(-50%);
+
+  @media (max-width: $mobile) {
+    --size: 4.52rem;
+
+    position: static;
+    transform: none;
+  }
+}
+
+.videos__arrow--prev {
+  left: 0;
+}
+
+.videos__arrow--next {
+  right: 0;
+}
+
+.video-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 23.3rem;
+  min-height: 41.3rem;
+  padding: 0;
+  cursor: pointer;
+  background: var(--bg-media-placeholder);
+  border: 0;
+  border-radius: var(--radius-card);
+
+  @media (max-width: $mobile) {
+    width: auto;
+    min-height: 0;
+    aspect-ratio: 0.7;
+  }
+}
+
+.video-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5.24rem;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $mobile) {
+    width: 3.15rem;
+  }
+}

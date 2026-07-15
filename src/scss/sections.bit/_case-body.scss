@@ -1,0 +1,47 @@
+.case-body__card {
+  padding: 0 8.4rem 4.8rem;
+  background: var(--bg-app-light);
+  border-radius: 0 0 4.2rem 4.2rem;
+}
+
+.case-body__media {
+  aspect-ratio: 1306 / 615;
+  margin-top: 4.7rem;
+  overflow: hidden;
+  border-radius: 2.5rem;
+}
+
+.case-body__media + .case-body__text {
+  margin-top: 3.1rem;
+}
+
+.case-body__back-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.7rem;
+}
+
+@media (max-width: $mobile) {
+  .case-body__container {
+    padding-inline: 1rem;
+  }
+
+  .case-body__card {
+    padding: 0 1.5rem 1.8rem;
+    border-radius: 0 0 2.5rem 2.5rem;
+  }
+
+  .case-body__media {
+    aspect-ratio: 270 / 141;
+    margin-top: 3.6rem;
+    border-radius: 1.75rem;
+  }
+
+  .case-body__media + .case-body__text {
+    margin-top: 1.8rem;
+  }
+
+  .case-body__back-wrap {
+    margin-top: 2rem;
+  }
+}

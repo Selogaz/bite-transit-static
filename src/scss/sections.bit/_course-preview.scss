@@ -1,0 +1,108 @@
+// Секция «course-preview»: заголовок + плейсхолдер видео (реальное превью — из Bitrix,
+// заглушка) + повтор оффера курса.
+.course-preview {
+  text-align: center;
+}
+
+.course-preview__title {
+  margin-bottom: 1.6rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 1.045;
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+.course-preview__title b {
+  font-weight: 700;
+}
+
+.course-preview__desc {
+  max-width: 54.3rem;
+  margin: 0 auto 4rem;
+  font-family: var(--ff-regular);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
+.course-preview__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 112.4rem;
+  aspect-ratio: 1124 / 450;
+  padding: 0;
+  margin: 0 auto 4rem;
+  cursor: pointer;
+  background: var(--bg-timer-badge);
+  border: none;
+  border-radius: 6rem;
+  transition: var(--tr-regular);
+}
+
+.course-preview__video:hover {
+  @media (any-hover: hover) {
+    opacity: 0.9;
+  }
+}
+
+// height, не min-height: фикс. квадратная иконка (SVG), контент внутри не растёт.
+.course-preview__video-icon {
+  width: 6.8rem;
+  height: 6.8rem;
+}
+
+.course-preview .course-offer {
+  width: max-content;
+  margin: 0 auto;
+}
+
+@media (max-width: $mobile) {
+  .course-preview__title {
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+  }
+
+  .course-preview__desc {
+    max-width: none;
+    margin-bottom: 2rem;
+    font-size: var(--fz-regular);
+  }
+
+  .course-preview__video {
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+  }
+
+  .course-preview__video-icon {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .course-preview .course-offer {
+    width: 100%;
+  }
+
+  .course-preview .course-offer.course__offer-bottom {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .course-preview .course-offer .course__price {
+    order: 1;
+  }
+
+  .course-preview .course-offer .timer {
+    order: 2;
+  }
+
+  .course-preview .course-offer .course__cta {
+    order: 3;
+
+    margin-top: 0;
+  }
+}

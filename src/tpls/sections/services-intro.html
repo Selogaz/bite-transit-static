@@ -1,0 +1,40 @@
+
+<section class="services@@if (typeof onCanvas != 'undefined') { services--canvas}" id="services">
+  <div class="services__container container">
+    <h2 class="services__title">Помогаем <b>экономить на поставках</b> и бережем нервы</h2>
+    <p class="services__subtitle">Находим <b>оптимальные</b> маршруты, снижаем риски импортера, соблюдаем <b>сроки</b></p>
+
+    <ul class="service-tabs" role="tablist">
+      @@include('../cards/service-tab.html', { "modifier": " service-tabs__link--active", "label": "Таможенное оформление" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Транспортно-экспедиционные услуги" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Сертификация, ввоз образцов" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Платежи" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Аутсорсинг ВЭД под ключ" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
+    </ul>
+
+    <ul class="services__results">
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+.burger {
+  --line-width: 60%;
+  --line-height: 0.2rem;
+  --line-offset: 0.7rem;
+  --c-burger-line: var(--fg-app-dark);
+
+  position: relative;
+  z-index: 3;
+  width: var(--burger-width, 4rem);
+  height: var(--burger-height, 4rem);
+  cursor: pointer;
+  transition: var(--tr);
+
+  @media (min-width: $has-burger + 1) {
+    display: none;
+  }
+}
+
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-width);
+  height: var(--line-height);
+  pointer-events: none;
+  background: var(--c-burger-line);
+  border-radius: 0.2rem;
+  transition: var(--tr);
+}
+
+.burger__line:nth-child(1) {
+  transform: translate(-50%, calc(-50% - var(--line-offset)));
+}
+
+.burger__line:nth-child(2) {
+  transform: translate(-50%, -50%);
+}
+
+.burger__line:nth-child(3) {
+  transform: translate(-50%, calc(-50% + var(--line-offset)));
+}
+
+.burger.is-active .burger__line:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger.is-active .burger__line:nth-child(2) {
+  width: 0;
+}
+
+.burger.is-active .burger__line:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header--dark-burger .burger {
+  --c-burger-line: var(--fg-regular);
+}

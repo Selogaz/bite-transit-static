@@ -1,0 +1,17 @@
+.contacts-hero {
+  padding-top: 1.6rem;
+}
+
+.contacts-hero__title {
+  margin: 3.7rem 0 0;
+}
+
+@media (max-width: $mobile) {
+  .contacts-hero__container {
+    padding-inline: 1rem;
+  }
+
+  .contacts-hero__title {
+    margin-top: 2.9rem;
+  }
+}

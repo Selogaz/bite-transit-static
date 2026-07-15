@@ -1,0 +1,112 @@
+.news-grid {
+  padding-top: 3.6rem;
+  padding-bottom: 10rem;
+
+  @media (max-width: $desktop-md) {
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile-xlg) {
+    padding-bottom: 4rem;
+  }
+}
+
+.news-grid__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.9rem;
+  margin-bottom: 2.9rem;
+
+  @media (max-width: $desktop-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile) {
+    gap: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.post-card {
+  overflow: hidden;
+  background: var(--bg-app-light);
+  border-radius: 2.4rem;
+}
+
+.post-card__media {
+  width: 100%;
+  // height, не min-height — карточка фиксированной высоты, натуральный аспект фото близок
+  // к макетному (348×230), растяжения не даёт.
+  height: 23rem;
+}
+
+.post-card__body {
+  padding: 2.6rem 2.6rem 2.9rem;
+}
+
+.post-card__date {
+  margin-bottom: 0.9rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--fg-post-date);
+}
+
+.post-card__title {
+  margin-bottom: 1rem;
+  font-family: var(--ff-regular);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.87;
+  color: var(--fg-app-light);
+}
+
+.post-card__lead {
+  max-width: 30rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--fg-post-lead);
+}
+
+.post-card__link {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: var(--ff-regular);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--fg-app-light);
+  text-decoration: none;
+  transition: var(--tr-regular);
+}
+
+.post-card__link:hover {
+  @media (any-hover: hover) {
+    color: var(--fg-button-third-accent);
+  }
+}
+
+.post-card__link-icon {
+  width: 0.6rem;
+  height: 1.1rem;
+}
+
+@media (max-width: $mobile) {
+  .post-card__media {
+    height: 17rem;
+  }
+
+  .post-card__body {
+    padding: 1.6rem 1.6rem 1.9rem;
+  }
+}

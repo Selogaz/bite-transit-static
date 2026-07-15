@@ -1,0 +1,79 @@
+<section class="features" id="features">
+  <div class="features__container section__container container">
+    <div class="section__head">
+      <h2 class="features__title section-title">Прописано = <b>соблюдено</b></h2>
+      <p class="features__desc section-desc">7 столпов <b>прозрачной поставки в срок</b><br> без сюрпризов в виде доплат</p>
+    </div>
+
+    <div class="features__slider swiper">
+      <ul class="features__wrapper swiper-wrapper">
+        @@include('../cards/feature-card.html', {
+          "modifier": "vertical",
+          "title": "Персональное <b>сопровождение</b>",
+          "list": "<li>Персональный менеджер, который закрывает все вопросы от забора груза до передачи на склад МП</li><li>Поддержка даже после завершения доставки</li>",
+          "image": "personal@2x.png",
+          "imgWidth": "357",
+          "imgHeight": "208"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "vertical",
+          "title": "Экспертная <b>команда</b>",
+          "list": "<li>Эксперты по логистике, ВЭД и таможенному оформлению</li><li>Контроль документов перед отправкой груза для минимизации рисков импорта</li>",
+          "image": "expert@2x.png",
+          "imgWidth": "357",
+          "imgHeight": "197"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "vertical",
+          "title": "<b>Прозрачность</b> и точность",
+          "list": "<li>Расчёт стоимости до начала перевозки</li><li>Предупреждение о возможных рисках и помощь в их предотвращении</li>",
+          "image": "transparency@2x.png",
+          "imgWidth": "357",
+          "imgHeight": "207"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "accent",
+          "title": "<b>Своя система в Китае</b>",
+          "list": "<li>Платежные инструменты для расчетов с поставщиками</li><li>Свои склады рядом таможенными пунктами</li><li>Страхование груза</li>",
+          "image": "china@2x.png",
+          "imgWidth": "358",
+          "imgHeight": "197"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "horizontal",
+          "title": "<b>Контроль</b> груза<br> на каждом этапе",
+          "list": "<li>Уведомления о статусе перевозки</li><li>Возможность отследить статус поставки у личного менеджера</li>",
+          "image": "control@2x.png",
+          "imgWidth": "160",
+          "imgHeight": "212"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "horizontal",
+          "title": "<b>Защита</b> каждой<br> единицы товара",
+          "list": "<li>Строгое соблюдение условий перевозки и возможность дополнительной упаковки, при необходимости</li><li>Все грузы застрахованы</li>",
+          "image": "protection@2x.png",
+          "imgWidth": "160",
+          "imgHeight": "212"
+        })
+        @@include('../cards/feature-card.html', {
+          "modifier": "horizontal",
+          "title": "<b>Сроки</b> и цены<br> гарантированы",
+          "list": "<li>Еще до начала работ<br> заркепляем реальную стоимость и дату прибытия груза</li>",
+          "image": "terms@2x.png",
+          "imgWidth": "159",
+          "imgHeight": "212",
+          "fade": true
+        })
+      </ul>
+    </div>
+
+    <div class="features__nav">
+      <button class="nav-arrow features__arrow features__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow features__arrow features__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
+  </div>
+</section>

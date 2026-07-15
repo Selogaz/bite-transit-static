@@ -1,0 +1,84 @@
+.pagination {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 5.5rem;
+  padding: 0 3.2rem;
+  margin-inline: auto;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-pill);
+}
+
+.pagination__list {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.pagination__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-xs);
+  font-weight: 600;
+  color: var(--fg-pagination);
+  text-decoration: none;
+  transition: var(--tr-regular);
+}
+
+.pagination__page:hover {
+  @media (any-hover: hover) {
+    color: var(--fg-regular);
+  }
+}
+
+// Активная страница — тёмный кружок 2.8rem с белым номером.
+// aspect-ratio вместо height: круг задаётся шириной, height не используем.
+.pagination__page--active,
+.pagination__page--active:hover {
+  width: 2.8rem;
+  min-width: 2.8rem;
+  aspect-ratio: 1;
+  color: var(--fg-app-dark);
+  background: var(--fg-secondary);
+  border-radius: 50%;
+}
+
+.pagination__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-divider);
+  transition: var(--tr-regular);
+}
+
+.pagination__arrow:hover {
+  @media (any-hover: hover) {
+    color: var(--fg-pagination);
+  }
+}
+
+.pagination__arrow-icon {
+  width: 0.8rem;
+  height: 1.6rem;
+}
+
+@media (max-width: $mobile) {
+  .pagination {
+    gap: 2rem;
+    min-height: 4.5rem;
+    padding: 0 2rem;
+  }
+
+  .pagination__list {
+    gap: 1.8rem;
+  }
+
+  .pagination__item:nth-child(n+5) {
+    display: none;
+  }
+}

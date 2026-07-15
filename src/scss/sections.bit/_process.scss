@@ -1,0 +1,309 @@
+.process {
+  position: relative;
+  padding-block: 7rem;
+  overflow: hidden;
+  background: var(--bg-app-dark) url("@img/process.bit/bg-warehouse.jpg") center / cover no-repeat;
+}
+
+.process::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at 92% 8%, rgba(var(--c-primary-rgb), 0.35) 0%, rgba(var(--c-primary-rgb), 0) 45%),
+    radial-gradient(circle at 4% 92%, rgba(var(--c-primary-rgb), 0.3) 0%, rgba(var(--c-primary-rgb), 0) 45%);
+}
+
+.process__container {
+  position: relative;
+  z-index: 1;
+}
+
+.process .section-title {
+  max-width: 67rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 400;
+}
+
+.process .section-title b {
+  font-weight: 700;
+}
+
+.process__steps {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 7.4rem;
+}
+
+.process__steps::before {
+  position: absolute;
+  top: 1.4rem;
+  left: 12.2rem;
+  width: calc(100% - 12.2rem - 12.2rem);
+  height: 0;
+  content: "";
+  border-top: 0.1rem dashed rgba(var(--border-app-light-rgb), 0.25);
+}
+
+.process__docs-title {
+  margin-bottom: 4rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h3);
+  font-weight: var(--fw-h3);
+  line-height: var(--lh-tight);
+  color: var(--fg-app-dark);
+  text-align: center;
+}
+
+.process__docs {
+  display: flex;
+  gap: 1.43rem;
+  justify-content: center;
+}
+
+.process-step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24.4rem;
+  padding-top: 4.9rem;
+}
+
+.process-step-card__dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: var(--fg-secondary);
+  border: 0.3rem solid rgba(var(--border-app-light-rgb), 0.15);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.process-step-card:last-child .process-step-card__dot {
+  background: var(--bg-app-light);
+  border-color: var(--bg-app-light);
+}
+
+.process-step-card__media {
+  width: 12.2rem;
+  height: 12.2rem;
+  margin-bottom: 2.2rem;
+  border-radius: var(--radius-md);
+}
+
+.process-step-card__text {
+  font-family: var(--ff-regular);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+  text-align: center;
+}
+
+.process-step-card__text b {
+  font-weight: 700;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  width: 32.08rem;
+  min-height: 40.1rem;
+  padding: 3.5rem 2rem 0;
+  background: rgba(var(--border-app-light-rgb), 0.04);
+  backdrop-filter: blur(1.7rem);
+  border-radius: var(--radius-lg);
+}
+
+.doc-card--accent {
+  background: var(--gradient-primary);
+  backdrop-filter: blur(0.43rem);
+}
+
+.doc-card__title {
+  margin-bottom: 1.4rem;
+  font-family: var(--ff-regular);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--fg-app-dark);
+  text-align: center;
+}
+
+.doc-card__media {
+  width: 21.1rem;
+  margin: 0 auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.doc-card__zoom {
+  display: none;
+}
+
+@media (max-width: $laptop) {
+  .process__steps {
+    flex-wrap: wrap;
+    row-gap: 4rem;
+  }
+
+  .process__steps::before {
+    display: none;
+  }
+
+  .process__docs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: $tablet) {
+  .process__steps {
+    justify-content: center;
+  }
+}
+
+@media (max-width: $mobile-xxlg) {
+  .process {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .process::before {
+    display: none;
+  }
+
+  .process .section-title,
+  .process .section-desc {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .process .section__head {
+    margin-bottom: 6rem;
+  }
+
+  .process__steps {
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .process__steps::after {
+    position: absolute;
+    top: 3.05rem;
+    bottom: 3.05rem;
+    left: 0;
+    width: 0;
+    content: "";
+    border-left: 0.1rem dashed rgba(var(--border-app-light-rgb), 0.25);
+  }
+
+  .process-step-card {
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+    width: auto;
+    padding-top: 0;
+  }
+
+  // height вместо min-height — здесь и ниже это квадратный/круглый декор фикс. размера
+  // (точка, фото-иконка, бейдж-лупа): контент внутри не растёт, min-height не имел бы смысла.
+  .process-step-card__dot {
+    top: 50%;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-width: 0.15rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .process-step-card:last-child .process-step-card__dot {
+    background: var(--fg-secondary);
+    border-color: rgba(var(--border-app-light-rgb), 0.15);
+  }
+
+  .process-step-card__media {
+    flex-shrink: 0;
+    width: 6.1rem;
+    height: 6.1rem;
+    margin-bottom: 0;
+    border-radius: var(--radius-lg);
+  }
+
+  .process-step-card__text {
+    font-size: var(--fz-small);
+    text-align: left;
+  }
+
+  .process__docs-title {
+    margin-bottom: 2.4rem;
+    font-size: var(--fz-h2);
+    font-weight: 400;
+  }
+
+  .process__docs-title b {
+    font-weight: 700;
+  }
+
+  .process__docs {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  .doc-card {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    min-height: 13.1rem;
+    padding: 0 0 0 2rem;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+  }
+
+  .doc-card__title {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .doc-card__media {
+    position: relative;
+    flex-shrink: 0;
+    align-self: flex-end;
+    width: 9.24rem;
+    margin: 0;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+  }
+
+  .doc-card__zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.1rem;
+    height: 6.1rem;
+    background: rgba(var(--border-app-light-rgb), 0.5);
+    backdrop-filter: blur(1.7rem);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .doc-card__zoom-icon {
+    width: 3.7rem;
+    height: 3.7rem;
+    color: rgba(var(--bg-app-dark-rgb), 0.35);
+  }
+}

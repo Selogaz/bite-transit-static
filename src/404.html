@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Страница не найдена — Байт Транзит",
+    "desc": "Запрашиваемая страница не существует или была перемещена.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      <section class="error-page">
+        <div class="error-page__container">
+          <p class="error-page__code">404</p>
+          <h1 class="error-page__title">Страница не найдена</h1>
+          <p class="error-page__text">
+            Возможно, она была перемещена или удалена. Вернитесь на главную — поможем
+            организовать официальный импорт из Китая.
+          </p>
+          <a class="button button--primary error-page__action" href="/">На главную</a>
+        </div>
+      </section>
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Транспортно-экспедиционные услуги — Байт Транзит",
+    "desc": "Составим выгодный маршрут и доставим партию в срок: официальный ввоз товаров из Китая в Россию по асфальту, рельсам, воздуху и морю.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/service-hero.html', {
+        "breadcrumbLabel": "ТЭУ",
+        "eyebrowText": "для селлеров, товарного бизнеса и производств",
+        "title": 'Составим выгодный<br>маршрут и <span class="service-hero__title-mark">доставим</span><br><span class="service-hero__title-mark">партию в срок</span>',
+        "subtitle": '<span class="service-hero__subtitle-accent">Официальный ввоз товаров из Китая в Россию по асфальту, рельсам, воздуху и морю.</span> На ваш склад, наш фулфилмент или прямо на маркетплейсы',
+        "ctaLabel": "Получить консультацию",
+        "ctaFormName": "Услуга — ТЭУ, консультация",
+        "mediaVariant": "contained",
+        "mediaShape": "square",
+        "photoSrc": "@img/service-hero.bit/hero-photo-teu@2x.jpg",
+        "photoAlt": "Морской порт, поезд и грузовой корабль — маршрут доставки",
+        "photoW": "697",
+        "photoH": "697",
+        "heroWaypoints": "true",
+        "trust1Icon": "@img/service-hero.bit/trust-years@2x.png",
+        "trust1Text": "<b>35 лет на рынке</b><br>в составе группы компаний",
+        "trust2Icon": "@img/service-hero.bit/trust-2-outsourcing@2x.png",
+        "trust2Text": "<b>Страхуем сохранность</b><br>каждого товара в партии",
+        "trust3Icon": "@img/service-hero.bit/trust-3-outsourcing@2x.png",
+        "trust3Text": "<b>Поможем с оплатой</b> товаров<br>и таможенным оформлением",
+        "trust4Icon": "@img/service-hero.bit/trust-4-outsourcing@2x.png",
+        "trust4Text": "<b>Фиксируем стоимость</b><br>поставки до начала работ"
+      })
+
+      @@include('tpls/sections/services-intro.html')
+
+      <section class="service-steps" id="service-steps">
+        <div class="service-steps__container section__container container">
+          <div class="section__head">
+            <h2 class="section-title">Как проходят <b>официальные поставки</b> с Байт Транзит?</h2>
+            <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
+          </div>
+
+          <ul class="service-steps__list">
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "teu-1",
+                "title": '<b>Подготовка</b> и оплата',
+                "list": "<li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Убедимся, что у вас есть полный пакет документов и мы сможем вывезти товар беспрепятственно.</li><li>Если что-то будет не так — предложим помощь с таможенным оформлением</li>",
+                "image": "step-1-teu@2x.jpg",
+                "imageW": "1024",
+                "imageH": "768",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "teu-2",
+                "bgImage": "step-2-teu-bg@2x.jpg",
+                "title": 'Складская <b>обработка</b><br><b>и страхование</b>',
+                "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
+                "image": "step-2-teu-bg@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "cover",
+                "mediaGhost": "true"
+              })
+            </li>
+
+            <li class="service-steps__item service-steps__item--row">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "teu-half-3",
+                "bgImage": "step-3-teu-bg@2x.jpg",
+                "title": 'Доставка <br>до таможни<br>и выпуск из Китая',
+                "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара и ввоз в РФ, используя ваши документы.</li><li>Если в бумагах найдут ошибки — предложим услуги таможенного оформления</li>",
+                "image": "step-3-teu-bg@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "cover",
+                "mediaGhost": "true"
+              })
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "teu-half-4",
+                "title": "Выгодная транспортировка по РФ",
+                "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
+                "image": "step-4-teu@2x.jpg",
+                "imageW": "1086",
+                "imageH": "1448",
+                "mediaVariant": "cover"
+              })
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="service-perks service-perks--teu" id="service-perks">
+        <div class="service-perks__container section__container container">
+          <div class="section__head service-perks__head">
+            <h2 class="section-title"><b>Боитесь</b> тонкостей официального ввоза<br>и представляете убытки?</h2>
+            <p class="section-desc">Выбирайте Байт Транзит — с нами сон крепче, а логистика дешевле</p>
+          </div>
+
+          <div class="service-perks__slider swiper">
+            <ul class="service-perks__list swiper-wrapper">
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "<b>Удешевляем логистику</b>,<br>исключая переплаты",
+              "text": "Стоимость логистических услуг становится ниже на 5-50%, когда все этапы в руках «Байт-Транзит»<a href='archive-case.html'>Подтверждение в кейсах</a>",
+              "image": "perk-1-teu@2x.jpg",
+              "imageW": "1254",
+              "imageH": "1254"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "<b>Называем реальные</b><br>сроки вместо красивых",
+              "text": "Критично смотрим на поставку и учитываем возможные задержки, чтобы вы смогли запланировать производство или продажи",
+              "image": "perk-2-teu@2x.jpg",
+              "imageW": "1254",
+              "imageH": "1254"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "<b>Спасаем от задержек</b><br>и издержек на СВХ",
+              "text": "Груз не застрянет на складе из-за ошибки в декларации или отсутствующего сертификата. Мы этого не допустим",
+              "image": "perk-3-teu@2x.jpg",
+              "imageW": "1086",
+              "imageH": "1448"
+            })
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

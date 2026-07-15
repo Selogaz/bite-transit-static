@@ -1,0 +1,68 @@
+
+<section class="service-hero service-hero--@@mediaVariant" id="service-hero">
+  <div class="service-hero__container container">
+    @@include('../b/breadcrumbs.html', {
+      "parentLabel": "Услуги",
+      "currentLabel": "@@breadcrumbLabel"
+    })
+
+    <p class="service-hero__eyebrow">
+      <span class="service-hero__eyebrow-icons" aria-hidden="true">
+        <span class="service-hero__eyebrow-avatar service-hero__eyebrow-avatar--faint"></span>
+        <span class="service-hero__eyebrow-avatar service-hero__eyebrow-avatar--muted"></span>
+        <span class="service-hero__eyebrow-avatar"></span>
+      </span>
+      @@eyebrowText
+    </p>
+
+    <h1 class="service-hero__title">
+      @@title
+    </h1>
+
+    <p class="service-hero__subtitle">
+      @@subtitle
+    </p>
+
+    <button class="service-hero__action button button--primary" type="button" data-b_modal-open="callback" data-form-name="@@ctaFormName">
+      @@ctaLabel
+    </button>
+  </div>
+
+  <div class="service-hero__media media service-hero__media--@@mediaShape">
+    <picture class="media__pic">
+      <img class="media__img" src="@@photoSrc" alt="@@photoAlt" width="@@photoW" height="@@photoH" loading="lazy">
+    </picture>
+    @@if (typeof heroWaypoints != 'undefined') {
+    <div class="service-hero__waypoints" aria-hidden="true">
+      <span class="service-hero__waypoint service-hero__waypoint--1">01</span>
+      <span class="service-hero__waypoint service-hero__waypoint--2">02</span>
+      <span class="service-hero__waypoint service-hero__waypoint--3">03</span>
+    </div>
+    }
+  </div>
+
+  <div class="service-hero__trust-bar">
+    <div class="service-hero__trust-container container">
+      <ul class="service-hero__trust-list">
+        @@include('../cards/trust-card.html', {
+          "icon": "@@trust1Icon",
+          "text": "@@trust1Text"
+        })
+        @@include('../cards/trust-card.html', {
+          "icon": "@@trust2Icon",
+          "text": "@@trust2Text"
+        })
+        @@include('../cards/trust-card.html', {
+          "icon": "@@trust3Icon",
+          "text": "@@trust3Text"
+        })
+        @@if (typeof trust4Text != 'undefined') {
+        @@include('../cards/trust-card.html', {
+          "icon": "@@trust4Icon",
+          "text": "@@trust4Text"
+        })
+        }
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<!-- Секция «course-preview» — плейсхолдер видео (реальное придёт из CMS) + повтор оффера курса -->
+<section class="course-preview section" id="course-preview">
+  <div class="course-preview__container section__container container">
+    <h2 class="course-preview__title"><b>Предпросмотр</b> курса</h2>
+    <p class="course-preview__desc">
+      Нарезка из уроков — позволит за 60 секунд понять, подходит ли вам спикер и подача материала
+    </p>
+
+    <button class="course-preview__video" type="button" aria-label="Смотреть предпросмотр курса">
+      <img class="course-preview__video-icon" src="@img/course.bit/icon-play.svg" alt="" width="68" height="68">
+    </button>
+
+    @@include('../cards/course-offer.html', { "formName": "Курс — предпросмотр — забрать бесплатно" })
+  </div>
+</section>

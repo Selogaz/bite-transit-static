@@ -1,0 +1,42 @@
+
+<section class="reviews section" id="reviews">
+  <div class="reviews__container section__container">
+    <div class="reviews__head">
+      <h2 class="section-title">Отзывы</h2>
+
+      <div class="reviews__nav">
+        <button class="nav-arrow nav-arrow--soft reviews__button reviews__button--prev" type="button" aria-label="Назад">
+          <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+        </button>
+        <button class="nav-arrow nav-arrow--soft reviews__button reviews__button--next" type="button" aria-label="Вперед">
+          <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+        </button>
+      </div>
+    </div>
+
+    <div class="reviews__slider swiper">
+      <ul class="reviews__wrapper swiper-wrapper">
+        @@include('../cards/review-card.html', {
+          "avatar": "avatar-woman@2x.png",
+          "name": "Зинаида Александровна, 69 лет, санкт-петербург",
+          "quote": "«Исполнилась моя давняя мечта!»",
+          "text": "Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует"
+        })
+        @@include('../cards/review-card.html', {
+          "avatar": "avatar-woman@2x.png",
+          "name": "Зинаида Александровна, 69 лет, санкт-петербург",
+          "quote": "«Исполнилась моя давняя мечта!»",
+          "text": "Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует"
+        })
+        @@include('../cards/review-card.html', {
+          "avatar": "avatar-woman@2x.png",
+          "name": "Зинаида Александровна, 69 лет, санкт-петербург",
+          "quote": "«Исполнилась моя давняя мечта!»",
+          "text": "Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует"
+        })
+      </ul>
+    </div>
+
+    <div class="reviews__pagination swiper-pagination"></div>
+  </div>
+</section>

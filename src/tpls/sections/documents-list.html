@@ -1,0 +1,19 @@
+<!-- Секция «documents-list» — сетка карточек документов. Ссылки-заглушки (href="#") — файлы придут из CMS. -->
+<section class="documents-list section" id="documents-list">
+  <div class="documents-list__container section__container container">
+    <ul class="documents-list__grid">
+      @@include('../cards/document-card.html', {
+        "title": "Открыть положение о гарантиях"
+      })
+      @@include('../cards/document-card.html', {
+        "title": "Открыть документ 2"
+      })
+      @@include('../cards/document-card.html', {
+        "title": "Открыть документ 1"
+      })
+      @@include('../cards/document-card.html', {
+        "title": "Открыть лицензии"
+      })
+    </ul>
+  </div>
+</section>

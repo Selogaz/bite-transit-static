@@ -1,0 +1,147 @@
+:root {
+  --c-primary: #bf2e36;
+  --c-primary-rgb: 191, 46, 54;
+  --c-primary-dark: #a70a13;
+  --c-primary-light: #b12830;
+  --c-primary-bright: #e53d47;
+
+  --c-glow: #dd565a;
+
+  --c-glow-course: #db5458;
+  --c-glow-course-rgb: 219, 84, 88;
+
+  --c-divider: #d4d4d4;
+
+  --c-divider-light: #ebebeb;
+  --c-divider-rgb: 212, 212, 212;
+  --c-error: #ef4444;
+
+  --bg-app-light: #fff;
+  --fg-app-dark: #fff;
+  --fg-app-light: #171717;
+  --bg-app-dark: #171717;
+  --bg-app-dark-rgb: 23, 23, 23;
+
+  --bg-audit-plate: #0a0a0a;
+  --bg-audit-plate-rgb: 10, 10, 10;
+  --bg-app-light-secondary: #f4f4f4;
+  --bg-app-light-secondary-rgb: 244, 244, 244;
+
+  --bg-app-light-tertiary: #efefef;
+  --bg-app-light-tertiary-rgb: 239, 239, 239;
+  --bg-card: #f4f4f4;
+  --bg-card-secondary: #f4f4f4;
+
+  --bg-card-glass: rgba(var(--border-app-light-rgb), 0.6);
+
+  --border-card-glass: rgba(var(--border-app-light-rgb), 0.55);
+  --bg-media-placeholder: #cbcbcb; // заглушка превью без фото (секция videos)
+  --fg-card-caption: #545454;
+
+  --bg-input: rgba(247, 249, 252, 0.9);
+  --bg-social: rgba(244, 244, 244, 0.6);
+  --fg-social: #050825;
+  --border-check-regular: #212121;
+  --fg-agreement: #212121;
+
+  --gradient-primary:
+    radial-gradient(circle at 50% 0%, rgba(187, 69, 72, 1) 0%, rgba(187, 69, 72, 0) 100%),
+    linear-gradient(#bf2e36, #bf2e36);
+
+  --gradient-card-accent:
+    radial-gradient(
+      73.26% 47.24% at 61.07% 6.36%,
+      #e76063 0%,
+      #da5457 15%,
+      #cf484c 30%,
+      #c73e42 45%,
+      #c0363a 60%,
+      #bb2e32 75%,
+      #b72429 100%
+    );
+
+  --gradient-card-fade:
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+  --gradient-decor-bracket: linear-gradient(var(--bg-app-dark) 42.13%, #361213 61.69%, #db5458 97.75%);
+
+  --fg-regular: #363636;
+  --fg-secondary: #292a2d;
+  --fg-link-regular: #363636;
+  --fg-link-hover: var(--c-primary);
+  --fg-primary: var(--c-primary);
+
+  --fg-button-primary: #fff;
+  --bg-button-primary: var(--c-primary);
+  --bg-button-primary-hover: var(--c-primary-light);
+  --border-button-primary: transparent;
+
+  --fg-button-secondary: #fff;
+  --bg-button-secondary: #363636;
+  --bg-button-secondary-hover: #272727;
+  --border-button-secondary: transparent;
+
+  --fg-button-third: #171717;
+  --fg-button-third-accent: var(--c-primary-dark);
+  --border-button-third: #171717;
+  --icon-button-third: var(--c-primary);
+
+  --bg-timer-badge: #454545;
+
+  --bg-burger-close: #373737;
+  --bg-burger-close-secondary: #353535;
+
+  --fg-menu-phone: #394260;
+
+  --fg-header-phone: #444548;
+
+  --fg-menu-link: #191919;
+
+  --fg-pagination: #656565;
+
+  --fg-hero: #191919;
+
+  --fg-trust: #050825;
+
+  --border-app-light-rgb: 255, 255, 255;
+
+  --border-trust-bar: rgba(75, 75, 75, 0.2);
+
+  --fg-program-card: #0e1226;
+
+  --fg-review-rgb: 46, 59, 78;
+
+  --border-review-card: rgba(0, 0, 0, 0.04);
+  --shadow-review-card: rgba(0, 0, 0, 0.1);
+
+  --shadow-tour-card: rgba(0, 0, 0, 0.09);
+
+  --shadow-modal-contact: rgba(0, 0, 0, 0.1);
+
+  --bg-consult-card-backing: rgba(112, 112, 112, 0.5);
+
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  --bg-overlay-strong: rgba(0, 0, 0, 0.8);
+
+  --fg-closer-inverted: var(--bg-card);
+
+  --fg-closer-founder: rgba(255, 255, 255, 0.3);
+
+  --fg-input-regular: rgba(36, 39, 41, 0.7);
+  --fg-input-hover: rgba(36, 39, 41, 0.7);
+  --fg-input-focus: #242729;
+  --fg-input-error: var(--c-error);
+  --border-input-regular: #ededed;
+  --border-input-hover: #ededed;
+  --border-input-focus: #ededed;
+  --border-input-error: var(--c-error);
+
+  --fg-contacts-text: #242729;
+
+  --fg-contacts-icon: #15212c;
+
+  --fg-post-lead: rgba(25, 25, 25, 0.85);
+  --fg-post-date: rgba(25, 25, 25, 0.3);
+}

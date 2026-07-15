@@ -1,0 +1,174 @@
+.partners {
+  padding-top: 5.7rem;
+  padding-bottom: 0;
+  background: var(--bg-app-light-secondary);
+
+  @media (max-width: $mobile) {
+    padding-top: 5rem;
+  }
+}
+
+.partners__container {
+  width: 100%;
+  max-width: 192rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: $mobile) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.partners__card {
+  position: relative;
+  padding: 6.7rem 4rem 10.7rem;
+  overflow: hidden;
+  background: var(--bg-app-dark) url("@img/partners.bit/bg-lights.jpg") center / cover no-repeat;
+  border-radius: var(--radius-panel);
+
+  @media (max-width: $mobile) {
+    padding: 5rem 1rem;
+    border-radius: 0;
+  }
+}
+
+.partners__card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0.7) 50%, var(--bg-app-dark) 100%),
+    rgba(var(--bg-app-dark-rgb), 0.6);
+}
+
+.partners .section__head {
+  margin-bottom: 4.4rem;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.partners .section-title {
+  position: relative;
+  font-weight: 400;
+  color: var(--fg-app-dark);
+}
+
+.partners__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2.3rem 2.6rem;
+  justify-content: center;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem 0.8rem;
+    justify-content: center;
+  }
+}
+
+.partners__grid .partner-card:nth-child(6) {
+  grid-column: 2;
+}
+
+.partners__grid .partner-card:nth-child(7) {
+  grid-column: 3;
+}
+
+.partners__grid .partner-card:nth-child(8) {
+  grid-column: 4;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  width: 22.1rem;
+  min-height: 15.9rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  background: var(--bg-app-light);
+  border: 0.3rem solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-card);
+
+  // Мобайл: фикс. ширина/высота по макету, тонкая рамка, узкий паддинг. Высота фикс.
+  // (не min-height): без definite-height object-fit:contain внутри не резолвится, лого лезли к верху.
+  @media (max-width: $mobile) {
+    flex: 0 0 auto;
+    width: 10.15rem;
+    height: 7.3rem;
+    min-height: 0;
+    padding: 0.5rem;
+    border-width: 0.1rem;
+  }
+}
+
+.partner-card__media {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+}
+
+@media (max-width: $mobile) {
+  .partners--rastamozhka,
+  .partners--rastamozhka .partners__card {
+    background: var(--bg-app-light);
+  }
+
+  .partners--rastamozhka .partners__card::before {
+    content: none;
+  }
+
+  .partners--rastamozhka .section-title {
+    color: var(--fg-regular);
+  }
+}
+
+.partner-card__color {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--tr) ease;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+@media (any-hover: hover) and (min-width: $mobile + 1) {
+  .partner-card:hover .partner-card__color {
+    opacity: 1;
+  }
+}
+
+.partner-card--cover {
+  width: 15rem;
+  padding: 0;
+  background: none;
+  border-color: transparent;
+
+  @media (max-width: $mobile) {
+    width: 6.9rem;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.partner-card--compact {
+  width: 17.3rem;
+
+  @media (max-width: $mobile) {
+    width: 7.94rem;
+  }
+}
+
+.partner-card--wide {
+  @media (max-width: $mobile) {
+    width: 10.65rem;
+  }
+}

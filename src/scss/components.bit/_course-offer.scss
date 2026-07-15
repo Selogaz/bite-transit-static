@@ -1,0 +1,37 @@
+.course-offer .course__price {
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: flex-start;
+}
+
+.section--dark .course-offer .course__price-old,
+.section--dark .course-offer .course__price-new {
+  color: var(--fg-app-dark);
+}
+
+@media (max-width: $mobile) {
+  .course-offer.course__offer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 1.6rem;
+    justify-content: flex-start;
+  }
+
+  .course-offer .course__cta {
+    order: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .course-offer .timer {
+    order: 2;
+  }
+
+  .course-offer .course__price {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+    order: 3;
+  }
+}

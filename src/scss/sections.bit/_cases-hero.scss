@@ -1,0 +1,13 @@
+.cases-hero {
+  padding-top: 1.6rem;
+  background: var(--bg-app-light);
+}
+
+.cases-hero__title {
+  margin: 3.7rem 0 0;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin-top: 2.9rem;
+  }
+}

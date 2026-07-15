@@ -1,0 +1,130 @@
+.service-steps {
+  background: var(--bg-app-light-secondary);
+}
+
+// Ширина заголовка ограничена до 2 строк (754px, центрирован), иначе на всю ширину
+// контейнера H2 вытягивается в одну строку.
+.service-steps .section-title {
+  max-width: 75.4rem;
+  margin-inline: auto;
+  font-weight: 400;
+}
+
+.service-steps .section-title b {
+  font-weight: 700;
+}
+
+.service-steps__container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.service-steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 4rem;
+  counter-reset: step;
+}
+
+.service-steps__item--row {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.service-steps__item--row > .step-card {
+  flex: 1 1 50%;
+  min-height: 49.3rem;
+}
+
+.service-steps .step-card__media {
+  flex: 1 1 45%;
+  min-width: 28rem;
+}
+
+.service-steps .step-card__media--ghost .media__img {
+  opacity: 0;
+}
+
+.service-steps .step-card--dark .step-card__media:not(.step-card__media--ghost)::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(90deg, var(--bg-app-dark), rgba(var(--bg-app-dark-rgb), 0) 42%);
+}
+
+@media (max-width: $laptop) {
+  .service-steps__item--row {
+    flex-direction: column;
+  }
+
+  .service-steps__item--row > .step-card {
+    min-height: 45.7rem;
+  }
+
+  .service-steps .step-card__media {
+    flex-basis: 40%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .service-steps__container {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .service-steps__list {
+    gap: 2rem;
+    margin-top: 2.4rem;
+  }
+
+  .service-steps .step-card__media--ghost {
+    height: 0;
+    min-height: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .service-steps .step-card--teu-2,
+  .service-steps .step-card--teu-half-3 {
+    min-height: 44.1rem;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__content,
+  .service-steps .step-card--teu-half-3 .step-card__content {
+    justify-content: flex-start;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__bg .media__img,
+  .service-steps .step-card--teu-half-3 .step-card__bg .media__img {
+    position: absolute;
+    max-width: none;
+    height: auto;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__bg .media__img {
+    top: 40.83%;
+    left: -77%;
+    width: 177%;
+  }
+
+  .service-steps .step-card--teu-half-3 .step-card__bg .media__img {
+    top: 52.44%;
+    left: -61.33%;
+    width: 161.4%;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__bg::after {
+    background: linear-gradient(180deg, var(--bg-app-dark) 45.6%, rgba(var(--bg-app-dark-rgb), 0) 58%);
+  }
+
+  .service-steps .step-card--teu-half-3 .step-card__bg::after {
+    background: linear-gradient(180deg, var(--bg-app-dark) 52.4%, rgba(var(--bg-app-dark-rgb), 0) 58%);
+  }
+
+  .service-steps .step-card--teu-half-3 .step-card__title br:first-of-type {
+    display: none;
+  }
+}

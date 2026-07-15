@@ -1,0 +1,106 @@
+.modal-audit {
+  --max-width: 41.2rem;
+  --padding: 2.5rem 2.8rem 2.3rem;
+  --radius: var(--radius-card);
+
+  border: 0.1rem solid var(--border-input-regular);
+
+  box-shadow:
+    0 2.1rem 2.1rem var(--shadow-tour-card),
+    0 0.5rem 1.1rem var(--shadow-modal-contact);
+}
+
+.modal-audit__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.modal-audit .input {
+  --fz: 1.5rem;
+  --padding-block: 2.79rem;
+  --padding-inline: 3rem;
+  --radius: 1rem;
+}
+
+// Свёрнутый .input__error (max-height:0) всё равно рендерит верхний padding — обнуляем
+// скоупно, возвращаем при подсветке ошибки, чтобы сообщение осталось видимым.
+.modal-audit .input__error {
+  padding-top: 0;
+}
+
+.modal-audit .is-invalid--highlighted .input__error {
+  padding-top: 0.4em;
+}
+
+.modal-audit__submit {
+  --padding-block: 2.675rem;
+
+  margin-bottom: 2.1rem;
+}
+
+.modal-audit__agreement {
+  --size-check: 1.4rem;
+  --gap-check: 1.5rem;
+
+  --fg-label: var(--fg-agreement);
+
+  max-width: 31.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-audit__agreement:last-child {
+  margin-bottom: 0;
+}
+
+.modal-audit__agreement .checkbox__label {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.modal-audit__agreement .checkbox__link {
+  font-weight: 500;
+  color: inherit;
+}
+
+@media (max-width: $mobile) {
+  .modal-audit {
+    --max-width: none;
+    --padding: 2rem 1.5rem 2.1rem;
+  }
+
+  .modal-audit__fields {
+    gap: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-audit .input {
+    --fz: 1.3rem;
+    --padding-block: 1.62rem;
+    --padding-inline: 1.2rem;
+    --radius: 0.7rem;
+  }
+
+  .modal-audit .input__field {
+    line-height: 1.2;
+  }
+
+  .modal-audit__submit {
+    --fz: 1.4rem;
+    --padding-block: 1.49rem;
+    --radius: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .modal-audit__agreement {
+    --gap-check: 0.9rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-audit__agreement .checkbox__label {
+    font-size: 1.2rem;
+  }
+}

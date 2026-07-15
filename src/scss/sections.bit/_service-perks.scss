@@ -1,0 +1,282 @@
+.service-perks {
+  background: var(--bg-app-light);
+}
+
+.service-perks .section-title {
+  font-weight: 400;
+}
+
+.service-perks .section-title b {
+  font-weight: 700;
+}
+
+.service-perks__head {
+  max-width: 90rem;
+  text-align: left;
+}
+
+.service-perks .section-desc {
+  max-width: 31rem;
+  margin-left: 0;
+}
+
+.service-perks__container {
+  padding-top: 11rem;
+  padding-bottom: 10rem;
+}
+
+.service-perks__nav {
+  display: flex;
+  gap: 1.9rem;
+  justify-content: flex-end;
+  margin-top: -8.9rem;
+  margin-bottom: 3rem;
+}
+
+.service-perks__arrow {
+  --size: 7.1rem;
+  --radius: var(--radius-md);
+}
+
+.service-perks__slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-perks__list {
+  display: flex;
+}
+
+.service-perks:not(.service-perks--teu) .service-perk-card:not(:last-child) {
+  margin-right: 4rem;
+}
+
+// Карточка горизонтальная (467×285): слева колонка «заголовок + текст», справа портретное фото.
+// Высота фикс. 28.5rem → min-height, а не тянущийся столбец с фото у нижнего края.
+.service-perk-card {
+  display: flex;
+  gap: 3.6rem;
+  width: 46.6rem;
+  min-height: 28.5rem;
+  padding-left: 3.4rem;
+  overflow: hidden;
+  background: var(--bg-app-light);
+  border: 0.1rem solid var(--c-divider-light);
+  border-radius: var(--radius-card);
+}
+
+.service-perk-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 4.3rem 0 3rem;
+}
+
+.service-perk-card__title {
+  font-family: var(--ff-title);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.3;
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+.service-perk-card__title b {
+  font-weight: 700;
+}
+
+.service-perk-card__text {
+  margin-top: 1.2rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-small);
+  line-height: 1.3;
+  color: var(--fg-regular);
+}
+
+.service-perk-card__text a {
+  display: block;
+  width: fit-content;
+  margin-top: 1.6rem;
+  color: var(--fg-regular);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.service-perk-card__media {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 17.2rem;
+  aspect-ratio: 172 / 264;
+  border-radius: var(--radius-xl);
+}
+
+.service-perk-card__media::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(to right, var(--bg-app-light), rgba(var(--border-app-light-rgb), 0) 27%);
+}
+
+.service-perks--fulfillment .service-perk-card__media::after {
+  content: none;
+}
+
+.service-perks--fulfillment .section-desc {
+  max-width: none;
+}
+
+.service-perks--payments .section-desc {
+  max-width: none;
+}
+
+@media (min-width: $tablet + 1) {
+  .service-perks--payments .service-perks__nav,
+  .service-perks--fulfillment .service-perks__nav {
+    display: none;
+  }
+}
+
+.service-perks--outsourcing .section-desc {
+  max-width: none;
+}
+
+@media (min-width: $mobile + 1) {
+  .service-perks--teu .service-perks__head {
+    max-width: none;
+    text-align: center;
+  }
+
+  .service-perks--teu .section-desc {
+    max-width: 31rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .service-perks--teu .service-perks__list {
+    gap: 1.8rem;
+    justify-content: center;
+  }
+
+  .service-perks--teu .service-perk-card {
+    flex-direction: column;
+    gap: 0;
+    width: 35.7rem;
+    min-height: 38.7rem;
+    padding: 3.5rem 2.3rem 0;
+  }
+
+  .service-perks--teu .service-perk-card__body {
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
+  .service-perks--teu .service-perk-card__media {
+    align-self: stretch;
+    width: auto;
+    height: 18.7rem;
+    aspect-ratio: auto;
+    margin: auto -2.3rem 0;
+    border-radius: 0;
+  }
+
+  .service-perks--teu .service-perk-card__media .media__img {
+    object-fit: contain;
+  }
+
+  .service-perks--teu .service-perk-card:nth-child(2) .media__img {
+    transform: scale(1.4);
+  }
+
+  .service-perks--teu .service-perk-card:nth-child(3) .media__img {
+    object-fit: cover;
+  }
+
+  .service-perks--teu .service-perk-card__media::after {
+    content: none;
+  }
+}
+
+@media (max-width: $desktop-md) {
+  .service-perks__container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: $tablet) {
+  .service-perks__nav {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .service-perks__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .service-perks__nav {
+    gap: 1.2rem;
+    justify-content: center;
+    order: 1;
+    margin-top: 2.4rem;
+    margin-bottom: 0;
+  }
+
+  .service-perks__arrow {
+    --size: 4.5rem;
+  }
+
+  .service-perks:not(.service-perks--teu) .service-perk-card:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+
+  .service-perk-card {
+    flex-direction: column;
+    width: 28rem;
+    min-height: 0;
+    padding: 2.4rem 2rem 0;
+  }
+
+  .service-perk-card__body {
+    padding: 0;
+  }
+
+  .service-perk-card__media {
+    align-self: stretch;
+    width: auto;
+    min-height: 18.7rem;
+    aspect-ratio: auto;
+    margin-top: 2rem;
+  }
+
+  .service-perks--samples .service-perk-card__media,
+  .service-perks--outsourcing .service-perk-card__media {
+    min-height: 0;
+    aspect-ratio: 240 / 150;
+    margin: 2rem -2rem 0;
+    border-radius: 0;
+  }
+
+  .service-perks--samples .service-perk-card__media::after,
+  .service-perks--outsourcing .service-perk-card__media::after {
+    content: none;
+  }
+
+  .service-perks--teu .service-perks__list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service-perks--teu .service-perk-card {
+    width: 100%;
+  }
+
+  .service-perks--teu .service-perk-card__media {
+    margin: 2rem -2rem 0;
+  }
+}

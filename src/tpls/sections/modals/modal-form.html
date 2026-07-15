@@ -1,0 +1,34 @@
+
+<div class="b_modal" id="callback">
+  <h3 class="b_modal__title">Заказать звонок</h3>
+  <p class="b_modal__desc">
+    Оставьте свои контакты, и мы свяжемся с вами в ближайшее время
+  </p>
+
+  <div class="form js_form">
+    <input type="hidden" name="form_name" value="Заявка">
+
+    <div class="form__fields">
+      @@include('../../b/input.html', {
+        "className": "js_form__control",
+        "type": "text",
+        "name": "name",
+        "placeholder": "Ваше имя",
+        "attributes": "required",
+        "error": "Введите имя"
+      })
+      @@include('../../b/input.html', {
+        "className": "js_form__control",
+        "type": "tel",
+        "name": "phone",
+        "placeholder": "+ 7 (___) ___ __ __",
+        "attributes": "required data-mask=\"phone\"",
+        "error": "Введите телефон"
+      })
+    </div>
+
+    <div class="form__actions">
+      <button class="button button--primary button--block js_form__submit" type="button">Отправить</button>
+    </div>
+  </div>
+</div>

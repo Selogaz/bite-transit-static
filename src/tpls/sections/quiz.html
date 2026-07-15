@@ -1,0 +1,300 @@
+<section class="quiz" id="quiz">
+  <div class="quiz__container section__container container">
+    <h2 class="quiz__title section-title">Ответьте на <b>5 вопросов и получите:</b></h2>
+
+    <ul class="quiz__benefits">
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/quiz.bit/benefit-estimate@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Смету</b> на тестовую поставку</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/quiz.bit/benefit-offer@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Персональное&nbsp;предложение</b> по оптимизации расходов на логистику</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/quiz.bit/benefit-calc@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Расчет</b> стоимости отдельных услуг или логистики под ключ</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/quiz.bit/benefit-article@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Статья</b> «7 точек, в которых чаще всего теряется маржинальность»</p>
+      </li>
+    </ul>
+
+    <div class="quiz__card js_form">
+      <input type="hidden" name="form_name" value="Квиз — 5 вопросов">
+
+      <ul class="quiz__progress">
+        <li class="quiz__dot is-active"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+      </ul>
+
+      <div class="quiz__slider swiper">
+        <ul class="quiz__wrapper swiper-wrapper">
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как сейчас устроен ваш импорт?</h3>
+
+            <ul class="quiz__options">
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-1",
+                "modifier": "",
+                "text": "Везу через карго-посредника (S-China и аналоги)",
+                "image": "option-cargo@2x.png",
+                "checked": "checked"
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-1",
+                "modifier": "",
+                "text": "Оформляю все официально сам или через сотрудника",
+                "image": "option-official@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-1",
+                "modifier": "",
+                "text": "Только планирую перейти к импорту",
+                "image": "option-planning@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-1",
+                "modifier": " quiz-option--wide",
+                "text": "Был неудачный опыт в импорте",
+                "image": "option-failed@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-1",
+                "modifier": " quiz-option--wide",
+                "text": "Работаю в белую через логистическую компанию",
+                "image": "option-legal@2x.png",
+                "checked": ""
+              })
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Есть ли у вас полный пакет документов на товар?</h3>
+
+            <ul class="quiz__options">
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-2",
+                "modifier": "",
+                "text": "Однозначно да, все ввозится в белую",
+                "image": "option-docs-full@2x.png",
+                "checked": "checked"
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-2",
+                "modifier": "",
+                "text": "Нет уверенности, что комплект полный",
+                "image": "option-docs-unsure@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-2",
+                "modifier": "",
+                "text": "Документы оформляет посредник — я не видел",
+                "image": "option-docs-agent@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-2",
+                "modifier": " quiz-option--wide",
+                "text": "Документов нет — везу неофициально",
+                "image": "option-docs-none@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-2",
+                "modifier": " quiz-option--wide",
+                "text": "Ещё не закупал — только планирую",
+                "image": "option-notyet@2x.png",
+                "checked": ""
+              })
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как вы сейчас платите поставщику в Китае?</h3>
+
+            <ul class="quiz__options">
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-3",
+                "modifier": "",
+                "text": "SWIFT-перевод",
+                "image": "option-pay-swift@2x.png",
+                "checked": "checked"
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-3",
+                "modifier": "",
+                "text": "Через российский банк с конвертацией",
+                "image": "option-pay-bank@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-3",
+                "modifier": "",
+                "text": "Через посредника / агента",
+                "image": "option-pay-agent@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-3",
+                "modifier": " quiz-option--wide",
+                "text": "USDT или криптовалюта",
+                "image": "option-pay-crypto@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-3",
+                "modifier": " quiz-option--wide",
+                "text": "Ещё не закупал — только планирую",
+                "image": "option-notyet@2x.png",
+                "checked": ""
+              })
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Что для вас сейчас важнее всего в импорте?</h3>
+
+            <ul class="quiz__options">
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-4",
+                "modifier": "",
+                "text": "Снизить риски и перейти на официальную схему",
+                "image": "option-goal-risk@2x.png",
+                "checked": "checked"
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-4",
+                "modifier": "",
+                "text": "Разобраться сколько это будет стоить",
+                "image": "option-goal-cost@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-4",
+                "modifier": "",
+                "text": "Найти нишу и начать с нуля",
+                "image": "option-goal-niche@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-4",
+                "modifier": " quiz-option--wide",
+                "text": "Разобраться в документах — у меня есть пробелы",
+                "image": "option-goal-docs@2x.png",
+                "checked": ""
+              })
+              @@include('../cards/quiz-option.html', {
+                "name": "quiz-step-4",
+                "modifier": " quiz-option--wide",
+                "text": "Убедиться что мой текущий логист надёжен",
+                "image": "option-goal-logist@2x.png",
+                "checked": ""
+              })
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step quiz__step--final swiper-slide">
+            <h3 class="quiz__final-title">Последний шаг</h3>
+
+            <div class="quiz__form">
+              <div class="quiz__form-fields">
+                @@include('../b/input.html', {
+                  "className": "js_form__control",
+                  "type": "text",
+                  "name": "name",
+                  "placeholder": "Имя",
+                  "attributes": "required",
+                  "error": "Поле должно быть заполнено!"
+                })
+                @@include('../b/input.html', {
+                  "className": "js_form__control",
+                  "type": "tel",
+                  "name": "phone",
+                  "placeholder": "+ 7 (___) ___ __ __",
+                  "attributes": "required data-mask=\"phone\"",
+                  "error": "Поле должно быть заполнено!"
+                })
+              </div>
+
+              <button class="quiz__form-submit button button--primary button--block js_form__submit" type="button">
+                Получить аудит
+              </button>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="privacy.html">условия политики конфиденциальности</a>
+                </span>
+              </label>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="#">условия договора оферты</a>
+                </span>
+              </label>
+            </div>
+
+            <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+              <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

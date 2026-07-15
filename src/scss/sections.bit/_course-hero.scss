@@ -1,0 +1,128 @@
+.course-hero {
+  padding-top: 1.6rem;
+  padding-bottom: 0;
+
+  background: var(--bg-app-light);
+}
+
+.course-hero__breadcrumbs {
+  margin-bottom: 3.2rem;
+}
+
+.course-hero__grid {
+  grid-template-columns: minmax(0, 620fr) minmax(0, 1034fr);
+  // Контент выше фото; прижимаем текст к верху, иначе унаследованный от .hero__container
+  // align-items: center центрирует его и роняет вниз лишним отступом.
+  gap: 3.6em;
+  align-items: start;
+  margin-bottom: 5.4rem;
+}
+
+.course-hero__desc {
+  max-width: 46.7rem;
+  margin-bottom: 2.8rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
+.course-hero__desc b {
+  font-weight: 700;
+}
+
+.course-hero__media {
+  align-self: center;
+  width: 100%;
+  border-radius: var(--radius-card);
+}
+
+.course-hero__perks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4em;
+  padding: 3.2rem var(--p-container) 1.9rem;
+  margin: 0 calc(var(--p-container) * -1);
+  background: var(--bg-app-light);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+@media (max-width: $laptop) {
+  .course-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3.2em;
+  }
+
+  .course-hero__perks {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: $tablet) {
+  .course-hero {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-hero__breadcrumbs {
+    margin-bottom: 1.6rem;
+  }
+
+  .course-hero__grid {
+    gap: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .course-hero__desc {
+    max-width: none;
+    margin-bottom: 1.6rem;
+    font-size: var(--fz-small);
+  }
+
+  .course-hero__perks {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    padding: 2rem 1.6rem 1.6rem;
+  }
+
+  .course-hero__perks .trust-card__media {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: $mobile-xxlg) {
+  .course-hero .course-offer.course__offer-bottom {
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  // Кнопка не во всю ширину: заполняет строку до таймера, оставляя его справа
+  // (снимаем width:100% базовой мобильной раскладки .course-offer). basis:0 — чтобы кнопка
+  // ужалась под таймер, а не переносила его на свою строку из-за своей текстовой ширины.
+  // Боковой padding базовой кнопки (2.4em ≈ 36px) в узкую кнопку не влезает — сжимаем его
+  // до макетного (в Figma текст почти во всю плашку). margin-top тоже из тизера — обнуляем,
+  // иначе кнопка съезжает вниз и ломает выравнивание с таймером по верхнему краю.
+  .course-hero .course-offer .course__cta {
+    --padding-inline: 0.6rem;
+
+    flex: 1 1 0;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .course-hero .course-offer .timer {
+    flex: 0 0 auto;
+  }
+
+  .course-hero .course-offer .course__price {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+}

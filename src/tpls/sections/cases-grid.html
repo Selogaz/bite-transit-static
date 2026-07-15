@@ -1,0 +1,40 @@
+<!-- Секция «cases-grid» — фильтр по услуге + сетка карточек кейсов + пагинация. Карточки —
+     заглушки, реальные кейсы придут из CMS. На 320 таб-пилюли схлопываются в один селект. -->
+<section class="cases-grid" id="cases-grid">
+  <div class="cases-grid__container container">
+    <ul class="service-tabs" role="tablist">
+      @@include('../cards/service-tab.html', { "modifier": " service-tabs__link--active", "label": "Таможенное оформление" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Транспортно-экспедиционные услуги" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Сертификация, ввоз образцов" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Платежи" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Аутсорсинг ВЭД под ключ" })
+      @@include('../cards/service-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
+    </ul>
+
+    <ul class="cases-grid__list">
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+      @@include('../cards/service-result-card.html', {
+        "alt": "Курьер оформляет доставку коробок",
+        "percent": "**%",
+        "company": "Название компании",
+        "tag1": "Товарная ниша",
+        "tag2": "Средний объем поставки"
+      })
+    </ul>
+
+    @@include('../b/pagination.html')
+  </div>
+</section>

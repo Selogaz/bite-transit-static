@@ -1,0 +1,273 @@
+.steps {
+  overflow: hidden;
+  background: var(--bg-app-light-secondary);
+}
+
+.steps__container {
+  padding-top: 0;
+  padding-bottom: 6rem;
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  counter-reset: step;
+}
+
+.steps__item--row {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.step-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 45.7rem;
+  overflow: hidden;
+  counter-increment: step;
+  border-radius: var(--radius-card);
+}
+
+.step-card--dark {
+  color: var(--fg-app-dark);
+  background: var(--bg-app-dark);
+}
+
+.step-card--light {
+  color: var(--fg-app-light);
+  background: var(--bg-app-light);
+}
+
+.step-card--half-3,
+.step-card--half-4 {
+  flex: 1 1 50%;
+  min-height: 49.3rem;
+}
+
+.step-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.step-card__bg::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, var(--bg-app-dark) 29%, rgba(var(--bg-app-dark-rgb), 0) 55%);
+}
+
+.step-card__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 3rem 2rem 3rem 8.7rem;
+}
+
+.step-card__title {
+  max-width: 68.3rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.step-card__title::before {
+  content: counter(step, decimal-leading-zero) "/ ";
+}
+
+.step-card__accent {
+  font-weight: 700;
+  color: var(--c-primary-dark);
+}
+
+.step-card__list {
+  max-width: 43.2rem;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  list-style: disc;
+}
+
+.step-card__list li {
+  list-style: disc;
+}
+
+.step-card__list li + li {
+  margin-top: 1rem;
+}
+
+.step-card__term {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.step-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.6rem;
+}
+
+.step-card__action {
+  --fz: 1.6rem;
+  --padding-inline: 1.4em;
+}
+
+.step-card__media {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.step-card__media--tilt .media__img {
+  transform: rotate(10deg);
+}
+
+.step-card--1 .step-card__media {
+  width: 65.3rem;
+}
+
+.step-card--2 .step-card__media {
+  width: 86.6rem;
+}
+
+.step-card--2 .step-card__media .media__img {
+  position: absolute;
+  top: 10.7%;
+  left: 11.2%;
+  width: 78.4%;
+  height: auto;
+}
+
+.step-card--half-3 .step-card__media {
+  width: 35.6rem;
+}
+
+.step-card--half-4 .step-card__media {
+  width: 31.7rem;
+}
+
+.step-card--5 .step-card__media {
+  width: 58.9rem;
+}
+
+.step-card--5 {
+  color: var(--fg-regular);
+}
+
+.step-card--5 .step-card__title {
+  font-weight: 700;
+}
+
+@media (max-width: $laptop) {
+  .steps__item--row {
+    flex-direction: column;
+  }
+
+  .step-card--half-3,
+  .step-card--half-4 {
+    min-height: 45.7rem;
+  }
+
+  .step-card--1 .step-card__media,
+  .step-card--2 .step-card__media,
+  .step-card--half-3 .step-card__media,
+  .step-card--half-4 .step-card__media,
+  .step-card--5 .step-card__media {
+    width: 40%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .step-card {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .step-card--half-3,
+  .step-card--half-4 {
+    min-height: 0;
+  }
+
+  .step-card__content {
+    padding: 3rem 2.4rem;
+  }
+
+  // height, не min-height: у карточки 04 фото портретное (355×493) — в колонке .media__img
+  // резолвит height:100% от неопределённой высоты и раздувается. Фикс. зона: контент не растёт.
+  .step-card__media {
+    height: 24rem;
+  }
+
+  .step-card--1 .step-card__media,
+  .step-card--2 .step-card__media,
+  .step-card--half-3 .step-card__media,
+  .step-card--half-4 .step-card__media,
+  .step-card--5 .step-card__media {
+    width: 100%;
+  }
+
+  .step-card--2 .step-card__media .media__img {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  .step-card__title,
+  .step-card__list {
+    max-width: none;
+  }
+}
+
+@media (max-width: $mobile-xxlg) {
+  .steps__container {
+    padding-bottom: 2.4rem;
+  }
+
+  .steps__list,
+  .steps__item--row {
+    gap: 2rem;
+  }
+
+  .step-card__bg::after {
+    background: linear-gradient(180deg, var(--bg-app-dark) 46%, rgba(var(--bg-app-dark-rgb), 0) 83%);
+  }
+
+  .step-card__content {
+    padding: 2.2rem 1rem 1.4rem;
+  }
+
+  .step-card__title {
+    font-size: 2rem;
+  }
+
+  .step-card__list {
+    margin-top: 1rem;
+    font-size: var(--fz-small);
+  }
+
+  .step-card__media {
+    height: 19.1rem;
+  }
+
+  .step-card__actions {
+    flex-direction: column;
+  }
+
+  // Базовая .button — white-space:nowrap (уместно почти везде), но в колонке на 320
+  // длинные тексты CTA карточки 05 иначе вылезают за край кнопки.
+  .step-card__action {
+    white-space: normal;
+  }
+}

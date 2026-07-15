@@ -1,0 +1,96 @@
+
+<section class="stats section section--dark@@if (typeof hideStepsHead != 'undefined') { stats--flush}" id="stats">
+  <div class="stats__bg">
+    <div class="stats__photo media">
+      <picture class="media__pic">
+        <img class="media__img" src="@img/stats.bit/bg-port.jpg" alt="" loading="lazy">
+      </picture>
+      <div class="stats__photo-blur"></div>
+    </div>
+    <div class="stats__glow stats__glow--top"></div>
+    <div class="stats__glow stats__glow--bottom"></div>
+  </div>
+
+  <div class="stats__container section__container container">
+    <div class="stats__assets">
+      <p class="stats__assets-label">Активы компании</p>
+
+      <ul class="stats__assets-list">
+        @@include('../cards/stat-item.html', {
+          "value": "35",
+          "text": "лет на рынке в составе группы"
+        })
+        @@include('../cards/stat-item.html', {
+          "value": "500",
+          "plus": true,
+          "text": "единиц собственного большегрузного транспорта"
+        })
+        @@include('../cards/stat-item.html', {
+          "value": "50",
+          "plus": true,
+          "narrow": true,
+          "text": "багажных вагонов"
+        })
+        @@include('../cards/stat-item.html', {
+          "value": "1 000",
+          "plus": true,
+          "narrow": true,
+          "text": "сотрудников в группе"
+        })
+        @@include('../cards/stat-item.html', {
+          "value": "10 000",
+          "unit": "м²",
+          "plus": true,
+          "text": "складских площадей в Москве"
+        })
+      </ul>
+    </div>
+
+    <div class="stats__reasons">
+      <h2 class="stats__title"><span class="stats__title-highlight">8 причин</span> выбрать Байт Транзит</h2>
+      <p class="stats__desc">Возможность быть краткими в изложении преимуществ — <b>результат эффективности и устойчивости</b></p>
+
+      <ul class="stats__reasons-grid">
+        @@include('../cards/reason-card.html', {
+          "image": "icon-flag@2x.jpg",
+          "text": "<b>Официальные поставки</b> из Китая"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-docs@2x.jpg",
+          "text": "<b>Персональный</b> менеджер на всех этапах"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-calculator@2x.jpg",
+          "text": "<b>Прозрачная</b> стоимость до старта поставки"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-truck@2x.jpg",
+          "text": "<b>Минимизируем</b> риски задержки груза в пути"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-book@2x.jpg",
+          "text": "Предоставляем <b>бесплатный курс</b> по официальному импорту"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-analytics@2x.jpg",
+          "text": "<b>Вникаем</b> в экономику бизнеса и оптимизируем издержки"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-phone@2x.jpg",
+          "text": "<b>Уведомляем</b> о статусе поставки ежедневно"
+        })
+        @@include('../cards/reason-card.html', {
+          "image": "icon-warehouse@2x.jpg",
+          "text": "Предоставляем <b>фулфилмент</b> и доставку на склады МП"
+        })
+      </ul>
+    </div>
+  </div>
+
+  @@if (typeof hideStepsHead == 'undefined') {
+  <div class="stats__head section__container">
+    <h2 class="stats__head-title"><b>Надежное</b> партнерство с&nbsp;Байт Транзит:</h2>
+    <p class="stats__head-lead">5 первых шагов</p>
+  </div>
+  }
+</section>

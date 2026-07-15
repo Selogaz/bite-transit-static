@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Спасибо за заявку — Байт Транзит",
+    "desc": "Заявка отправлена. Менеджер свяжется с вами в ближайшее время.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/thanks-hero.html', {
+        "downloadImage": "download-table@2x.jpg",
+        "downloadPrefix": "Таблица",
+        "downloadTitle": "Белый vs серый ВЭД: честный расчёт на реальных цифрах"
+      })
+      @@include('tpls/sections/services-intro.html', { "onCanvas": true })
+      @@include('tpls/sections/benefits.html')
+      @@include('tpls/sections/features.html')
+      @@include('tpls/sections/stats.html', { "hideStepsHead": true })
+      @@include('tpls/sections/faq.html')
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

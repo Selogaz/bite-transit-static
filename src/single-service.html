@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Растаможка товаров из Китая — Байт Транзит",
+    "desc": "Официальное таможенное оформление товаров из Китая: подбор кода ТН ВЭД, разрешительные документы, расчет и оплата пошлин. Без переплат, ошибок и задержек.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/service-hero.html', {
+        "breadcrumbLabel": "Растаможка",
+        "eyebrowText": "для селлеров, товарного бизнеса и производств",
+        "title": 'Растаможим ваш товар<br>официально <span class="service-hero__title-mark">без переплат,</span><br><span class="service-hero__title-mark">ошибок и задержек</span>',
+        "subtitle": '<span class="service-hero__subtitle-accent">Помогаем перейти с карго на белый ВЭД без риска потери денег и времени.</span> Можем передать товар подрядчиком или взять всю логистику на себя от Китая до Маркетплейса',
+        "ctaLabel": "Получить консультацию",
+        "ctaFormName": "Услуга — Растаможка, консультация",
+        "mediaVariant": "bleed",
+        "mediaShape": "bleed",
+        "photoSrc": "@img/service-hero.bit/hero-photo@2x.jpg",
+        "photoAlt": "Грузовик с красным контейнером проходит таможенный контроль",
+        "photoW": "1659",
+        "photoH": "613",
+        "trust1Icon": "@img/service-hero.bit/trust-years@2x.png",
+        "trust1Text": "<b>35 лет на рынке</b><br>в составе группы компаний",
+        "trust2Icon": "@img/service-hero.bit/trust-overpay@2x.png",
+        "trust2Text": "Избавляем <b>от переплат</b><br>на всех этапах",
+        "trust3Icon": "@img/service-hero.bit/trust-terms@2x.png",
+        "trust3Text": "Называем <b>реальные сроки</b> и соблюдаем их"
+      })
+      @@include('tpls/sections/services-intro.html')
+      @@include('tpls/sections/process.html')
+      @@include('tpls/sections/customs-benefits.html')
+      @@include('tpls/sections/quiz.html')
+      @@include('tpls/sections/customs-banner.html')
+      @@include('tpls/sections/features.html')
+      @@include('tpls/sections/categories.html', { "pageVariant": "rastamozhka" })
+      @@include('tpls/sections/partners.html', { "pageVariant": "rastamozhka" })
+      @@include('tpls/sections/audit-b.html')
+      @@include('tpls/sections/stats.html')
+      @@include('tpls/sections/steps.html')
+      @@include('tpls/sections/course.html')
+      @@include('tpls/sections/map.html')
+      @@include('tpls/sections/team.html')
+      @@include('tpls/sections/reviews.html')
+      @@include('tpls/sections/videos.html')
+      @@include('tpls/sections/faq.html')
+      @@include('tpls/sections/footer-tour.html')
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

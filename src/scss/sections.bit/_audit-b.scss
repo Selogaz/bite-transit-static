@@ -1,0 +1,243 @@
+.audit-b {
+  padding-top: 5rem;
+  padding-bottom: 0;
+  background: var(--bg-app-light-tertiary);
+
+  @media (min-width: $mobile + 1) {
+    padding-top: 8.3rem;
+  }
+}
+
+.audit-b__container {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.audit-b__content {
+  position: relative;
+  z-index: 1;
+  max-width: 64rem;
+}
+
+.audit-b__title {
+  max-width: 63rem;
+  margin-bottom: 3.6rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+.audit-b__title b {
+  font-weight: 700;
+}
+
+.audit-b__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4rem;
+  margin-bottom: 3.3rem;
+}
+
+.audit-b-point {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+}
+
+.audit-b-point__body {
+  max-width: 27.7rem;
+}
+
+.audit-b-point__media {
+  flex-shrink: 0;
+  width: 7.8rem;
+  // min-height, не height: ассет 156×192 = 7.8×9.6rem, натуральный аспект совпадает
+  // с макетной рамкой — переполнения нет.
+  min-height: 9.6rem;
+  border-radius: var(--radius-card);
+}
+
+.audit-b-point__title {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 700;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-light);
+}
+
+.audit-b-point__text {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-light);
+}
+
+// ── Тёмная плашка «Бонус» (#292a2d, r20px, 441×109).
+// Вертикальный падинг 1.1rem, не 1.4rem: с 1.4rem фото-иконка 8.6rem распирала плашку
+// до 11.4rem и min-height не срабатывал. Теперь высоту держит min-height.
+.audit-b__bonus {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  max-width: 44.1rem;
+  min-height: 10.9rem;
+  padding: 1.1rem 2.8rem 1.1rem 1.1rem;
+  background: var(--fg-secondary);
+  border-radius: var(--radius-card);
+}
+
+.audit-b__bonus-media {
+  flex-shrink: 0;
+  width: 8.6rem;
+  // min-height, не height: ассет 172×172 = 8.6×8.6rem, аспект 1:1 совпадает
+  // с макетной квадратной рамкой — переполнения нет.
+  min-height: 8.6rem;
+  border-radius: var(--radius-lg);
+}
+
+.audit-b__bonus-label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+}
+
+.audit-b__bonus-text {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+}
+
+.audit-b__bonus-text b {
+  font-weight: 700;
+}
+
+.audit-b__bonus-icon {
+  flex-shrink: 0;
+  width: 1.47rem;
+  color: var(--fg-app-dark);
+  opacity: 0.3;
+}
+
+.audit-b__visual {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.audit-b__photo {
+  flex: 0 0 auto;
+  width: 107.2rem;
+  aspect-ratio: 1072 / 804;
+  margin-top: -3.2rem;
+  margin-right: 4.5rem;
+}
+
+.audit-b__form-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (max-width: $laptop) {
+  .audit-b__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .audit-b__content {
+    max-width: none;
+  }
+
+  .audit-b__title {
+    max-width: none;
+  }
+
+  .audit-b-point__body {
+    max-width: none;
+  }
+
+  .audit-b__visual {
+    display: block;
+  }
+
+  .audit-b__photo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .audit-b__form-card {
+    position: static;
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .audit-b__container {
+    gap: 2.6rem;
+  }
+
+  .audit-b__title {
+    margin-bottom: 2.4rem;
+  }
+
+  .audit-b__list {
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .audit-b-point {
+    gap: 1.6rem;
+  }
+
+  // height вместо min-height — фото-иконка фикс. размера, контент внутри не растёт.
+  // Мобильная рамка 60×74, скругление 8px (не десктопные 20px) и белый кант 1px.
+  .audit-b-point__media {
+    width: 6rem;
+    height: 7.4rem;
+    border: 0.1rem solid var(--bg-app-light);
+    border-radius: var(--radius-photo-icon);
+  }
+
+  .audit-b-point__title,
+  .audit-b-point__text {
+    font-size: 1.4rem;
+  }
+
+  .audit-b__bonus {
+    gap: 1.6rem;
+    max-width: none;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .audit-b__bonus-media {
+    width: 6.5rem;
+    height: 8.6rem;
+  }
+
+  .audit-b__bonus-label,
+  .audit-b__bonus-text {
+    font-size: 1.4rem;
+  }
+
+  .audit-b__form-card {
+    margin-top: 1.8rem;
+  }
+}

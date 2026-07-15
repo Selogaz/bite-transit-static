@@ -1,0 +1,20 @@
+<!-- Карточка новости (news-grid) — обложка + дата + заголовок + лид + ссылка «Подробнее».
+     Ведёт на страницу новости. Параметры — заглушки, реальные новости придут из CMS. -->
+<li class="post-card">
+  <div class="post-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/news.bit/post-card@2x.jpg" alt="@@alt" width="348" height="230" loading="lazy">
+    </picture>
+  </div>
+  <div class="post-card__body">
+    <p class="post-card__date">@@date</p>
+    <h3 class="post-card__title">@@title</h3>
+    <p class="post-card__lead">@@lead</p>
+    <a class="post-card__link" href="single-post.html">
+      Подробнее
+      <svg class="post-card__link-icon" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 1l4 4.5L1 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</li>

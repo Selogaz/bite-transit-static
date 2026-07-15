@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Фулфилмент для маркетплейсов — Байт Транзит",
+    "desc": "Фулфилмент полного цикла для продавцов маркетплейсов: приём и хранение товара, упаковка и маркировка, отгрузка на Ozon, WB и Яндекс.Маркет.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/service-hero.html', {
+        "breadcrumbLabel": "Фулфилмент",
+        "eyebrowText": "для селлеров WB, Ozon, Яндекс.Маркет",
+        "title": '<span class="service-hero__title-mark">Фулфилмент полного</span><br><span class="service-hero__title-mark">цикла</span> для продавцов<br>маркетплейсов',
+        "subtitle": 'Отгружаем товары на склады ежедневно. <span class="service-hero__subtitle-accent">Точки фулфилмента в ** городах. От ***₽ за единицу</span>',
+        "ctaLabel": "Получить консультацию",
+        "ctaFormName": "Услуга — Фулфилмент, консультация",
+        "mediaVariant": "wide-fade",
+        "mediaShape": "wide-bleed",
+        "photoSrc": "@img/service-hero.bit/hero-photo-fulfillment@2x.jpg",
+        "photoAlt": "Погрузчик у склада фулфилмента с товарами для WB, Ozon и Яндекс.Маркета",
+        "photoW": "1024",
+        "photoH": "577",
+        "trust1Icon": "@img/service-hero.bit/trust-1-fulfillment@2x.png",
+        "trust1Text": "<b>Страхуем сохранность</b><br>каждого товара в партии",
+        "trust2Icon": "@img/service-hero.bit/trust-2-fulfillment@2x.png",
+        "trust2Text": "<b>Обрабатываем возвраты</b><br>и возвращаем в оборот за 1 день",
+        "trust3Icon": "@img/service-hero.bit/trust-3-fulfillment@2x.png",
+        "trust3Text": "<b>Заранее уведомляем</b> об изменении условий"
+      })
+
+      @@include('tpls/sections/services-intro.html')
+
+      <section class="service-steps" id="service-steps">
+        <div class="service-steps__container section__container container">
+          <div class="section__head">
+            <h2 class="section-title">Как проходят <b>официальные поставки</b> с Байт Транзит?</h2>
+            <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
+          </div>
+
+          <ul class="service-steps__list">
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "fulfillment-1",
+                "title": 'Прием<br>и <b>хранение товара</b>',
+                "list": "<li>Сверяем фактическую поставку с документами и присваиваем товарам коды для отслеживания</li><li>Размещаем товары на складе, учитывая характеристики: температурный режим, категорию и сроки годности</li>",
+                "image": "step-1-fulfillment@2x.jpg",
+                "imageW": "1280",
+                "imageH": "960",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "fulfillment-2",
+                "title": '<b>Упаковка</b><br>и маркировка',
+                "list": "<li>Маркируем товары в системе ЧЗ.</li><li>Упаковываем, опираясь на ваши требования и стандарты маркетплейсов</li>",
+                "image": "step-2-fulfillment-bg@2x.jpg",
+                "imageW": "1536",
+                "imageH": "1024",
+                "mediaVariant": "cover"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "fulfillment-3",
+                "title": '<b>Отгрузка</b><br>на маркетплейсы',
+                "list": "<li>Доставим на ближайший склад Ozon / WB / Яндекс.Маркета.</li><li>Отгружаем ежедневно, чтобы обеспечить быструю доставку вашим клиентам</li>",
+                "image": "step-3-fulfillment@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "fulfillment-4",
+                "title": 'Работа<br><b>с возвратами</b>',
+                "list": "<li>Принимаем возвращенные товары, проверяем и готовим к повторным продажам</li>",
+                "image": "step-4-fulfillment-bg@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "cover"
+              })
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="service-perks service-perks--fulfillment" id="service-perks">
+        <div class="service-perks__container section__container container">
+          <div class="section__head service-perks__head">
+            <h2 class="section-title">Байт Транзит —<br><b>1 подрядчик вместо 5</b></h2>
+            <p class="section-desc">Оказываем услуги полного аутсорсинга ВЭД с поставщиками из Китая</p>
+          </div>
+
+          <div class="service-perks__nav">
+            <button class="nav-arrow service-perks__arrow service-perks__arrow--prev" type="button" aria-label="Назад">
+              <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+            </button>
+            <button class="nav-arrow service-perks__arrow service-perks__arrow--next" type="button" aria-label="Вперед">
+              <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+            </button>
+          </div>
+
+          <div class="service-perks__slider swiper">
+            <ul class="service-perks__list swiper-wrapper">
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": 'Созданы для двуруких <b>без отдела логистики</b>',
+              "text": "Вам не нужно собирать цепочку из 5+ подрядчиков или формировать команду логистов — Байт Транзит возьмет на себя все этапы официальной ВЭД",
+              "image": "perk-1-fulfillment@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": 'Знаем <b>все про ВЭД</b> в вашем бизнесе',
+              "text": "Бесплатно проконсультируем перед началом работы и объясним, как ввозить товары официально и сэкономить на логистике, перейдя к нам",
+              "image": "perk-2-fulfillment@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": '<b>Спасаем от задержек</b> и издержек',
+              "text": "Груз не застрянет на складе из-за ошибки в декларации или отсутствующего сертификата. Вам не придется переплачивать за лишние сертификаты",
+              "image": "perk-3-fulfillment@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

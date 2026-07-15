@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Аутсорсинг ВЭД под ключ — Байт Транзит",
+    "desc": "Переведём бизнес на официальную ВЭД или оптимизируем текущую схему: полный аутсорсинг официального ввоза товаров из Китая в Россию под ключ.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/service-hero.html', {
+        "breadcrumbLabel": "Аутсорсинг ВЭД",
+        "eyebrowText": "для селлеров, товарного бизнеса и производств",
+        "title": 'Переведем бизнес<br>на <span class="service-hero__title-mark">официальную ВЭД</span><br>или оптимизируем текущую схему',
+        "subtitle": '<span class="service-hero__subtitle-accent">Полный аутсорсинг официального ввоза товаров из Китая в Россию.</span> Доставим по асфальту, рельсам, морю или воздуху — на ваш склад, наш фулфилмент или прямо на маркетплейсы',
+        "ctaLabel": "Получить консультацию",
+        "ctaFormName": "Услуга — Аутсорсинг ВЭД, консультация",
+        "mediaVariant": "wide-fade",
+        "mediaShape": "wide",
+        "photoSrc": "@img/service-hero.bit/hero-photo-outsourcing@2x.jpg",
+        "photoAlt": "Грузовик, самолёт, поезд и корабль сходятся в единый логистический маршрут",
+        "photoW": "1024",
+        "photoH": "577",
+        "trust1Icon": "@img/service-hero.bit/trust-1-outsourcing@2x.png",
+        "trust1Text": "<b>Возим из Китая 35 лет</b><br>и выучили все тонкости",
+        "trust2Icon": "@img/service-hero.bit/trust-2-outsourcing@2x.png",
+        "trust2Text": "<b>Страхуем</b> сохранность<br>каждого товара в партии",
+        "trust3Icon": "@img/service-hero.bit/trust-3-outsourcing@2x.png",
+        "trust3Text": "<b>Поможем с оплатой</b> товаров<br>и таможенным оформлением",
+        "trust4Icon": "@img/service-hero.bit/trust-4-outsourcing@2x.png",
+        "trust4Text": "<b>Фиксируем стоимость</b><br>поставки до начала работ"
+      })
+
+      @@include('tpls/sections/services-intro.html')
+
+      <section class="service-steps" id="service-steps">
+        <div class="service-steps__container section__container container">
+          <div class="section__head">
+            <h2 class="section-title">Как проходят <b>официальные поставки</b> с Байт Транзит?</h2>
+            <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
+          </div>
+
+          <ul class="service-steps__list">
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "outsourcing-1",
+                "title": '<b>Подготовка</b><br>и оплата',
+                "list": "<li>Оформим внешнеторговый контракт. Если сумма от $7000 — предоставим свое юрлицо для оплаты</li><li>Контракты от 3 000 000 рублей — зарегистрируем в банке самостоятельно.</li><li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Составим таможенную декларацию и заранее рассчитаем пошлины, НДС и сборы.</li>",
+                "image": "step-1-outsourcing@2x.jpg",
+                "imageW": "1024",
+                "imageH": "768",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "outsourcing-2",
+                "title": '<b>Складская обработка</b><br>и страхование',
+                "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
+                "image": "step-2-outsourcing-bg@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "cover"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "outsourcing-3",
+                "title": '<b>Доставка до таможни</b><br>и выпуск из Китая',
+                "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара.</li><li>Зарегистрируем декларацию, внесем обязательные платежи, пройдем валютный и таможенный контроль.</li><li>Получим разрешение на ввоз груза в РФ</li>",
+                "image": "step-3-outsourcing@2x.jpg",
+                "imageW": "1448",
+                "imageH": "1086",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "outsourcing-4",
+                "title": 'Выгодная <b>транспортировка по РФ</b>',
+                "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
+                "image": "step-4-outsourcing-bg@2x.jpg",
+                "imageW": "1672",
+                "imageH": "941",
+                "mediaVariant": "cover"
+              })
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="service-perks service-perks--outsourcing" id="service-perks">
+        <div class="service-perks__container section__container container">
+          <div class="section__head service-perks__head">
+            <h2 class="section-title"><b>Боитесь</b> тонкостей официального<br>ввоза и представляете убытки?</h2>
+            <p class="section-desc">Выбирайте Байт Транзит — с нами сон крепче, а логистика дешевле</p>
+          </div>
+
+          <div class="service-perks__nav">
+            <button class="nav-arrow service-perks__arrow service-perks__arrow--prev" type="button" aria-label="Назад">
+              <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+            </button>
+            <button class="nav-arrow service-perks__arrow service-perks__arrow--next" type="button" aria-label="Вперед">
+              <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+            </button>
+          </div>
+
+          <div class="service-perks__slider swiper">
+            <ul class="service-perks__list swiper-wrapper">
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Созданы для двуруких без отдела логистики",
+              "text": "Вам не нужно собирать цепочку из 5+ подрядчиков или формировать команду логистов — Байт Транзит возьмет на себя все этапы официальной ВЭД",
+              "image": "perk-1-outsourcing@2x.jpg",
+              "imageMobile": "perk-1-outsourcing-m@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Знаем все про ВЭД в вашем бизнесе",
+              "text": "Бесплатно проконсультируем перед началом работы и объясним, как ввозить товары официально и сэкономить на логистике, перейдя к нам",
+              "image": "perk-2-outsourcing@2x.jpg",
+              "imageMobile": "perk-2-outsourcing-m@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Называем реальные сроки вместо красивых",
+              "text": "Критично смотрим на поставку и учитываем возможные задержки, чтобы вы смогли запланировать производство или продажи",
+              "image": "perk-3-outsourcing@2x.jpg",
+              "imageMobile": "perk-3-outsourcing-m@2x.jpg",
+              "imageW": "768",
+              "imageH": "1024"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Комиссия для клиентов <b>0.00%</b>",
+              "text": "Вам не придется переплачивать нам за использование юрлица Байт Транзит для оплаты",
+              "image": "perk-commission@2x.jpg",
+              "imageMobile": "perk-commission-m@2x.jpg",
+              "imageW": "344",
+              "imageH": "528"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Поможем <b>оформить сертификаты</b>",
+              "text": "Потратим деньги только на те документы, которые действительно необходимы <b>для официального ввоза</b>",
+              "image": "perk-certificates@2x.jpg",
+              "imageMobile": "perk-certificates-m@2x.jpg",
+              "imageW": "344",
+              "imageH": "528"
+            })
+            @@include('tpls/cards/service-perk-card.html', {
+              "title": "Защищаем <b>от штрафов и КТС</b>",
+              "text": "С необходимыми сертификатами даже самые дотошные сотрудники ФТС не найдут изъянов",
+              "image": "perk-fines@2x.jpg",
+              "imageMobile": "perk-fines-m@2x.jpg",
+              "imageW": "344",
+              "imageH": "528"
+            })
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<section class="process section section--dark" id="process">
+  <div class="process__container section__container container">
+    <div class="section__head">
+      <h2 class="section-title"><b>Как проходит таможенное оформление</b> с Байт Транзит</h2>
+      <p class="section-desc">Последовательный путь к официальному импорту и экономии</p>
+    </div>
+
+    <ul class="process__steps">
+      @@include('../cards/process-step-card.html', {
+        "icon": "@img/process.bit/step-1@2x.jpg",
+        "text": "<b>Анализируем товар</b> по инвойсу и пакинг-листу"
+      })
+      @@include('../cards/process-step-card.html', {
+        "icon": "@img/process.bit/step-2@2x.jpg",
+        "text": "Оказываем содействие в получении <b>необходимых разрешительных документов</b>"
+      })
+      @@include('../cards/process-step-card.html', {
+        "icon": "@img/process.bit/step-3@2x.jpg",
+        "text": "<b>Размещаем груз</b> на таможенном пункте"
+      })
+      @@include('../cards/process-step-card.html', {
+        "icon": "@img/process.bit/step-4@2x.jpg",
+        "text": "<b>Расчитываем суммы таможенных платежей,</b> даем инструкции по оплате и подаем таможенную декларацию"
+      })
+      @@include('../cards/process-step-card.html', {
+        "icon": "@img/process.bit/step-5@2x.jpg",
+        "text": "<b>Доводим груз до выпуска</b> и передаём его на следующий этап маршрута"
+      })
+    </ul>
+
+    <h3 class="process__docs-title">Готовим все <b>разрешительные документы:</b></h3>
+
+    <ul class="process__docs">
+      @@include('../cards/doc-card.html', {
+        "modifier": "",
+        "title": "Нотификации ФСБ для ввоза электроники с чипами"
+      })
+      @@include('../cards/doc-card.html', {
+        "modifier": " doc-card--accent",
+        "title": "Декларция соответствия, сертефикат соответствия (ГОСТ Р,ТР ТС)"
+      })
+      @@include('../cards/doc-card.html', {
+        "modifier": "",
+        "title": "СГР, СТ1"
+      })
+    </ul>
+  </div>
+</section>

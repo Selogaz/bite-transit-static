@@ -1,0 +1,24 @@
+.customs-banner__media {
+  aspect-ratio: 1920 / 823;
+
+  @media (max-width: $mobile) {
+    aspect-ratio: 320 / 197;
+  }
+}
+
+@media (max-width: $mobile) {
+  .customs-banner {
+    position: relative;
+  }
+
+  .customs-banner::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.1rem;
+    left: 0;
+    height: 5.4rem;
+    pointer-events: none;
+    content: "";
+    background: url("@img/customs-banner.bit/edge-clouds.png") center bottom / cover no-repeat;
+  }
+}

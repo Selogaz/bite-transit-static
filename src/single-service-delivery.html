@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('tpls/b/meta-head.html', {
+    "title": "Доставка сборных грузов из Казахстана и Кыргызстана — Байт Транзит",
+    "desc": "Привезем сборный груз из Казахстана или Кыргызстана для селлеров WB, Ozon, Яндекс.Маркет. Фиксируем сроки и стоимость до внесения оплаты за логистические услуги.",
+    "themeColor": "#BF2E36",
+    "favicon": true
+  })
+
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    @@include('tpls/header.html')
+
+    <main class="main">
+      @@include('tpls/sections/service-hero.html', {
+        "breadcrumbLabel": "Доставка",
+        "eyebrowText": "для селлеров WB, Ozon, Яндекс.Маркет",
+        "title": '<span class="service-hero__title-mark">Привезем сборный</span><br><span class="service-hero__title-mark">груз</span> из Казахстана<br>или Кыргызстана',
+        "subtitle": '<span class="service-hero__subtitle-accent">Доставка займет от n до x дней.</span> Фиксируем сроки и стоимость до внесения вами оплаты за логистические услуги',
+        "ctaLabel": "Получить консультацию",
+        "ctaFormName": "Услуга — Доставка, консультация",
+        "mediaVariant": "wide-fade",
+        "mediaShape": "wide",
+        "photoSrc": "@img/service-hero.bit/hero-photo-delivery@2x.jpg",
+        "photoAlt": "Паллета со сборным грузом и флаги Казахстана и Кыргызстана",
+        "photoW": "1846",
+        "photoH": "1238",
+        "trust1Icon": "@img/service-hero.bit/trust-1-delivery@2x.png",
+        "trust1Text": "<b>Страхуем сохранность</b><br>каждого товара в партии",
+        "trust2Icon": "@img/service-hero.bit/trust-2-delivery@2x.png",
+        "trust2Text": "<b>Обрабатываем возвраты</b><br>и возвращаем в оборот за 1 день",
+        "trust3Icon": "@img/service-hero.bit/trust-3-delivery@2x.png",
+        "trust3Text": "<b>Заранее уведомляем</b><br>об изменении условий"
+      })
+
+      @@include('tpls/sections/services-intro.html')
+
+      <section class="service-steps" id="service-steps">
+        <div class="service-steps__container section__container container">
+          <div class="section__head">
+            <h2 class="section-title"><b>Доставка сборных грузов</b><br>из Казахстана и Кыргызстана</h2>
+            <p class="section-desc">Гарантируем сроки доставки</p>
+          </div>
+
+          <ul class="service-steps__list">
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "delivery-1",
+                "title": 'Получите <b>скидку<br>-20% за регистрацию</b>',
+                "list": "<li>Создайте аккаунт в личном кабинете</li><li>Сделаем первую поставку за 80% от реальной стоимости услуг</li>",
+                "image": "step-1-delivery@2x.jpg",
+                "imageW": "694",
+                "imageH": "457",
+                "mediaVariant": "contain"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "delivery-2",
+                "title": 'Сделайте предварительный<br><b>расчет в калькуляторе</b>',
+                "list": "<li>Моментально увидите ориентировочные сроки и стоимость</li><li>Если устроит, сможете сразу же оставить заявку на доставку</li>",
+                "image": "step-2-delivery@2x.jpg",
+                "imageW": "1440",
+                "imageH": "914",
+                "mediaVariant": "cover"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "light",
+                "size": "delivery-3",
+                "title": 'Получите<br><b>подробные условия</b>',
+                "list": "<li>Свяжемся с вами в течение нескольких минут, уточним детали и сможем объявить стоимость за килограмм и м3, а также время, необходимое на доставку</li>",
+                "image": "step-3-delivery@2x.jpg",
+                "imageW": "1440",
+                "imageH": "914",
+                "mediaVariant": "cover"
+              })
+            </li>
+
+            <li class="service-steps__item">
+              @@include('tpls/cards/step-card.html', {
+                "theme": "dark",
+                "size": "delivery-4",
+                "title": 'Глубоко выдохните<br>и <b>расслабьтесь</b>',
+                "list": "<li>Доставим в заявленный срок, или предоставим компенсацию в установленном порядке</li><li>Цена поставки не изменится в пути груза</li>",
+                "image": "step-4-delivery@2x.jpg",
+                "imageW": "1440",
+                "imageH": "914",
+                "mediaVariant": "cover"
+              })
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    @@include('tpls/footer.html')
+  </div>
+
+  <script src="./js/index.min.js" defer></script>
+</body>
+</html>

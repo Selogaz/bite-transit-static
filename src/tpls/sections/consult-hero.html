@@ -1,0 +1,94 @@
+
+<section class="consult-hero" id="consult-hero">
+  <div class="consult-hero__container container">
+    @@include('../b/breadcrumbs.html', {
+      "parentLabel": "Клиентам",
+      "currentLabel": "Консультация"
+    })
+
+    <div class="consult-hero__row">
+      <div class="consult-hero__content">
+        <h1 class="consult-hero__title">
+          Узнайте, как перейти <b>на белый ВЭД</b> и получить выгоду уже<br>
+          на этапе тестовой поставки
+        </h1>
+
+        <ul class="consult-hero__list">
+          @@include('../cards/consult-point.html', {
+            "image": "icon-checklist@2x.png",
+            "title": "Сравним 2 сценария на цифрах",
+            "text": "Покажем потенциальную финансовую экономию и реальные сроки поставок в белую: вы поймете, выгодно ли перейти на легальный ввоз"
+          })
+          @@include('../cards/consult-point.html', {
+            "image": "icon-stopwatch@2x.png",
+            "title": "Обсудим тестовую поставку",
+            "text": "Разберём, как может выглядеть первая поставка: что нужно по документам, каким будет маршрут и за счет чего вы сэкономите"
+          })
+          @@include('../cards/consult-point.html', {
+            "image": "icon-gears@2x.png",
+            "title": "Проявим предельную честность",
+            "text": "Сроки, платежи, подводные камни вашего товара, сертификация и так далее. Конкретика без завтраков"
+          })
+        </ul>
+      </div>
+
+      <div class="consult-hero__visual">
+
+        <div class="consult-hero__card audit__card js_form">
+          <input type="hidden" name="form_name" value="Консультация — Получить аудит">
+
+          <p class="audit__card-title">
+            <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+          </p>
+
+          <div class="audit__card-fields">
+            @@include('../b/input.html', {
+              "className": "js_form__control",
+              "type": "text",
+              "name": "name",
+              "placeholder": "Имя",
+              "attributes": "required",
+              "error": "Поле должно быть заполнено!"
+            })
+            @@include('../b/input.html', {
+              "className": "js_form__control",
+              "type": "tel",
+              "name": "phone",
+              "placeholder": "+ 7 (___) ___ __ __",
+              "attributes": "required data-mask=\"phone\"",
+              "error": "Поле должно быть заполнено!"
+            })
+          </div>
+
+          <button class="audit__card-submit button button--primary button--block js_form__submit" type="button">
+            Получить аудит
+          </button>
+
+          <label class="checkbox audit__card-agreement js_form__control">
+            <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+            <span class="checkbox__check"></span>
+            <span class="checkbox__label">
+              Нажимая на кнопку, Вы принимаете условия
+              <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+            </span>
+          </label>
+
+          <label class="checkbox audit__card-agreement js_form__control">
+            <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+            <span class="checkbox__check"></span>
+            <span class="checkbox__label">
+              Нажимая на кнопку, Вы принимаете условия
+              <a class="checkbox__link" href="#">договора оферты</a>
+            </span>
+          </label>
+        </div>
+
+        <div class="consult-hero__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/consult-hero.bit/map-route@2x.jpg" alt="" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

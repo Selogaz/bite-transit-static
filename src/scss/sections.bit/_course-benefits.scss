@@ -1,0 +1,219 @@
+.course-benefits {
+  position: relative;
+  padding-top: 9.6rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+}
+
+.course-benefits__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.course-benefits__bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+  height: 19.3rem;
+}
+
+.course-benefits__bg-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+  height: 26.4rem;
+}
+
+.course-benefits__container {
+  position: relative;
+  z-index: 1;
+}
+
+.course-benefits__title {
+  margin-bottom: 4rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 1.045;
+  color: var(--fg-app-dark);
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.course-benefits__title b {
+  font-weight: 700;
+}
+
+.course-benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+
+  justify-content: center;
+
+  margin-bottom: 2rem;
+}
+
+.course-benefit-point {
+  background: var(--bg-app-light);
+  border-radius: var(--radius-card);
+}
+
+.course-benefit-point__text {
+  font-family: var(--ff-regular);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--fg-app-light);
+}
+
+.course-benefit-point__text b {
+  font-weight: 700;
+}
+
+// ── Верхний ряд (3 карточки): текст сверху, фото на всю ширину снизу.
+// max-width 39rem — карточка 390px, фото width:100% → 390×205. min-height 34rem держит
+// фикс. высоту 340px (все три равны): без неё карточка садилась по контенту.
+.course-benefit-point--top {
+  display: flex;
+  flex: 1 1 calc(33.333% - 1.87rem);
+  flex-direction: column;
+  max-width: 39rem;
+  min-height: 34rem;
+  overflow: hidden;
+}
+
+.course-benefit-point--top .course-benefit-point__text {
+  padding: 2.5rem 2.5rem 0;
+  text-align: center;
+}
+
+.course-benefit-point--top .course-benefit-point__media {
+  width: 100%;
+  aspect-ratio: 390 / 205;
+  margin-top: auto;
+}
+
+// ── Нижний ряд (2 карточки): текст слева, фото справа на всю высоту.
+// max-width 60.1rem — карточка 601px. Высоту задаёт фото 146×146; своего вертикального
+// паддинга у карточки нет — иначе фото + паддинги раздували её до 202px вместо ~141.
+.course-benefit-point--bottom {
+  display: flex;
+  flex: 1 1 calc(50% - 1.4rem);
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 60.1rem;
+  padding-left: 3.9rem;
+  overflow: hidden;
+}
+
+.course-benefit-point--bottom .course-benefit-point__text {
+  flex: 1 1 0%;
+  align-self: flex-start;
+  padding-top: 2.5rem;
+}
+
+// Фото — квадрат 146×146, фиксированной высотой задаёт высоту карточки (align-self не stretch,
+// иначе фото тянулось бы по тексту и высота уплывала). Отрицательный низ 0.5rem: фото свисает
+// на 5px и режется overflow:hidden карточки.
+.course-benefit-point--bottom .course-benefit-point__media {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 14.6rem;
+  aspect-ratio: 1;
+  margin-bottom: -0.5rem;
+}
+
+.course-benefits .course-offer {
+  width: max-content;
+  margin: 0 auto;
+}
+
+@media (max-width: $laptop) {
+  .course-benefits {
+    padding-top: 6rem;
+  }
+
+  .course-benefit-point--top {
+    flex: 1 1 calc(50% - 1.4rem);
+    max-width: none;
+  }
+
+  .course-benefit-point--bottom {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-benefits {
+    padding-top: 5rem;
+    padding-bottom: 19.2rem;
+  }
+
+  .course-benefits__bg {
+    display: none;
+  }
+
+  .course-benefits__bg-top,
+  .course-benefits__bg-bottom {
+    display: block;
+  }
+
+  .course-benefits__title {
+    margin-bottom: 2.5rem;
+  }
+
+  .course-benefits__list {
+    gap: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .course-benefit-point--top {
+    flex: 1 1 100%;
+    min-height: 0;
+  }
+
+  .course-benefit-point__text {
+    font-size: 1.5rem;
+  }
+
+  .course-benefit-point--top .course-benefit-point__media {
+    aspect-ratio: 300 / 127;
+    margin-top: 1.6rem;
+  }
+
+  .course-benefit-point--top .course-benefit-point__text {
+    padding: 1.5rem 2.5rem 0;
+  }
+
+  .course-benefit-point--bottom {
+    flex: 1 1 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .course-benefit-point--bottom .course-benefit-point__text {
+    padding: 1.5rem 2.5rem 0;
+    text-align: center;
+  }
+
+  .course-benefit-point--bottom .course-benefit-point__media {
+    align-self: auto;
+    width: 100%;
+    aspect-ratio: 300 / 127;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .course-benefits .course-offer {
+    display: none;
+  }
+}

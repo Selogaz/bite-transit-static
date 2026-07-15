@@ -1,0 +1,29 @@
+<div class="step-card step-card--@@theme step-card--@@size">
+  @@if (typeof bgImage != 'undefined') {
+  <div class="step-card__bg media media--cover">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/steps.bit/@@bgImage" alt="" loading="lazy">
+    </picture>
+  </div>
+  }
+
+  <div class="step-card__content">
+    <h3 class="step-card__title">@@title</h3>
+
+    <ul class="step-card__list">
+      @@list
+    </ul>
+
+    @@if (typeof actions != 'undefined') {
+    <div class="step-card__actions">
+      @@actions
+    </div>
+    }
+  </div>
+
+  <div class="step-card__media media media--@@mediaVariant@@if (typeof mediaTilt != 'undefined') { step-card__media--tilt}@@if (typeof mediaGhost != 'undefined') { step-card__media--ghost}">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/steps.bit/@@image" alt="" width="@@imageW" height="@@imageH" loading="lazy">
+    </picture>
+  </div>
+</div>

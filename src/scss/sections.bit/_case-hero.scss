@@ -1,0 +1,28 @@
+.case-hero {
+  padding-top: 1.6rem;
+}
+
+.case-hero__card {
+  // Зазор до тела кейса держим паддингом карточки, а не margin-bottom заголовка: иначе
+  // margin последнего ребёнка схлопывается наружу и серый канвас пробивается полосой в стык.
+  padding: 6.7rem 8.4rem 5.3rem;
+  margin-top: 4.8rem;
+  background: var(--bg-app-light);
+  border-radius: 4.2rem 4.2rem 0 0;
+}
+
+.case-hero__title {
+  margin: 0;
+}
+
+@media (max-width: $mobile) {
+  .case-hero__container {
+    padding-inline: 1rem;
+  }
+
+  .case-hero__card {
+    padding: 3rem 1.5rem 2.9rem;
+    margin-top: 3.1rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+}

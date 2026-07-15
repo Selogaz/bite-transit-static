@@ -1,0 +1,45 @@
+
+<div class="b_modal modal-audit js_form" id="audit-request">
+  <input type="hidden" name="form_name" value="Попап — Получить аудит">
+
+  <div class="modal-audit__fields">
+    @@include('../../b/input.html', {
+      "className": "js_form__control",
+      "type": "text",
+      "name": "name",
+      "placeholder": "Имя",
+      "attributes": "required",
+      "error": "Поле должно быть заполнено!"
+    })
+    @@include('../../b/input.html', {
+      "className": "js_form__control",
+      "type": "tel",
+      "name": "phone",
+      "placeholder": "+ 7 (___) ___ __ __",
+      "attributes": "required data-mask=\"phone\"",
+      "error": "Поле должно быть заполнено!"
+    })
+  </div>
+
+  <button class="modal-audit__submit button button--primary button--block js_form__submit" type="button">
+    Получить аудит
+  </button>
+
+  <label class="checkbox modal-audit__agreement js_form__control">
+    <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+    <span class="checkbox__check"></span>
+    <span class="checkbox__label">
+      Нажимая на кнопку, Вы принимаете
+      <a class="checkbox__link" href="privacy.html">условия политики конфиденциальности</a>
+    </span>
+  </label>
+
+  <label class="checkbox modal-audit__agreement js_form__control">
+    <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+    <span class="checkbox__check"></span>
+    <span class="checkbox__label">
+      Нажимая на кнопку, Вы принимаете
+      <a class="checkbox__link" href="#">условия договора оферты</a>
+    </span>
+  </label>
+</div>

@@ -1,0 +1,130 @@
+.course-program__title {
+  margin-bottom: 4.8rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 1.045;
+  color: var(--fg-regular);
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.course-program__title b {
+  font-weight: 700;
+}
+
+.course-program__list {
+  display: flex;
+  gap: 1.9rem;
+
+  align-items: stretch;
+  justify-content: center;
+}
+
+.program-module-card {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  max-width: 28.1rem;
+}
+
+// Фото над телом: боковой инсет 2.26rem, z-index держит его поверх белого тела в зоне нахлёста.
+// flex-shrink:0 обязателен: иначе в колоночной карточке (мобайл) фото схлопывается в height:0.
+.program-module-card__media {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: calc(100% - 4.52rem);
+  aspect-ratio: 472 / 218;
+  margin: 0 2.26rem;
+  border-radius: var(--radius-card);
+}
+
+.program-module-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 25% 2.26rem 3rem;
+  margin-top: -18%;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-card);
+}
+
+.program-module-card__badge {
+  align-self: flex-start;
+  padding: 0.4rem 1.4rem;
+  font-family: var(--ff-regular);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--fg-program-card);
+  border: 0.1rem solid var(--fg-program-card);
+  border-radius: var(--radius-pill);
+}
+
+// Заголовок чуть шире прочего текста (правый инсет 1.28rem против бокового 2.26rem тела) —
+// иначе строка «официальная схема» переносится лишний раз; отрицательный margin добирает ~1rem.
+.program-module-card__title {
+  margin-top: 1.2rem;
+  margin-right: -0.98rem;
+  font-family: var(--ff-title);
+  font-size: 2.51rem;
+  font-weight: 400;
+  line-height: 1.045;
+  color: var(--fg-program-card);
+}
+
+.program-module-card__title b {
+  font-weight: 700;
+}
+
+.program-module-card__lessons {
+  margin-top: 2rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-program-card);
+}
+
+.program-module-card__lessons p + p {
+  margin-top: 1rem;
+}
+
+.program-module-card__lessons b {
+  font-weight: 700;
+}
+
+@media (max-width: $laptop) {
+  .course-program__list {
+    flex-wrap: wrap;
+  }
+
+  .program-module-card {
+    flex: 1 1 22rem;
+    max-width: 34rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-program__title {
+    margin-bottom: 2.4rem;
+    font-size: 2.2rem;
+  }
+
+  .course-program__list {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .program-module-card {
+    max-width: none;
+  }
+
+  .program-module-card__title {
+    font-size: 2rem;
+  }
+
+  .program-module-card__lessons {
+    font-size: 1.4rem;
+  }
+}

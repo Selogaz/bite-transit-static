@@ -1,0 +1,458 @@
+.quiz {
+  padding-top: 8rem;
+  padding-bottom: 5.5rem;
+  background: var(--bg-app-light-secondary);
+
+  @media (max-width: $mobile) {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.quiz__title {
+  margin-bottom: 3.2rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+.quiz__title b {
+  font-weight: 700;
+}
+
+.quiz__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem 4rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  @media (max-width: $mobile) {
+    gap: 1.1rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.quiz-benefit {
+  display: flex;
+  flex: 1 1 0;
+  gap: 2.1rem;
+  align-items: flex-start;
+  min-width: 26rem;
+
+  @media (max-width: $tablet) {
+    flex: none;
+    gap: 1.6rem;
+    min-width: 0;
+  }
+}
+
+.quiz-benefit__media {
+  flex-shrink: 0;
+  width: 7.5rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+
+  @media (max-width: $mobile) {
+    width: 5.1rem;
+    border-radius: 0.9rem;
+  }
+}
+
+.quiz-benefit__text {
+  font-size: 1.8rem;
+  line-height: 1.45;
+  color: var(--fg-app-light);
+
+  @media (max-width: $mobile) {
+    font-size: 1.4rem;
+  }
+}
+
+.quiz-benefit__text b {
+  font-weight: 700;
+}
+
+.quiz__card {
+  position: relative;
+  padding: 3.5rem 8.7rem 4.7rem;
+  background: var(--bg-app-light);
+  border-radius: 5rem;
+
+  @media (max-width: $laptop) {
+    padding: 3.2rem 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 1.5rem 1.5rem 2.7rem;
+    border-radius: 2rem;
+  }
+}
+
+.quiz__progress {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 4.4rem;
+
+  @media (max-width: $mobile) {
+    gap: 0.3rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.quiz__dot {
+  width: 1.5rem;
+  height: 1rem;
+  background: var(--bg-app-light-secondary);
+  border-radius: 2rem;
+  transition: var(--tr-regular);
+}
+
+.quiz__dot.is-active {
+  width: 6.5rem;
+  background: var(--c-primary-dark);
+}
+
+.quiz__dot.is-done {
+  background: var(--c-primary-dark);
+  opacity: 0.4;
+}
+
+.quiz__question {
+  margin-bottom: 3.6rem;
+  font-family: var(--ff-title);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--fg-app-light);
+  letter-spacing: -0.03em;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+.quiz__slider {
+  padding-block: 2rem;
+  margin-block: -2rem;
+  overflow: hidden;
+}
+
+// Высота карточки не прыгает при переключении: у каждого шага фиксированный min-height,
+// навигация прижата к низу (margin-top:auto). Мобильный потолок выше — колонка из 5 опций длиннее сетки.
+.quiz__step {
+  display: flex;
+  flex-direction: column;
+  min-height: 40.6rem;
+
+  @media (max-width: $mobile) {
+    min-height: 58rem;
+  }
+}
+
+.quiz__options {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3.4rem 3.1rem;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.quiz__options.is-invalid--highlighted .quiz-option__label {
+  box-shadow: 0 0 0 0.1rem var(--c-error);
+}
+
+// ── Навигация шага (стрелка «назад» + «Далее») ─────────────────
+// Прижата к низу шага (margin-top:auto) — работает и на мобиле за счёт min-height шага.
+// «назад» слева, «Далее» справа (margin-left:auto). Первый шаг — без «назад».
+.quiz__nav {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.quiz__back {
+  --size: 7rem;
+
+  flex-shrink: 0;
+
+  @media (max-width: $mobile) {
+    --size: 5.1rem;
+  }
+}
+
+.quiz__submit {
+  display: flex;
+  width: 30rem;
+  min-height: 7rem;
+  margin-left: auto;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    min-height: 5.1rem;
+  }
+}
+
+.quiz__step--final {
+  display: grid;
+  grid-template-areas:
+    "title form"
+    ".     form"
+    "back  form";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 41.2rem;
+  column-gap: 3rem;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.quiz__step--final .quiz__back {
+  grid-area: back;
+  align-self: end;
+}
+
+.quiz__final-title {
+  grid-area: title;
+  font-family: var(--ff-title);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--fg-app-light);
+  letter-spacing: -0.03em;
+
+  @media (max-width: $mobile) {
+    font-size: 1.8rem;
+  }
+}
+
+.quiz__form {
+  grid-area: form;
+  width: 41.2rem;
+  padding: 2.5rem 2.8rem 2.3rem;
+  background: var(--bg-app-light);
+  border: 0.1rem solid var(--border-input-regular);
+  border-radius: var(--radius-card);
+  box-shadow:
+    0 2.1rem 2.1rem var(--shadow-tour-card),
+    0 0.5rem 1.1rem var(--shadow-modal-contact);
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding: 2rem 1.5rem 2.1rem;
+  }
+}
+
+.quiz__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.quiz__form .input {
+  --fz: 1.5rem;
+  --padding-block: 2.79rem;
+  --padding-inline: 3rem;
+  --radius: 1rem;
+
+  @media (max-width: $mobile) {
+    --fz: 1.3rem;
+    --padding-block: 1.62rem;
+    --padding-inline: 1.2rem;
+    --radius: 0.7rem;
+  }
+}
+
+// Свёрнутый .input__error (max-height:0) всё равно рендерит верхний padding — снимаем его
+// скоупно, возвращаем при подсветке ошибки, чтобы сообщение осталось видимым.
+.quiz__form .input__error {
+  padding-top: 0;
+}
+
+.quiz__form .is-invalid--highlighted .input__error {
+  padding-top: 0.4em;
+}
+
+.quiz__form-submit {
+  --padding-block: 2.675rem;
+
+  margin-bottom: 2.1rem;
+
+  @media (max-width: $mobile) {
+    --fz: 1.4rem;
+    --padding-block: 1.49rem;
+    --radius: 0.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.quiz__form-agreement {
+  --size-check: 1.4rem;
+  --gap-check: 1.5rem;
+  --fg-label: var(--fg-agreement);
+
+  max-width: 31.9rem;
+  margin-bottom: 1.2rem;
+
+  @media (max-width: $mobile) {
+    --gap-check: 0.9rem;
+
+    max-width: none;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.quiz__form-agreement:last-child {
+  margin-bottom: 0;
+}
+
+.quiz__form-agreement .checkbox__label {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @media (max-width: $mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+.quiz__form-agreement .checkbox__link {
+  font-weight: 500;
+  color: inherit;
+}
+
+.quiz-option {
+  grid-column: span 2;
+
+  @media (max-width: $laptop) {
+    grid-column: span 1;
+  }
+}
+
+.quiz-option--wide {
+  grid-column: span 3;
+
+  @media (max-width: $laptop) {
+    grid-column: span 1;
+  }
+}
+
+.quiz-option__label {
+  position: relative;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  min-height: 9.8rem;
+  padding: 1.1rem 11.7rem 1.1rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-app-light);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0.2rem 0.4rem rgba(0, 0, 0, 0.03),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.03),
+    0 1.7rem 1rem rgba(0, 0, 0, 0.02);
+
+  @media (max-width: $mobile) {
+    gap: 0.7rem;
+    min-height: 7.1rem;
+    padding: 0.9rem 7.5rem 0.9rem 1rem;
+  }
+}
+
+.quiz-option__input {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  pointer-events: none;
+  opacity: 0;
+}
+
+// height вместо min-height — круглый радио-декор фикс. размера, контент не растёт.
+.quiz-option__radio {
+  position: relative;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid var(--c-divider);
+  border-radius: 50%;
+  transition: var(--tr-regular);
+
+  @media (max-width: $mobile) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.quiz-option__radio::before {
+  position: absolute;
+  inset: 0;
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  content: "";
+  background-color: var(--fg-app-dark);
+  -webkit-mask: url("@img/common.bit/icon-check.svg") center / contain no-repeat;
+  mask: url("@img/common.bit/icon-check.svg") center / contain no-repeat;
+  transition: transform 0.2s ease;
+  transform: scale(0);
+}
+
+.quiz-option__input:checked ~ .quiz-option__radio {
+  background: var(--c-primary-dark);
+  border-color: var(--c-primary-dark);
+}
+
+.quiz-option__input:checked ~ .quiz-option__radio::before {
+  transform: scale(1);
+}
+
+.quiz-option__text {
+  flex: 1 1 auto;
+  max-width: 15.7rem;
+  font-size: 1.6rem;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-light);
+
+  @media (max-width: $mobile) {
+    max-width: 14.7rem;
+    font-size: 1.4rem;
+  }
+}
+
+.quiz-option--wide .quiz-option__text {
+  max-width: 21rem;
+
+  @media (max-width: $mobile) {
+    max-width: 14.7rem;
+  }
+}
+
+.quiz-option__media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 9.7rem;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+
+  @media (max-width: $mobile) {
+    width: 6.5rem;
+  }
+}

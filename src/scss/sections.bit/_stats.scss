@@ -1,0 +1,355 @@
+.stats {
+  position: relative;
+  z-index: 0;
+  padding-top: 10.6rem;
+  padding-bottom: 5.5rem;
+}
+
+.stats__bg {
+  position: absolute;
+
+  inset: 0 0 -21.7rem;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--bg-app-dark);
+}
+
+// Модификатор для страниц, где после stats НЕТ секции steps (напр. «Спасибо», флаг
+// hideStepsHead): убираем нижний свес тёмной полосы — иначе он на 21.7rem наезжает на
+// начало следующей светлой секции (на главной под этот свес заходит первая карточка steps).
+.stats--flush .stats__bg {
+  inset: 0;
+}
+
+.stats__photo {
+  position: absolute;
+  top: 13.1rem;
+  left: -2.2rem;
+  width: 195.7rem;
+  height: 83.9rem;
+}
+
+.stats__photo-blur {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(0.7rem);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 58.5%, rgb(0, 0, 0) 91.3%);
+}
+
+.stats__photo::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(270deg, var(--bg-app-dark) 15.36%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),
+    linear-gradient(90deg, var(--bg-app-dark) 15.74%, rgba(var(--bg-app-dark-rgb), 0) 37.56%),
+    linear-gradient(0deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 83.97%),
+    linear-gradient(180deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 64.9%);
+}
+
+.stats__glow {
+  position: absolute;
+  width: 111.6rem;
+  height: 111.6rem;
+  background: var(--c-glow);
+  filter: blur(25rem);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.stats__glow--top {
+  top: -67.9rem;
+  right: -92.3rem;
+}
+
+.stats__glow--bottom {
+  bottom: -63.4rem;
+  left: -80.9rem;
+}
+
+.stats__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 5.2rem;
+}
+
+.stats__assets {
+  flex-shrink: 0;
+  width: 50.9rem;
+}
+
+.stats__assets-label {
+  margin-bottom: 2.6rem;
+  font-family: var(--ff-regular);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  opacity: 0.45;
+}
+
+.stats__assets-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 2.3rem 0;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:first-child {
+  padding-top: 0;
+}
+
+.stat-item__value {
+  font-family: var(--ff-title);
+  font-size: var(--fz-h1);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  color: var(--fg-app-dark);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.stat-item__unit {
+  font-family: var(--ff-title);
+  font-size: 2.509rem;
+  font-weight: 400;
+}
+
+.stat-item__plus {
+  font-size: 3.509rem;
+}
+
+.stat-item__text {
+  max-width: 16.6rem;
+  margin-bottom: 0.8rem;
+  font-family: var(--ff-regular);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: var(--lh-ui);
+  color: var(--fg-app-dark);
+  text-align: right;
+}
+
+.stats__reasons {
+  min-width: 0;
+}
+
+.stats__title {
+  max-width: 44rem;
+  margin-bottom: 1.6rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  color: var(--fg-app-dark);
+  letter-spacing: -0.03em;
+}
+
+.stats__title-highlight {
+  padding: 0 0.1em;
+  color: var(--fg-app-light);
+  background: var(--bg-app-light);
+}
+
+.stats__desc {
+  max-width: 55.2rem;
+  margin-bottom: 5.4rem;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+}
+
+.stats__desc b {
+  font-weight: 700;
+}
+
+.stats__reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2.8rem;
+  column-gap: 3.3rem;
+}
+
+// Колонка карточки — 20rem: шаг иконок 233px при column-gap 3.3rem. `1fr` растягивал колонку
+// до 20.5rem, и текст терял строку в двух карточках. Только десктопная полоса: ниже 1440px
+// делитель font-size ещё десктопный — фиксированные rem-колонки схлопнули бы сетку в ленту.
+//
+// Карточка «Уведомляем о статусе поставки ежедневно» остаётся в 2 строки против 3 в макете,
+// и это неустранимо единой колонкой: её рамка нарисована шириной 189px, а у соседней — 239px
+// при том же кегле. Любая ширина, дающая 3 строки первой, ломает вторую. Несогласованность макета.
+@media (min-width: $laptop + 1) {
+  .stats__reasons-grid {
+    grid-template-columns: repeat(4, 20rem);
+  }
+}
+
+.reason-card__media {
+  width: 10rem;
+  // min-height, не height: ассет 200×200 = 10×10rem, аспект 1:1 совпадает с квадратной
+  // рамкой — переполнения нет.
+  min-height: 10rem;
+  margin-bottom: 1.8rem;
+  border-radius: var(--radius-md);
+}
+
+.reason-card__text {
+  font-family: var(--ff-regular);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: var(--lh-ui);
+  color: var(--fg-app-dark);
+}
+
+.reason-card__text b {
+  font-weight: 700;
+}
+
+.stats__head {
+  position: relative;
+  z-index: 2;
+  max-width: 62rem;
+  padding-top: 7rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.stats__head-title {
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--fg-app-dark);
+  letter-spacing: -0.02em;
+}
+
+.stats__head-title b {
+  font-weight: 700;
+}
+
+.stats__head-lead {
+  margin-top: 1.4rem;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-app-dark);
+}
+
+@media (max-width: $laptop) {
+  .stats__container {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .stats__assets {
+    width: 100%;
+    max-width: 50.9rem;
+  }
+}
+
+@media (max-width: $tablet) {
+  .stats__reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .stats {
+    padding-top: 5rem;
+  }
+
+  .stats__bg {
+    inset: 0 0 -26.9rem;
+  }
+
+  .stats__photo,
+  .stats__glow {
+    display: none;
+  }
+
+  .stats__container {
+    flex-direction: column-reverse;
+    gap: 3.9rem;
+  }
+
+  .stats__title {
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .stats__desc {
+    margin-bottom: 2.6rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .stats__reasons-grid {
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  .reason-card__media {
+    width: 7rem;
+    min-height: 7rem;
+    margin-bottom: 1rem;
+  }
+
+  .reason-card__text {
+    font-size: var(--fz-small);
+  }
+
+  .stats__assets-label {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .stat-item {
+    gap: 0.8rem;
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+  }
+
+  .stat-item__value {
+    flex-shrink: 0;
+    width: 15rem;
+    font-size: 3.9rem;
+  }
+
+  .stat-item__unit {
+    font-size: 1.5rem;
+  }
+
+  .stat-item__plus {
+    font-size: 2.1rem;
+  }
+
+  .stat-item__text {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    font-size: var(--fz-xs);
+    text-align: left;
+  }
+
+  .stat-item__text--narrow {
+    max-width: 9rem;
+  }
+
+  .stats__head-lead {
+    font-size: var(--fz-small);
+  }
+}

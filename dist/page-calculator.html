@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Калькулятор — Байт Транзит</title>
+  <meta property="og:title" content="Калькулятор — Байт Транзит">
+
+
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" type="image/png" href="./img/common/favicon.png">
+
+
+  <meta property="og:description" content="Получите смету на тестовую поставку и персональное предложение по оптимизации расходов на логистику. Ответьте на 5 вопросов.">
+
+
+
+  <meta property="og:image" content="./img/common/og.png">
+
+
+<meta property="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+  <meta property="og:type" content="website">
+
+
+
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260715120306">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+
+  <div class="topbar">
+    <div class="topbar__container container">
+      <div class="topbar__timer timer timer--topbar" data-timer data-timer-deadline="">
+        <span class="timer__unit">
+          <span class="timer__num" data-timer-minutes>00</span>
+          <span class="timer__label">минут</span>
+        </span>
+        <span class="timer__unit">
+          <span class="timer__num" data-timer-seconds>00</span>
+          <span class="timer__label">секунд</span>
+        </span>
+      </div>
+
+      <p class="topbar__promo">
+        Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+      </p>
+
+      <a class="topbar__course button button--pill" href="page-course.html">Пройти курс</a>
+    </div>
+  </div>
+
+  <div class="header__bar">
+    <div class="header__container container">
+      <a class="header__logo logo" href="page-homepage.html" aria-label="Байт Транзит — на главную">
+        <img class="logo__img" src="./img/common.bit/logo.svg" alt="Байт Транзит" width="68" height="45" loading="lazy">
+      </a>
+
+      <div class="menu">
+
+        <a class="menu__logo logo" href="page-homepage.html" aria-label="Байт Транзит — на главную">
+          <img class="logo__img" src="./img/common.bit/logo.svg" alt="Байт Транзит" width="68" height="45" loading="lazy">
+        </a>
+        <hr class="menu__divider">
+
+        <nav class="menu__nav" aria-label="Основное меню">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="page-homepage.html" aria-current="page">Главная</a></li>
+            <li class="menu__item menu__item--has-sub">
+              <a class="menu__link menu__link--has-sub" href="page-homepage.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="menu-submenu-services">Услуги</a>
+              <ul class="menu__submenu" id="menu-submenu-services">
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service.html">Растаможка</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-teu.html">ТЭУ</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-samples.html">Ввоз образцов</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-payments.html">Платежи</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-outsourcing.html">Аутсорсинг ВЭД</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-fulfillment.html">Фулфилмент</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="single-service-delivery.html">Доставка</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="archive-post.html">Новости</a></li>
+            <li class="menu__item"><a class="menu__link" href="archive-case.html">Кейсы</a></li>
+            <li class="menu__item"><a class="menu__link" href="page-course.html">Курс</a></li>
+            <li class="menu__item menu__item--has-sub">
+              <a class="menu__link menu__link--has-sub" href="page-contacts.html" aria-haspopup="true" aria-expanded="false" aria-controls="menu-submenu-clients">Клиентам</a>
+              <ul class="menu__submenu" id="menu-submenu-clients">
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-contacts.html">Контакты</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-documents.html">Документы</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-calculator.html">Квиз</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-consult.html">Консультация</a></li>
+                <li class="menu__submenu-item"><a class="menu__submenu-link" href="page-faq.html">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="menu__offer">
+          <div class="timer timer--topbar" data-timer data-timer-deadline="">
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-minutes>00</span>
+              <span class="timer__label">минут</span>
+            </span>
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-seconds>00</span>
+              <span class="timer__label">секунд</span>
+            </span>
+          </div>
+          <p class="menu__offer-promo">
+            Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+          </p>
+          <a class="menu__course button button--pill" href="page-course.html">Пройти курс</a>
+        </div>
+
+        <a class="menu__phone" href="tel:88007700040"><u>8 800 770-00-40</u></a>
+        <div class="socials menu__socials">
+  <a class="socials__link" href="#" target="_blank" rel="noopener" aria-label="Написать в MAX">
+    <span class="socials__icon socials__icon--max" aria-hidden="true"></span>
+  </a>
+  <a class="socials__link" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+    <span class="socials__icon socials__icon--telegram" aria-hidden="true"></span>
+  </a>
+  <a class="socials__link" href="#" target="_blank" rel="noopener" aria-label="ВКонтакте">
+    <span class="socials__icon socials__icon--vk" aria-hidden="true"></span>
+  </a>
+</div>
+
+        <button class="menu__cta button button--secondary" type="button" data-b_modal-open="callback" data-form-name="Шапка — расчёт поставки">Расчёт поставки</button>
+      </div>
+
+      <div class="menu-overlay"></div>
+
+      <a class="header__phone" href="tel:88007700040">8 800 770-00-40</a>
+
+      <button class="header__burger burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main">
+      
+<section class="calculator-hero" id="calculator-hero">
+  <div class="calculator-hero__container container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <a class="breadcrumbs__item" href="/">Главная</a>
+  <span class="breadcrumbs__divider">/</span>
+  
+  
+  
+  <span class="breadcrumbs__item">Клиентам</span>
+  
+  
+  <span class="breadcrumbs__divider">/</span>
+  <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Калькулятор</span>
+  
+</nav>
+
+
+    <div class="calculator-hero__row">
+      <div class="calculator-hero__content">
+        <h1 class="calculator-hero__title">
+          Получите смету на<br>
+          <span class="calculator-hero__title-mark">тестовую поставку</span><br>
+          с Байт Транзит
+        </h1>
+
+        <p class="calculator-hero__subtitle">Или персональное предложение по оптимизации расходов на логистику</p>
+
+        <p class="calculator-hero__bonuses-label">Бонусы:</p>
+
+        <ul class="calculator-hero__bonuses">
+          <li class="calculator-bonus">
+            <div class="calculator-bonus__media media">
+              <picture class="media__pic">
+                <img class="media__img" src="./img/calculator-hero.bit/bonus-calc@2x.png" alt="" width="52" height="52" loading="lazy">
+              </picture>
+            </div>
+            <p class="calculator-bonus__text"><b>Расчет стоимости</b> отдельных услуг или логистики под ключ</p>
+          </li>
+          <li class="calculator-bonus">
+            <div class="calculator-bonus__media media">
+              <picture class="media__pic">
+                <img class="media__img" src="./img/calculator-hero.bit/bonus-losses@2x.png" alt="" width="52" height="52" loading="lazy">
+              </picture>
+            </div>
+            <p class="calculator-bonus__text"><b>Статья</b> «7 точек, в которых чаще всего теряется маржинальность»</p>
+          </li>
+        </ul>
+
+        <a class="calculator-hero__action button button--primary" href="#quiz">Начать</a>
+      </div>
+
+      <div class="calculator-hero__media media">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/calculator-hero.bit/briefcase@2x.jpg" alt="Кейс Байт Транзит: калькулятор, смета на тестовую поставку и персональное предложение" width="1090" height="613">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="quiz" id="quiz">
+  <div class="quiz__container section__container container">
+    <h2 class="quiz__title section-title">Ответьте на <b>5 вопросов и получите:</b></h2>
+
+    <ul class="quiz__benefits">
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-estimate@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Смету</b> на тестовую поставку</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-offer@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Персональное&nbsp;предложение</b> по оптимизации расходов на логистику</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-calc@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Расчет</b> стоимости отдельных услуг или логистики под ключ</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-article@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Статья</b> «7 точек, в которых чаще всего теряется маржинальность»</p>
+      </li>
+    </ul>
+
+    <div class="quiz__card js_form">
+      <input type="hidden" name="form_name" value="Квиз — 5 вопросов">
+
+      <ul class="quiz__progress">
+        <li class="quiz__dot is-active"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+      </ul>
+
+      <div class="quiz__slider swiper">
+        <ul class="quiz__wrapper swiper-wrapper">
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как сейчас устроен ваш импорт?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Везу через карго-посредника (S-China и аналоги)</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-cargo@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Оформляю все официально сам или через сотрудника</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-official@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Только планирую перейти к импорту</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-planning@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Был неудачный опыт в импорте</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-failed@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Работаю в белую через логистическую компанию</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-legal@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Есть ли у вас полный пакет документов на товар?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Однозначно да, все ввозится в белую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-full@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Нет уверенности, что комплект полный</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-unsure@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Документы оформляет посредник — я не видел</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-agent@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Документов нет — везу неофициально</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-none@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Ещё не закупал — только планирую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-notyet@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как вы сейчас платите поставщику в Китае?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">SWIFT-перевод</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-swift@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Через российский банк с конвертацией</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-bank@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Через посредника / агента</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-agent@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">USDT или криптовалюта</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-crypto@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Ещё не закупал — только планирую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-notyet@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Что для вас сейчас важнее всего в импорте?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Снизить риски и перейти на официальную схему</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-risk@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Разобраться сколько это будет стоить</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-cost@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Найти нишу и начать с нуля</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-niche@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Разобраться в документах — у меня есть пробелы</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-docs@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Убедиться что мой текущий логист надёжен</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-logist@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+              </button>
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step quiz__step--final swiper-slide">
+            <h3 class="quiz__final-title">Последний шаг</h3>
+
+            <div class="quiz__form">
+              <div class="quiz__form-fields">
+                <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Имя"
+      required
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+                <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+              </div>
+
+              <button class="quiz__form-submit button button--primary button--block js_form__submit" type="button">
+                Получить аудит
+              </button>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="privacy.html">условия политики конфиденциальности</a>
+                </span>
+              </label>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="#">условия договора оферты</a>
+                </span>
+              </label>
+            </div>
+
+            <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
+              <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    
+<footer class="footer">
+  <div class="footer__nav">
+    <div class="footer__nav-container container">
+      <div class="footer__brand">
+        <a class="footer__brand-logo logo" href="page-homepage.html" aria-label="Байт Транзит — на главную">
+          <img class="logo__img" src="./img/common.bit/logo-mono.svg" alt="Байт Транзит" width="68" height="45" loading="lazy">
+        </a>
+        <address class="footer__address">
+          Московская область,<br>
+          г. Дзержинский<br>
+          ул. Северный проезд, 2
+        </address>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Навигация</h4>
+        <div class="footer__col-groups">
+          <ul class="footer__links">
+            <li><a class="footer__link" href="page-homepage.html">Главная</a></li>
+            <li><a class="footer__link" href="page-calculator.html">Калькулятор</a></li>
+            <li><a class="footer__link" href="archive-post.html">Новости</a></li>
+            <li><a class="footer__link" href="archive-case.html">Кейсы</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li><a class="footer__link" href="page-homepage.html#reviews">Отзывы</a></li>
+            <li><a class="footer__link" href="page-documents.html">Документы</a></li>
+            <li><a class="footer__link" href="page-contacts.html">Контакты</a></li>
+            <li><a class="footer__link" href="page-consult.html">Консультация</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li><a class="footer__link" href="page-faq.html">FAQ</a></li>
+            <li><a class="footer__link" href="page-documents.html">Инструкции</a></li>
+            <li><a class="footer__link" href="page-course.html">Курс</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__col footer__col--services">
+        <h4 class="footer__col-title">Услуги</h4>
+        <div class="footer__col-groups">
+          <ul class="footer__links">
+            <li><a class="footer__link" href="single-service-teu.html">Забор груза в Китае</a></li>
+            <li><a class="footer__link" href="single-service.html">Белая растаможка</a></li>
+            <li><a class="footer__link" href="single-service-delivery.html">Доставка на склад в РФ</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li><a class="footer__link" href="single-service-fulfillment.html">Фулфилмент</a></li>
+            <li><a class="footer__link" href="single-service-delivery.html">Доставка до склада МП</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__contacts">
+        <p class="footer__contacts-note">Специалист готов ответить на звонок</p>
+        <a class="footer__phone" href="tel:+78007700040">
+          <img class="footer__phone-flag" src="./img/common.bit/flag-russia.svg" alt="" width="29" height="29" loading="lazy">
+          <span class="footer__phone-number">+7(800) 770-00-40</span>
+        </a>
+        <a class="footer__phone" href="tel:+375353487880">
+          <img class="footer__phone-flag" src="./img/common.bit/flag-belarus.svg" alt="" width="29" height="29" loading="lazy">
+          <span class="footer__phone-number">+375 35 348 78 80</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-container container">
+        <p class="footer__copyright">© Группа компаний «Байт Транзит», 1991-2026</p>
+        <ul class="footer__legal">
+          <li><a class="footer__legal-link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="footer__legal-link" href="#">Оферта</a></li>
+          <li><a class="footer__legal-link" href="#">Форма согласия на обработку персональных данных</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="b_modal" id="callback">
+  <h3 class="b_modal__title">Заказать звонок</h3>
+  <p class="b_modal__desc">
+    Оставьте свои контакты, и мы свяжемся с вами в ближайшее время
+  </p>
+
+  <div class="form js_form">
+    <input type="hidden" name="form_name" value="Заявка">
+
+    <div class="form__fields">
+      <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Ваше имя"
+      required
+    >
+  </div>
+  <span class="input__error">Введите имя</span>
+</label>
+
+      <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Введите телефон</span>
+</label>
+
+    </div>
+
+    <div class="form__actions">
+      <button class="button button--primary button--block js_form__submit" type="button">Отправить</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="b_modal modal-audit js_form" id="audit-request">
+  <input type="hidden" name="form_name" value="Попап — Получить аудит">
+
+  <div class="modal-audit__fields">
+    <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Имя"
+      required
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+    <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+  </div>
+
+  <button class="modal-audit__submit button button--primary button--block js_form__submit" type="button">
+    Получить аудит
+  </button>
+
+  <label class="checkbox modal-audit__agreement js_form__control">
+    <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+    <span class="checkbox__check"></span>
+    <span class="checkbox__label">
+      Нажимая на кнопку, Вы принимаете
+      <a class="checkbox__link" href="privacy.html">условия политики конфиденциальности</a>
+    </span>
+  </label>
+
+  <label class="checkbox modal-audit__agreement js_form__control">
+    <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+    <span class="checkbox__check"></span>
+    <span class="checkbox__label">
+      Нажимая на кнопку, Вы принимаете
+      <a class="checkbox__link" href="#">условия договора оферты</a>
+    </span>
+  </label>
+</div>
+
+
+  </div>
+
+  <script src="./js/index.min.js?_v=20260715120306" defer></script>
+</body>
+</html>

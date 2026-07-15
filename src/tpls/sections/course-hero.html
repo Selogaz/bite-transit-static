@@ -1,0 +1,60 @@
+
+<section class="course-hero" id="course-hero">
+  <div class="course-hero__container container">
+    <nav class="breadcrumbs course-hero__breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__item" href="page-homepage.html">Главная</a>
+      <span class="breadcrumbs__divider">/</span>
+      <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">Курс</span>
+    </nav>
+
+    <div class="hero__container course-hero__grid">
+      <div class="hero__content">
+        <p class="hero__eyebrow">
+          <span class="hero__eyebrow-icons" aria-hidden="true">
+            <span class="hero__eyebrow-avatar hero__eyebrow-avatar--faint"></span>
+            <span class="hero__eyebrow-avatar hero__eyebrow-avatar--muted"></span>
+            <span class="hero__eyebrow-avatar"></span>
+          </span>
+          для селлеров, товарного бизнеса и производств
+        </p>
+
+        <h1 class="hero__title course-hero__title">
+          Получите курс<br>
+          по <span class="hero__title-mark">официальной ВЭД</span> бесплатно
+        </h1>
+
+        <p class="course-hero__desc">
+          25 уроков о том, как перейти на официальный ввоз товаров из Китая. Узнайте, как исключить
+          убытки из-за ошибок или поймите, как <b>увеличить маржинальность</b> текущей схемы
+        </p>
+
+        @@include('../cards/course-offer.html', { "formName": "Курс — забрать бесплатно" })
+      </div>
+
+      <div class="course-hero__media media">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/course.bit/hero-program@2x.jpg" alt="Планшет с программой курса, документы, красный контейнер и калькулятор" width="1034" height="690" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <ul class="course-hero__perks">
+      @@include('../cards/trust-card.html', {
+        "icon": "@img/course.bit/perk-sellers@2x.jpg",
+        "text": "<b>Для селлеров,</b> товарного бизнеса и производств"
+      })
+      @@include('../cards/trust-card.html', {
+        "icon": "@img/course.bit/perk-plan@2x.jpg",
+        "text": "<b>План</b> по безопасному и быстрому переходу с карго"
+      })
+      @@include('../cards/trust-card.html', {
+        "icon": "@img/course.bit/perk-costs@2x.jpg",
+        "text": "Способы <b>оптимизации расходов</b> на официальную ВЭД"
+      })
+      @@include('../cards/trust-card.html', {
+        "icon": "@img/course.bit/perk-stats@2x.jpg",
+        "text": "Вывели в белую зону <b>XXX бизнесов за 2025</b> по методике из курса"
+      })
+    </ul>
+  </div>
+</section>

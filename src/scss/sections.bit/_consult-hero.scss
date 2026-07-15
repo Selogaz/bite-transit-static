@@ -1,0 +1,150 @@
+.consult-hero {
+  padding-top: 1.6rem;
+  padding-bottom: 10rem;
+}
+
+.consult-hero__row {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+  margin-top: 6.2rem;
+}
+
+.consult-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 64rem;
+}
+
+.consult-hero__title {
+  margin-bottom: 4rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+.consult-hero__title b {
+  font-weight: 700;
+}
+
+.consult-hero__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.consult-hero__visual {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.consult-hero__media {
+  flex: 0 0 auto;
+  width: 91.6rem;
+  aspect-ratio: 916 / 687;
+  margin-top: -3.6rem;
+  margin-right: 14.2rem;
+}
+
+.consult-hero__card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (min-width: $laptop + 1) {
+  .consult-hero__visual {
+    isolation: isolate;
+  }
+
+  .consult-hero__media {
+    position: relative;
+    z-index: -2;
+  }
+
+  .consult-hero__card {
+    z-index: auto;
+  }
+
+  .consult-hero__card::after {
+    position: absolute;
+    inset: 5.2rem 2.8rem -0.8rem;
+    z-index: -1;
+    content: "";
+    background: var(--bg-consult-card-backing);
+    border-radius: var(--radius-card);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.09);
+  }
+}
+
+@media (max-width: $laptop) {
+  .consult-hero__row {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 3rem;
+  }
+
+  .consult-hero__content {
+    max-width: none;
+  }
+
+  .consult-hero__visual {
+    display: block;
+  }
+
+  .consult-hero__media {
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+
+  .consult-hero__card {
+    position: static;
+  }
+}
+
+@media (max-width: $mobile) {
+  .consult-hero__container {
+    padding-inline: 1rem;
+  }
+
+  .consult-hero__title {
+    margin-top: 1.9rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .consult-hero__list {
+    gap: 1.6rem;
+  }
+
+  .consult-hero__media {
+    width: calc(100% + 2rem);
+    aspect-ratio: 394 / 295;
+    margin: 2.4rem -1rem 0;
+  }
+
+  // z-index: auto гасит десктопный stacking context (база даёт z-index: 2 для нахлёста над
+  // фото карты) — иначе псевдоэлемент-подложка с z-index: -1 не ушёл бы за белый фон карточки,
+  // а лёг бы поверх него. relative без z-index держит карточку якорем для absolute-подложки.
+  .consult-hero__card {
+    position: relative;
+    z-index: auto;
+    margin-top: 2.4rem;
+  }
+
+  .consult-hero__card::after {
+    position: absolute;
+    inset: 3rem 1.5rem -1rem;
+    z-index: -1;
+    content: "";
+    background: var(--bg-consult-card-backing);
+    border-radius: var(--radius-card);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  }
+}

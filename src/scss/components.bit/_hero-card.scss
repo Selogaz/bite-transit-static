@@ -1,0 +1,109 @@
+.hero-stage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 17.3em;
+  min-height: 12.6em;
+  padding: 0 1.1em;
+
+  font-size: 1rem;
+}
+
+.hero-stage-card--wide {
+  width: 19.6em;
+}
+
+.hero-stage-card__backdrop {
+  position: absolute;
+  inset: 2.2em 0 0;
+  z-index: 0;
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(3.447em);
+  border: 0.12em solid var(--border-card-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1.2em 3em rgba(var(--bg-app-dark-rgb), 0.14);
+}
+
+.hero-stage-card__media {
+  // height, не min-height: `.media__img{height:100%}` не резолвится без явной высоты
+  // родителя — без неё фото растягивало карточку по своим пропорциям вместо 12.6em.
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 8.5em;
+  border-radius: var(--radius-md);
+}
+
+.hero-stage-card__caption {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+
+  padding: 0.7em 0.2em;
+}
+
+.hero-stage-card__num {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  font-family: var(--ff-title);
+  font-size: var(--fz-xs);
+  font-weight: 700;
+
+  color: var(--fg-card-caption);
+  background: var(--bg-app-light);
+  border-radius: 50%;
+}
+
+.hero-stage-card__label {
+  font-family: var(--ff-title);
+  font-size: var(--fz-small);
+  font-weight: 700;
+  line-height: var(--lh-ui);
+  color: var(--fg-card-caption);
+
+  white-space: nowrap;
+}
+
+@media (max-width: $mobile) {
+  .hero-stage-card {
+    min-height: 5.4rem;
+    // Паддинги слегка ужаты против сырых 7/9: с учётом кромки 1.2px стек №+подпись
+    // укладывается в 54px, и высоту держит min-height, а не контент.
+    padding: 0.6rem 1rem 0.7rem 1.3rem;
+
+    background: var(--bg-card-glass);
+    backdrop-filter: blur(3.447em);
+    border: 0.12em solid var(--border-card-glass);
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-stage-card__backdrop {
+    display: none;
+  }
+
+  .hero-stage-card__caption {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .hero-stage-card__num {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .hero-stage-card__label {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}

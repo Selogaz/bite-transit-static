@@ -1,0 +1,316 @@
+<!-- Секция «services», нижняя часть — тёмная панель детали услуги + красный CTA-баннер с формой.
+     Интро (таб-пилюли + карточки результатов) вынесено в services-intro.html (страницы услуг берут
+     только его). Панель детали — семь переключаемых вкладок: колонка табов слева, справа семь пар
+     «контент + фото», показывается активная. Контент вкладок придёт из CMS; здесь свёрстаны все
+     семь как эталон разметки. -->
+@@include('services-intro.html')
+<div class="service-detail">
+    <div class="service-detail__container container">
+      <h3 class="service-detail__heading">Позаботимся о доставке вашего груза от <b>фабрики в Китае до склада Маркетплейса</b></h3>
+      <p class="service-detail__subheading">Или делаем более выгодными отдельные этапы логистики</p>
+
+      <div class="service-detail__panel">
+        <ul class="service-detail__tabs">
+          @@include('../cards/service-detail-tab.html', { "modifier": " service-detail__tab-link--active", "label": "Таможенное оформление" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Транспортно-экспедиционные услуги" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Сертификация, ввоз образцов" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Платежи" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Аутсорсинг ВЭД под ключ" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
+          @@include('../cards/service-detail-tab.html', { "modifier": "", "label": "Доставка груза по России и СНГ" })
+        </ul>
+
+        <div class="service-detail__pane">
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Таможенное</b> оформление</h4>
+
+            <div class="service-detail__perks">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-book.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text"><b>Оформляем</b> все разрешающие документы</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon service-detail__perk-icon--text">0₽</span>
+                <p class="service-detail__perk-text">Консультация<br> по товару <b>бесплатна</b></p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list">
+              <li>Подбор кода ТНВЭД</li>
+              <li>Проверка и Формирование комплекта документов для подачи таможенной декларации</li>
+              <li>Расчет таможенных платежей</li>
+              <li>Проверка необходимости маркировки «Честный Знак»</li>
+              <li>Проверка необходимости оформления разрешительных документов в зависимости от товара/ кода ТНВЭД</li>
+              <li>Работаем только через проверенных брокеров с опытом более 10 лет</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-container@2x.jpg" alt="Морской контейнер и разрешительные документы с флагами России и Китая" width="592" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Транспортно-экспедиционные</b> услуги</h4>
+
+            <div class="service-detail__perks service-detail__perks--triple">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-cube.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Свои склады в 20 городах РФ</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-group.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Авиа, авто, ж/д, морские перевозки</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-money.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Выгода от 8000$ за инвойс</p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list service-detail__list--wide">
+              <li>Заберём груз со склада или с фабрики в Китае</li>
+              <li>Составим маршрут, опираясь на требуемую длительность поставки и особенности товара</li>
+              <li>Доставим груз до своего склада или прямо на маркетплейсы</li>
+              <li>Страхуем и надежно доставляем каждый товар</li>
+              <li>Уведомляем о статусах поставки в личном кабинете или через менеджера</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-teu@2x.jpg" alt="Самолёт, контейнеровоз, фура и погрузчик, ноутбук и телефон с отслеживанием груза, страховой полис" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Сертификация,</b> ввоз образцов</h4>
+
+            <div class="service-detail__perks">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-book.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Поможем оформить разрешительные документы</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon service-detail__perk-icon--text">0₽</span>
+                <p class="service-detail__perk-text">Консультация по товару бесплатна <b>для клиентов</b></p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list service-detail__list--wide">
+              <li>Работаем с максимальным перечнем групп товаров</li>
+              <li>Оформим только нужные сертификаты, исключив переплату</li>
+              <li>Зафиксируем финальную стоимость до внесения оплаты</li>
+              <li>Работаем с проверенными органами по сертификации с собственными испытательными лабораториями</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-samples@2x.jpg" alt="Сертификат соответствия на планшете, коробка с образцом и печать «Одобрено»" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Платежи</b></h4>
+
+            <div class="service-detail__perks">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-discount.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Стоимость от 0.3% транзакции</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-receipt.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Инвойсы от 7000$</p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list">
+              <li>Предоставим собственный международный платежный контур</li>
+              <li>Есть свои платежные агенты в Китае</li>
+              <li>Гарантия возврата денежных средств, в случае незачисления фабрике</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-payments@2x.jpg" alt="Глобус с картой Китая, банковская карта и красный щит с замком" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title">Аутсорсинг <b>ВЭД ПОД КЛЮЧ</b></h4>
+
+            <div class="service-detail__perks service-detail__perks--triple">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-book.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text"><b>Оформляем</b> все разрешающие документы</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-rotate.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Авиа, авто, ж/д, морские перевозки</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-columns.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">От 7000$ инвойс 300кг / 3 м3</p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list">
+              <li>Полностью возьмём на себя все операции связанные с покупкой товара за рубежом</li>
+              <li>Обеспечим официальный импорт товара, включая таможенное оформление</li>
+              <li>Вы получите очищенный товар со всеми необходимыми документами</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-outsourcing@2x.jpg" alt="Глобус, самолёт, контейнеровоз, фура и коробки с пакетом таможенных документов" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Фулфилмент</b> для маркетплейсов</h4>
+
+            <div class="service-detail__perks">
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-briefcase.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">Полный цикл фулфилмента</p>
+              </div>
+              <div class="service-detail__perk">
+                <span class="service-detail__perk-icon">
+                  <img src="@img/services.bit/icon-receipt.svg" alt="" width="24" height="24" loading="lazy">
+                </span>
+                <p class="service-detail__perk-text">От ***₽ за единицу товара</p>
+              </div>
+            </div>
+
+            <ul class="service-detail__list">
+              <li>Примем и разместим товары на своем складе для подготовки</li>
+              <li>Выявим брак до отправки на маркетплейсы</li>
+              <li>Промаркируем и упакуем в соответствии со стандартами маркетплейса</li>
+              <li>Отправляем товары на склады маркетплейсов каждый день</li>
+              <li>Работаем по гибкой схеме: забираем товар у вас или отгружаем со своего фулфилмента</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-fulfillment@2x.jpg" alt="Морской контейнер, паллеты с коробками и погрузчик, логотипы OZON, Wildberries и Яндекс Маркет" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="service-detail__pane" hidden>
+          <div class="service-detail__content">
+            <h4 class="service-detail__title"><b>Доставка</b> груза по России и СНГ</h4>
+
+            <ul class="service-detail__list">
+              <li>Большая сеть собственных терминалов по РФ</li>
+              <li>Точный график доставки, известный заранее</li>
+              <li>Берёмся даже за поставки с сжатыми сроками</li>
+              <li>Собственный автопарк</li>
+            </ul>
+
+            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+          </div>
+
+          <div class="service-detail__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/detail-delivery@2x.jpg" alt="Карта России с сетью терминалов, склад, фура, фургон и погрузчик с коробками, флаг России и часы" width="572" height="643" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <span class="service-detail__decor" aria-hidden="true"></span>
+    </div>
+
+    <div class="service-cta">
+      <div class="service-cta__container container">
+        <div class="service-cta__card">
+          <p class="service-cta__title"><b>Оставьте заявку</b> и получите персональный пакет услуг для вашего бизнеса</p>
+
+          <div class="service-cta__media media media--contain">
+            <picture class="media__pic">
+              <img class="media__img" src="@img/services.bit/cta-booklet@2x.png" alt="Буклет «Пакет услуг»" width="496" height="336" loading="lazy">
+            </picture>
+          </div>
+
+          <div class="service-cta__fields">
+            <input type="hidden" name="form_name" value="Услуги — пакет услуг">
+            @@include('../b/input.html', {
+              "className": "service-cta__field",
+              "type": "text",
+              "name": "name",
+              "placeholder": "Имя",
+              "attributes": "required",
+              "error": "Введите имя"
+            })
+            @@include('../b/input.html', {
+              "className": "service-cta__field",
+              "type": "tel",
+              "name": "phone",
+              "placeholder": "Номер телефона",
+              "attributes": "required",
+              "error": "Введите телефон"
+            })
+            <button class="service-cta__submit button button--secondary" type="submit">Отправить заявку</button>
+
+            <label class="checkbox service-cta__privacy">
+              <input type="checkbox" name="privacy" class="checkbox__input" required>
+              <span class="checkbox__check"></span>
+              <span class="checkbox__label">
+                Нажимая на кнопку, Вы принимаете <a class="checkbox__link" href="#">условия политики конфиденциальности</a>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

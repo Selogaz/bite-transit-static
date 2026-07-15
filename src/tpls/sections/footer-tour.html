@@ -1,0 +1,98 @@
+
+<div class="footer__tour">
+  <div class="footer__tour-bg media media--cover">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/footer.bit/bg-tour.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="footer__tour-container container">
+    <div class="footer__tour-content">
+      <h2 class="footer__tour-title">
+        <b>Онлайн-экскурсия в БАЙТ-Транзит:</b> посмотрите, кому вы доверяете груз, время и деньги
+      </h2>
+
+      <ul class="footer__tour-list">
+        @@include('../cards/tour-point.html', {
+          "image": "icon-cases@2x.jpg",
+          "title": "Покажем реальные кейсы из смежных ниш. ",
+          "text": "Увидите нашу работу в деле:как мы уже сделали логистику более выгодной похожим бизнесам"
+        })
+        @@include('../cards/tour-point.html', {
+          "image": "icon-infrastructure@2x.jpg",
+          "title": "Покажем инфраструктуру",
+          "text": "<br>Схема организации, реальные фотографии, адреса складов, юрлицо и даже наши дела в КАД"
+        })
+        @@include('../cards/tour-point.html', {
+          "image": "icon-team@2x.jpg",
+          "title": "Познакомим с командой",
+          "text": "<br>Поймёте, кто будет вести вашу поставку, отвечать за документы, планировать маршрут и почему сотрудники знают свое дело"
+        })
+      </ul>
+
+      <div class="footer__tour-bonus">
+        <div class="footer__tour-bonus-media media">
+          <picture class="media__pic">
+            <img class="media__img" src="@img/footer.bit/icon-checklist@2x.jpg" alt="" width="86" height="86" loading="lazy">
+          </picture>
+        </div>
+        <div class="footer__tour-bonus-body">
+          <p class="footer__tour-bonus-label">
+            Бонус
+            <span class="footer__tour-bonus-icon" aria-hidden="true"></span>
+          </p>
+          <p class="footer__tour-bonus-text">Чек-лист: «Готовы ли вы к первой партии из Китая»</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__tour-card js_form">
+      <input type="hidden" name="form_name" value="Футер — Получить аудит">
+
+      <p class="footer__tour-card-title">
+        <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+      </p>
+
+      <div class="footer__tour-card-fields">
+        @@include('../b/input.html', {
+          "className": "js_form__control",
+          "type": "text",
+          "name": "name",
+          "placeholder": "Имя",
+          "attributes": "required",
+          "error": "Поле должно быть заполнено!"
+        })
+        @@include('../b/input.html', {
+          "className": "js_form__control",
+          "type": "tel",
+          "name": "phone",
+          "placeholder": "+ 7 (___) ___ __ __",
+          "attributes": "required data-mask=\"phone\"",
+          "error": "Поле должно быть заполнено!"
+        })
+      </div>
+
+      <button class="footer__tour-card-submit button button--primary button--block js_form__submit" type="button">
+        Получить аудит
+      </button>
+
+      <label class="checkbox footer__tour-card-agreement js_form__control">
+        <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+        </span>
+      </label>
+
+      <label class="checkbox footer__tour-card-agreement js_form__control">
+        <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="#">договора оферты</a>
+        </span>
+      </label>
+    </div>
+  </div>
+</div>

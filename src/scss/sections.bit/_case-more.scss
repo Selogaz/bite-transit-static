@@ -1,0 +1,58 @@
+.case-more {
+  padding-top: 7.7rem;
+  padding-bottom: 11rem;
+
+  @media (max-width: $desktop-md) {
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile-xlg) {
+    padding-bottom: 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 3.1rem;
+  }
+}
+
+.case-more__title {
+  margin-bottom: 3.6rem;
+  text-align: center;
+}
+
+.case-more .service-tabs {
+  margin-bottom: 4.4rem;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.case-more__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.1rem;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile) {
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .case-more__container {
+    padding-inline: 1rem;
+  }
+
+  .case-more__title {
+    margin-bottom: 2.9rem;
+  }
+}

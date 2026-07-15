@@ -1,0 +1,59 @@
+.socials {
+  --bg: var(--bg-social);
+  --fg: var(--fg-social);
+  --bg-hover: var(--bg-social);
+  --fg-hover: var(--c-primary-dark);
+  --gap: 1.2rem;
+
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.7rem;
+  height: 3.6rem;
+  color: var(--fg);
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  transition: var(--tr-regular);
+}
+
+.socials__link:hover {
+  @media (any-hover: hover) {
+    color: var(--fg-hover);
+    background: var(--bg-hover);
+  }
+}
+
+.socials__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.socials__icon--telegram {
+  --icon: url("@img/socials/icon-telegram.svg");
+  --icon-size: 2.1rem;
+}
+
+.socials__icon--vk {
+  --icon: url("@img/socials/icon-vk.svg");
+  --icon-size: 2.2rem;
+}
+
+.socials__icon--max {
+  --icon: url("@img/socials/icon-max.svg");
+  --icon-size: 1.75rem;
+}
+
+.socials--light {
+  --bg: rgba(255, 255, 255, 0.08);
+  --fg: var(--fg-app-dark);
+  --bg-hover: var(--c-primary);
+}

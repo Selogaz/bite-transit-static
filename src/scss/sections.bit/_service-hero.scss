@@ -1,0 +1,371 @@
+.service-hero {
+  position: relative;
+  padding-top: 1.6rem;
+  overflow: hidden;
+  background: var(--bg-app-light-secondary);
+}
+
+.service-hero__container {
+  position: relative;
+  z-index: 2;
+  min-height: 61.3rem;
+}
+
+.service-hero__eyebrow {
+  display: inline-flex;
+  gap: 0.9rem;
+  align-items: center;
+  margin: 2.8rem 0 1rem;
+  font-family: var(--ff-regular);
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--fg-hero);
+}
+
+.service-hero__eyebrow-icons {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.service-hero__eyebrow-avatar {
+  z-index: 1;
+  width: 2.46rem;
+  aspect-ratio: 1;
+  margin-left: -1.64rem;
+  background: url("@img/hero.bit/avatar-placeholder.svg") center / contain no-repeat;
+}
+
+.service-hero__eyebrow-avatar:first-child {
+  margin-left: 0;
+}
+
+.service-hero__eyebrow-avatar--faint {
+  opacity: 0.1;
+}
+
+.service-hero__eyebrow-avatar--muted {
+  opacity: 0.4;
+}
+
+.service-hero__title {
+  max-width: 63.3rem;
+  margin: 0 0 2.3rem;
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: 300;
+  line-height: 0.945;
+  color: var(--fg-regular);
+  letter-spacing: -0.03em;
+}
+
+// Две отдельные плашки (по одной на строку), а не единый фон: inline-block + line-height:1
+// задают высоту от строки (1em), а не от content-area шрифта (у Inter Tight ~1.22em — фон был выше).
+.service-hero__title-mark {
+  display: inline-block;
+  padding: 0 0.2em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--fg-app-dark);
+  background: var(--c-primary-dark);
+  border-radius: var(--radius-sm);
+}
+
+.service-hero__subtitle {
+  max-width: 46.7rem;
+  margin-bottom: 2.8rem;
+  font-family: var(--ff-regular);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-regular);
+  color: var(--fg-hero);
+}
+
+.service-hero__subtitle-accent {
+  font-weight: 700;
+}
+
+.service-hero__action {
+  min-width: 30rem;
+  padding-top: 1.68em;
+  padding-bottom: 2.15em;
+}
+
+.service-hero__media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 165.9rem;
+  min-height: 61.3rem;
+}
+
+.service-hero__media::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(to right, rgba(var(--bg-app-light-secondary-rgb), 1) 0%, rgba(var(--bg-app-light-secondary-rgb), 0) 47%);
+}
+
+.service-hero__trust-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: -2.4rem;
+  background: var(--bg-app-light);
+  border-bottom: 0.1rem solid var(--border-trust-bar);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.service-hero--bleed .service-hero__trust-bar {
+  margin-top: -2.4rem;
+}
+
+.service-hero__trust-container {
+  padding-top: 2.2rem;
+  padding-bottom: 1.9rem;
+}
+
+.service-hero__trust-list {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2.4em;
+}
+
+.service-hero__media--wide-bleed ~ .service-hero__trust-bar .trust-card:last-child .trust-card__text {
+  max-width: 22rem;
+}
+
+.service-hero--contained .service-hero__media {
+  position: absolute;
+  top: 8.1rem;
+  right: calc((100vw - var(--w-container)) / 2);
+  border-radius: var(--radius-card);
+}
+
+// top: -3.5rem, а не 8.1rem: 8.1 снято с frame-Y (там в отсчёт входит шапка), а тут отсчёт
+// от верха секции — иначе фото стояло ниже и уходило под трастбар. Отрицательный top поднимает его.
+.service-hero--contained .service-hero__media--square {
+  top: -3.5rem;
+  width: 69.7rem;
+  min-height: 69.7rem;
+}
+
+.service-hero--contained .service-hero__media::before {
+  content: none;
+}
+
+.service-hero--wide-fade .service-hero__media {
+  min-height: 61.9rem;
+}
+
+.service-hero--wide-fade .media__img {
+  object-fit: contain;
+}
+
+.service-hero--wide-fade .service-hero__media::before {
+  background: linear-gradient(
+    to right,
+    rgba(var(--bg-app-light-secondary-rgb), 1) 0%,
+    rgba(var(--bg-app-light-secondary-rgb), 0) 20%
+  );
+}
+
+.service-hero--wide-fade .service-hero__media--wide {
+  right: calc((100vw - var(--w-container)) / 2);
+  width: 92.3rem;
+}
+
+.service-hero--wide-fade .service-hero__media--wide-bleed {
+  right: calc((100vw - var(--w-container)) / 2 - 7.6rem);
+  width: 107.5rem;
+}
+
+.service-hero--fade .service-hero__media {
+  top: -4.6rem;
+  right: calc((100vw - var(--w-container)) / 2 - 8rem);
+  width: 94.1rem;
+  min-height: 0;
+  aspect-ratio: 941 / 707;
+}
+
+.service-hero--fade .service-hero__media::before {
+  background: linear-gradient(
+    to right,
+    rgba(var(--bg-app-light-secondary-rgb), 1) 0%,
+    rgba(var(--bg-app-light-secondary-rgb), 0) 38%,
+    rgba(var(--bg-app-light-secondary-rgb), 0) 87%,
+    rgba(var(--bg-app-light-secondary-rgb), 1) 100%
+  );
+}
+
+.service-hero__waypoint {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.1rem;
+  height: 4.1rem;
+  font-family: var(--ff-regular);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--c-divider);
+  border: 0.1rem solid var(--c-divider);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.service-hero__waypoint--1 {
+  top: 10.7%;
+  left: 96%;
+}
+
+.service-hero__waypoint--2 {
+  top: 48.7%;
+  left: 72.2%;
+}
+
+.service-hero__waypoint--3 {
+  top: 65.5%;
+  left: 83.7%;
+}
+
+@media (max-width: $tablet) {
+  .service-hero__media {
+    width: 120rem;
+  }
+
+  .service-hero--contained .service-hero__media--square {
+    top: 8.1rem;
+    right: 2rem;
+    width: 50rem;
+    min-height: 50rem;
+  }
+
+  .service-hero--wide-fade .service-hero__media {
+    right: 2rem;
+    width: 60rem;
+    min-height: 34.6rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .service-hero {
+    padding-top: 2.4rem;
+  }
+
+  .service-hero__container {
+    min-height: 0;
+  }
+
+  .service-hero__eyebrow {
+    margin-top: 1.4rem;
+  }
+
+  .service-hero__title {
+    max-width: none;
+  }
+
+  .service-hero__subtitle {
+    max-width: none;
+  }
+
+  .service-hero__action {
+    width: 100%;
+    min-width: 0;
+    padding-top: 0.93em;
+    padding-bottom: 1.27em;
+    font-size: 1.4rem;
+  }
+
+  .service-hero__media {
+    position: static;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 320 / 329;
+    margin-top: 2.1rem;
+  }
+
+  .service-hero__waypoints {
+    display: none;
+  }
+
+  .service-hero__media::before {
+    content: none;
+  }
+
+  .service-hero--bleed .service-hero__media {
+    position: relative;
+  }
+
+  .service-hero--bleed .service-hero__media::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(var(--bg-app-light-secondary-rgb), 1) 0%, rgba(var(--bg-app-light-secondary-rgb), 0) 18.5%);
+  }
+
+  .service-hero--contained .service-hero__media {
+    position: static;
+    top: auto;
+    right: auto;
+    width: auto;
+    min-height: 0;
+    aspect-ratio: 320 / 329;
+    border-radius: var(--radius-card);
+  }
+
+  .service-hero--fade .service-hero__media {
+    width: auto;
+    aspect-ratio: 320 / 329;
+    border-radius: var(--radius-card);
+  }
+
+  .service-hero--wide-fade .service-hero__media {
+    position: relative;
+    width: auto;
+    min-height: 0;
+    aspect-ratio: 1024 / 577;
+  }
+
+  .service-hero--wide-fade .service-hero__media::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(var(--bg-app-light-secondary-rgb), 1) 0%, rgba(var(--bg-app-light-secondary-rgb), 0) 34%);
+  }
+
+  .service-hero__trust-bar {
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .service-hero--bleed .service-hero__trust-bar {
+    margin-top: -2.9rem;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .service-hero--fade .service-hero__trust-bar {
+    margin-top: 1.2rem;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .service-hero--contained .service-hero__trust-bar {
+    margin-top: 1.2rem;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .service-hero--wide-fade .service-hero__trust-bar {
+    margin-top: -2.9rem;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .service-hero__trust-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    row-gap: 1.6rem;
+    column-gap: 2rem;
+  }
+
+  .service-hero__trust-list .trust-card:nth-child(3):last-child {
+    grid-column: 1 / -1;
+  }
+}

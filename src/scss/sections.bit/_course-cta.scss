@@ -1,0 +1,198 @@
+.course-cta {
+  padding-bottom: 0;
+  background: var(--bg-app-light-tertiary);
+}
+
+.course-cta__container {
+  display: flex;
+  gap: 4rem;
+
+  align-items: flex-start;
+}
+
+.course-cta__content {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  max-width: 49.6rem;
+}
+
+.course-cta__title {
+  margin-bottom: 3.4rem;
+}
+
+.course-cta__subtitle {
+  margin-bottom: 3.2rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 700;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
+.course-cta__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.course-cta__step {
+  position: relative;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+// height, не min-height: пунктирный коннектор — декор без контента, не блок с фото.
+.course-cta__step:not(:last-child)::after {
+  position: absolute;
+  top: 2.9rem;
+  left: 1.4rem;
+  width: 0;
+  height: 2rem;
+  content: "";
+  border-left: 0.1rem dashed var(--c-divider);
+  transform: translateX(-50%);
+}
+
+// height, не min-height: кружок-бейдж должен остаться circle (border-radius:50%) — с
+// min-height двузначный номер мог бы растянуть его в овал.
+.course-cta__step-num {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-family: var(--ff-regular);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--fg-regular);
+  background: var(--bg-app-light);
+  border: 0.1rem solid var(--c-divider);
+  border-radius: 50%;
+}
+
+.course-cta__step--accent .course-cta__step-num {
+  color: var(--fg-app-dark);
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+}
+
+.course-cta__step-text {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
+.course-cta__visual {
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.course-cta__media {
+  position: relative;
+  width: calc(100% + 32rem);
+  aspect-ratio: 1168 / 735;
+  margin-left: -32rem;
+  background: var(--bg-app-light-tertiary);
+}
+
+.course-cta__media .media__img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.course-cta__media::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(to right, var(--bg-app-light-tertiary) 14%, rgba(var(--bg-app-light-tertiary-rgb), 0) 26%);
+}
+
+.course-cta__form-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: $laptop) {
+  .course-cta {
+    padding-bottom: 6rem;
+  }
+
+  .course-cta__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .course-cta__content {
+    max-width: none;
+  }
+
+  .course-cta__visual {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 2.4rem;
+  }
+
+  .course-cta__form-card {
+    position: static;
+    width: 100%;
+  }
+
+  .course-cta__media {
+    width: 100%;
+    aspect-ratio: 1168 / 657;
+    margin-top: 2.4rem;
+    margin-left: 0;
+  }
+
+  .course-cta__media .media__img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .course-cta__media::after {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-cta {
+    padding-bottom: 0;
+  }
+
+  .course-cta__title {
+    margin-bottom: 2rem;
+  }
+
+  .course-cta__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .course-cta__steps {
+    gap: 1.6rem;
+  }
+
+  .course-cta__visual {
+    padding-top: 1.6rem;
+  }
+
+  .course-cta__form-card {
+    margin-top: 1.8rem;
+  }
+
+  .course-cta__media {
+    width: calc(100% + 2 * var(--p-container));
+    aspect-ratio: 320 / 253;
+    margin-top: 2rem;
+    margin-right: calc(-1 * var(--p-container));
+    margin-left: calc(-1 * var(--p-container));
+  }
+}

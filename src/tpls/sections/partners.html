@@ -1,0 +1,69 @@
+
+<section class="partners section@@if (typeof pageVariant != 'undefined') { partners--rastamozhka}" id="partners">
+  <div class="partners__container">
+    <div class="partners__card">
+      <div class="section__head">
+        <h2 class="section-title">Наши партнеры</h2>
+      </div>
+
+      <ul class="partners__grid">
+        @@include('../cards/partner-card.html', {
+          "modifier": "cover",
+          "fit": "cover",
+          "image": "logo-ff1@2x.png",
+          "imageColor": "logo-ff1-color@2x.png",
+          "name": "FF1"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "wide",
+          "fit": "contain",
+          "image": "logo-mpstats@2x.png",
+          "imageColor": "logo-mpstats-color@2x.png",
+          "name": "MPSTATS"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "default",
+          "fit": "contain",
+          "image": "logo-alt1@2x.png",
+          "imageColor": "logo-alt1-color@2x.png",
+          "name": "ALT1 finance"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "default",
+          "fit": "contain",
+          "image": "logo-marketguru@2x.png",
+          "imageColor": "logo-marketguru-color@2x.png",
+          "name": "Market GURU"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "compact",
+          "fit": "contain",
+          "image": "logo-apet@2x.png",
+          "imageColor": "logo-apet-color@2x.png",
+          "name": "АПЭТ"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "default",
+          "fit": "contain",
+          "image": "logo-sber@2x.png",
+          "imageColor": "logo-sber-color@2x.png",
+          "name": "СБЕР"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "default",
+          "fit": "contain",
+          "image": "logo-fabrix@2x.png",
+          "imageColor": "logo-fabrix-color@2x.png",
+          "name": "FABRIX"
+        })
+        @@include('../cards/partner-card.html', {
+          "modifier": "default",
+          "fit": "contain",
+          "image": "logo-sellplus@2x.png",
+          "imageColor": "logo-sellplus-color@2x.png",
+          "name": "sellplus"
+        })
+      </ul>
+    </div>
+  </div>
+</section>

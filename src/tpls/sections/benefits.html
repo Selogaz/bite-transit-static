@@ -1,0 +1,62 @@
+<section class="benefits" id="benefits">
+  <div class="benefits__container section__container container">
+    <div class="section__head benefits__head">
+      <h2 class="section-title"><b>Сомневаетесь,</b> что белый вэд может быть дешевым?</h2>
+      <p class="section-desc">В то же время — <b>мы оптимизируем каждый этап логистики для клиентов,</b> одновременно минимизируем риски при импорте</p>
+    </div>
+
+    <div class="benefits__nav">
+      <button class="nav-arrow benefits__arrow benefits__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow benefits__arrow benefits__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
+
+    <div class="benefits__slider swiper">
+      <ul class="benefits__wrapper swiper-wrapper">
+        @@include('../cards/benefit-card.html', {
+          "title": "<b>Подготовка</b> к поставке из Китая",
+          "imageAlt": "Подготовка к поставке из Китая",
+          "image": "prep-china@2x.png",
+          "economyList": "<li>Проводим<b> транзакции с фиксированной комиссией от 0.3%</b></li><li>Надежная финансовая инфоструктура для проведения оплаты за рубеж</li>",
+          "benefitsList": "<li>Высвобождаем<b> время.</b> избавляя от необходимости формировать связку подрядчиков</li><li>Помогаем заранее просчитать реальную unit-экономику, четко спланировать продажи или производство</li>",
+          "modifier": "",
+          "ariaHidden": "false",
+          "tabindex": "0"
+        })
+        @@include('../cards/benefit-card.html', {
+          "title": "<b>Документы</b> и сертификация",
+          "imageAlt": "Документы и сертификация",
+          "image": "docs-cert@2x.png",
+          "economyList": "<li>Избавляем от переплат за лишние сертификаты</li><li>Готовим документы заранее, исключая простои на СВХ</li><li>Консультируем по всем бумагам бесплатно в рамках комплекса услуг</li>",
+          "benefitsList": "<li>Высвобождаем время. избавляя от необходимости формировать связку подрядчиков</li><li>Помогаем заранее просчитать реальную unit-экономику, четко спланировать продажи или производство</li>",
+          "modifier": "",
+          "ariaHidden": "false",
+          "tabindex": "0"
+        })
+        @@include('../cards/benefit-card.html', {
+          "title": "<b>Доставка</b> до склада в РФ",
+          "imageAlt": "Доставка до склада в РФ",
+          "image": "delivery-rf@2x.png",
+          "economyList": "<li>Импортируем официально без риска штрафов</li><li>Закрываем весь процесс, избавляя от издержек работы с несколькими подрядчиками</li><li><b>Гарантируем соблюдение сроков</b></li>",
+          "benefitsList": "<li>Высвобождаем время собственника и команды: не нужно вручную контролировать, кто и куда повезёт груз после таможни</li><li>Задаем ритм поставок без зависаний между этапами и перебоев в продажах или производстве</li>",
+          "modifier": "",
+          "ariaHidden": "false",
+          "tabindex": "0"
+        })
+        @@include('../cards/benefit-card.html', {
+          "title": "<b>Быстрая</b> доставка",
+          "imageAlt": "Быстрая доставка",
+          "image": "delivery-fast@2x.png",
+          "economyList": "<li>Избавляем от переплат множеству посредников при комплексной работе</li><li>Устраняем риск, что остатки кончатся и карточка потеряет позиции в каталоге</li>",
+          "benefitsList": "<li>Позволяем команде заниматься ассортиментом и продажами, а не тушить логистические пожары на последней миле</li><li>Создаем товару дополнительную ценность в виде быстрой доставки</li>",
+          "modifier": "",
+          "ariaHidden": "false",
+          "tabindex": "0"
+        })
+      </ul>
+    </div>
+  </div>
+</section>

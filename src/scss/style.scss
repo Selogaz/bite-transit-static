@@ -1,0 +1,61 @@
+@use "sass:math";
+
+@import "variables/media";
+@import "variables/variables";
+@import "variables/colors";
+@import "mixins";
+
+@include font("Inter Tight", normal, 300, "@fonts/InterTight-Light");
+@include font("Inter Tight", normal, 400, "@fonts/InterTight-Regular");
+@include font("Inter Tight", normal, 700, "@fonts/InterTight-Bold");
+@include font("Manrope", normal, 700, "@fonts/Manrope-Bold");
+@include font("Manrope", normal, 600, "@fonts/Manrope-SemiBold");
+@include font("Manrope", normal, 500, "@fonts/Manrope-Medium");
+@include font("Manrope", normal, 400, "@fonts/Manrope-Regular");
+@include font("Manrope", normal, 300, "@fonts/Manrope-Light");
+
+@import "reset";
+@import "normalize";
+
+html {
+  font-size: calc(var(--fz-modifier) * var(--base-size));
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+
+  background-color: var(--bg-app-light-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: calc(var(--w-container) + 2 * var(--p-container));
+  padding-right: var(--p-container);
+  padding-left: var(--p-container);
+  margin: 0 auto;
+}
+
+@import "libs/swiper";
+@import "keyframes";
+@import "sections.b/section";
+@import "components";
+@import "helpers";
+@import "sections";
+@import "pages";
+@import "modifiers";

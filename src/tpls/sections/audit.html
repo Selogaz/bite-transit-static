@@ -1,0 +1,84 @@
+
+<section class="audit section section--dark" id="audit">
+  <div class="audit__bg media">
+    <picture class="media__pic">
+      <img class="media__img" src="@img/audit.bit/bg-containers@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="audit__container section__container container">
+    <div class="audit__content">
+      <h2 class="audit__title">
+        Узнайте, <b>как перейти на официальную ВЭД</b>
+        и получить выгоду уже на этапе тестовой поставки
+      </h2>
+
+      <ul class="audit__list">
+        @@include('../cards/audit-point.html', {
+          "image": "icon-scale@2x.png",
+          "title": "Сравним 2 сценария на цифрах",
+          "text": "Покажем потенциальную финансовую экономию и реальные сроки официальных поставок: вы поймете, выгодно ли перейти на легальный ввоз"
+        })
+        @@include('../cards/audit-point.html', {
+          "image": "icon-conveyor@2x.png",
+          "title": "Обсудим тестовую поставку",
+          "text": "Разберём, как может выглядеть первая поставка: что нужно по документам, каким будет маршрут и за счет чего вы можете оптимизировать бизнес"
+        })
+        @@include('../cards/audit-point.html', {
+          "image": "icon-magnifier@2x.png",
+          "title": "Проявим предельную клиентоориентированность",
+          "text": "Сроки, платежи, подводные камни поставки вашего товара и сертификации"
+        })
+      </ul>
+    </div>
+
+    <div class="audit__card js_form">
+      <input type="hidden" name="form_name" value="Секция — Получить аудит">
+
+      <p class="audit__card-title">
+        <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+      </p>
+
+      <div class="audit__card-fields">
+        @@include('../b/input.html', {
+          "className": "js_form__control",
+          "type": "text",
+          "name": "name",
+          "placeholder": "Имя",
+          "attributes": "required",
+          "error": "Поле должно быть заполнено!"
+        })
+        @@include('../b/input.html', {
+          "className": "js_form__control",
+          "type": "tel",
+          "name": "phone",
+          "placeholder": "+ 7 (___) ___ __ __",
+          "attributes": "required data-mask=\"phone\"",
+          "error": "Поле должно быть заполнено!"
+        })
+      </div>
+
+      <button class="audit__card-submit button button--primary button--block js_form__submit" type="button">
+        Получить аудит
+      </button>
+
+      <label class="checkbox audit__card-agreement js_form__control">
+        <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+        </span>
+      </label>
+
+      <label class="checkbox audit__card-agreement js_form__control">
+        <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="#">договора оферты</a>
+        </span>
+      </label>
+    </div>
+  </div>
+</section>
