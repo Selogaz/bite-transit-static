@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 artefacts/
+scratchpad/
 node_modules
 psd/
 package-lock.json
