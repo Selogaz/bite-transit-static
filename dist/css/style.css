@@ -11712,6 +11712,10 @@ span.breadcrumbs__item {
     aspect-ratio: 320/329;
     border-radius: var(--radius-card);
   }
+  .service-hero--fade .service-hero__media--wide {
+    aspect-ratio: 1672/1257;
+    border-radius: 0;
+  }
   .service-hero--wide-fade .service-hero__media {
     position: relative;
     width: auto;
