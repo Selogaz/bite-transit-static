@@ -1,1 +1,1 @@
-https://selogaz.github.io/bite-transit-static/
+https://selogaz.github.io/bite-transit-static/index.html
