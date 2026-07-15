@@ -1,4 +1,4 @@
-name: Deploy HTML from src
+name: Deploy built site from dist
 on:
   push:
     branches: ["main"]
@@ -23,9 +23,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          
-          path: './src' 
-          
+          path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
