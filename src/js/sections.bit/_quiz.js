@@ -12,8 +12,13 @@
     slidesPerView: 1,
     spaceBetween: 40,
     allowTouchMove: false,
+    autoHeight: true,
     speed: 350,
   });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => swiper.updateAutoHeight());
+  }
 
   const hasOptions = (index) => !!(steps[index] && steps[index].querySelector(".quiz-option__input"));
 
@@ -41,11 +46,6 @@
   });
 
   sliderEl.addEventListener("click", (e) => {
-    if (e.target.closest(".quiz__back")) {
-      swiper.slidePrev();
-      return;
-    }
-
     if (e.target.closest(".quiz__submit")) {
       const index = swiper.activeIndex;
 

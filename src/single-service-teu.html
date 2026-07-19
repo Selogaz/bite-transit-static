@@ -49,67 +49,72 @@
             <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
           </div>
 
-          <ul class="service-steps__list">
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "teu-1",
-                "title": '<b>Подготовка</b> и оплата',
-                "list": "<li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Убедимся, что у вас есть полный пакет документов и мы сможем вывезти товар беспрепятственно.</li><li>Если что-то будет не так — предложим помощь с таможенным оформлением</li>",
-                "image": "step-1-teu@2x.jpg",
-                "imageW": "1024",
-                "imageH": "768",
-                "mediaVariant": "contain"
-              })
-            </li>
+          <div class="service-steps__slider swiper">
+            <ul class="service-steps__list swiper-wrapper">
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "teu-1",
+                  "title": '<b>Подготовка</b> и оплата',
+                  "list": "<li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Убедимся, что у вас есть полный пакет документов и мы сможем вывезти товар беспрепятственно.</li><li>Если что-то будет не так — предложим помощь с таможенным оформлением</li>",
+                  "image": "step-1-teu@2x.jpg",
+                  "imageW": "1024",
+                  "imageH": "768",
+                  "mediaVariant": "contain"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "teu-2",
-                "bgImage": "step-2-teu-bg@2x.jpg",
-                "title": 'Складская <b>обработка</b><br><b>и страхование</b>',
-                "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
-                "image": "step-2-teu-bg@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "cover",
-                "mediaGhost": "true"
-              })
-            </li>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "teu-2",
+                  "bgImage": "step-2-teu-bg@2x.jpg",
+                  "title": 'Складская <b>обработка</b><br><b>и страхование</b>',
+                  "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
+                  "image": "step-2-teu-bg@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "cover",
+                  "mediaGhost": "true"
+                })
+              </li>
 
-            <li class="service-steps__item service-steps__item--row">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "teu-half-3",
-                "bgImage": "step-3-teu-bg@2x.jpg",
-                "title": 'Доставка <br>до таможни<br>и выпуск из Китая',
-                "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара и ввоз в РФ, используя ваши документы.</li><li>Если в бумагах найдут ошибки — предложим услуги таможенного оформления</li>",
-                "image": "step-3-teu-bg@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "cover",
-                "mediaGhost": "true"
-              })
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "teu-half-4",
-                "title": "Выгодная транспортировка по РФ",
-                "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
-                "image": "step-4-teu@2x.jpg",
-                "imageW": "1086",
-                "imageH": "1448",
-                "mediaVariant": "cover"
-              })
-            </li>
-          </ul>
+              <li class="service-steps__item service-steps__item--half swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "teu-half-3",
+                  "bgImage": "step-3-teu-bg@2x.jpg",
+                  "title": '<b>Доставка <br>до таможни</b> <br>и выпуск из Китая',
+                  "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара и ввоз в РФ, используя ваши документы.</li><li>Если в бумагах найдут ошибки — предложим услуги таможенного оформления</li>",
+                  "image": "step-3-teu-bg@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "cover",
+                  "mediaGhost": "true"
+                })
+              </li>
+
+              <li class="service-steps__item service-steps__item--half swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "teu-half-4",
+                  "title": '<b>Выгодная транспортировка по РФ</b>',
+                  "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
+                  "image": "step-4-teu@2x.jpg",
+                  "imageW": "1086",
+                  "imageH": "1448",
+                  "mediaVariant": "cover"
+                })
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="service-perks service-perks--teu" id="service-perks">
         <div class="service-perks__container section__container container">
           <div class="section__head service-perks__head">
-            <h2 class="section-title"><b>Боитесь</b> тонкостей официального ввоза<br>и представляете убытки?</h2>
+            <h2 class="section-title"><b>Боитесь тонкостей официального ввоза</b><br>и представляете убытки?</h2>
             <p class="section-desc">Выбирайте Байт Транзит — с нами сон крепче, а логистика дешевле</p>
           </div>
 
@@ -136,7 +141,7 @@
               "imageW": "1086",
               "imageH": "1448"
             })
-            </ul>
+              </ul>
           </div>
         </div>
       </section>

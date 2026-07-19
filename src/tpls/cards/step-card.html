@@ -21,9 +21,14 @@
     }
   </div>
 
+  @@if (typeof image != 'undefined') {
   <div class="step-card__media media media--@@mediaVariant@@if (typeof mediaTilt != 'undefined') { step-card__media--tilt}@@if (typeof mediaGhost != 'undefined') { step-card__media--ghost}">
     <picture class="media__pic">
+      @@if (typeof imageMobile != 'undefined') {
+      <source media="(max-width: 991px)" srcset="@img/steps.bit/@@imageMobile">
+      }
       <img class="media__img" src="@img/steps.bit/@@image" alt="" width="@@imageW" height="@@imageH" loading="lazy">
     </picture>
   </div>
+  }
 </div>

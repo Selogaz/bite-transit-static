@@ -2,6 +2,14 @@
 <section class="categories@@if (typeof pageVariant != 'undefined') { categories--rastamozhka}" id="categories">
   <div class="categories__container">
     <div class="categories__panel">
+      @@if (typeof pageVariant != 'undefined') {
+      <div class="categories__backdrop media media--cover">
+        <picture class="media__pic">
+          <img class="media__img" src="@img/categories.bit/bg-loading-night.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+      }
+
       <div class="section__head">
         <h2 class="section-title"><b>Выгодная</b> логистика для вашего бизнеса</h2>
         <p class="section-desc">Помогаем работать официально и зарабатывать больше селлерам маркетплейсов, владельцам магазинов и производств</p>

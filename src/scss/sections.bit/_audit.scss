@@ -21,6 +21,10 @@
     linear-gradient(90deg, var(--bg-audit-plate) 28.54%, rgba(var(--bg-audit-plate-rgb), 0) 45.78%);
 }
 
+.audit__photo {
+  display: none;
+}
+
 .audit__container {
   position: relative;
   z-index: 2;
@@ -193,6 +197,7 @@
   // height вместо min-height — фото-иконка фикс. размера, контент внутри не растёт.
   .audit-point__media {
     width: 6rem;
+    min-height: 0;
     height: 7.4rem;
     border-radius: 1rem;
   }
@@ -236,9 +241,93 @@
     --radius: 0.6rem;
   }
 
-  .audit__bg::before {
+  .audit {
+    padding-bottom: 30.6rem;
+  }
+
+  .audit__bg {
+    display: none;
+  }
+
+  .audit__photo {
+    position: absolute;
+    display: block;
+    height: 27.6rem;
+  }
+
+  .audit__photo::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+  }
+
+  .audit__photo--top {
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .audit__photo--bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .audit__photo--middle {
+    top: -4.6rem;
+    left: 50%;
+    z-index: -1;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+
+  .audit__photo .media__img {
+    max-width: none;
+    height: auto;
+    aspect-ratio: 3168 / 1344;
+  }
+
+  .audit__photo--top .media__img,
+  .audit__photo--middle .media__img {
+    position: absolute;
+    top: -71.77%;
+    width: 388.63%;
+  }
+
+  .audit__photo--top .media__img {
+    left: -18.88%;
+  }
+
+  .audit__photo--middle .media__img {
+    left: -288.68%;
+  }
+
+  .audit__photo--bottom .media__img {
+    position: absolute;
+    top: 0;
+    left: -56.78%;
+    width: 203.26%;
+  }
+
+  .audit__photo--top::after {
     background:
-      linear-gradient(rgba(var(--bg-audit-plate-rgb), 0.88), rgba(var(--bg-audit-plate-rgb), 0.88)),
-      radial-gradient(circle at 100% 0%, rgba(var(--c-primary-rgb), 0.25) 0%, rgba(var(--c-primary-rgb), 0) 45%);
+      linear-gradient(0deg, var(--bg-audit-plate) 50%, rgba(var(--bg-audit-plate-rgb), 0) 82.97%),
+      linear-gradient(270deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 7.48%),
+      linear-gradient(90deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 18.13%);
+  }
+
+  .audit__photo--middle::after {
+    background:
+      linear-gradient(180deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 17.03%),
+      linear-gradient(0deg, var(--bg-audit-plate) 50%, rgba(var(--bg-audit-plate-rgb), 0) 82.97%),
+      linear-gradient(270deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 7.48%),
+      linear-gradient(90deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 18.13%);
+  }
+
+  .audit__photo--bottom::after {
+    background:
+      linear-gradient(180deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 21.2%),
+      linear-gradient(270deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 7.48%),
+      linear-gradient(90deg, var(--bg-audit-plate) 0%, rgba(var(--bg-audit-plate-rgb), 0) 18.13%);
   }
 }

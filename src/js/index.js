@@ -16,6 +16,9 @@ import "./components.bit/_service-detail-tabs.js";
 
 import "./sections.bit/_header.js";
 import "./sections.bit/_quiz.js";
+import "./sections.bit/_services.js";
+import "./sections.bit/_steps.js";
+import "./sections.bit/_service-steps.js";
 import "./sections.bit/_benefits.js";
 import "./sections.bit/_service-perks.js";
 import "./sections.bit/_customs-benefits.js";

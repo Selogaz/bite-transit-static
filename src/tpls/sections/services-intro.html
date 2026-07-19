@@ -13,28 +13,42 @@
       @@include('../cards/service-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
     </ul>
 
-    <ul class="services__results">
-      @@include('../cards/service-result-card.html', {
-        "alt": "Курьер оформляет доставку коробок",
-        "percent": "**%",
-        "company": "Название компании",
-        "tag1": "Товарная ниша",
-        "tag2": "Средний объем поставки"
-      })
-      @@include('../cards/service-result-card.html', {
-        "alt": "Курьер оформляет доставку коробок",
-        "percent": "**%",
-        "company": "Название компании",
-        "tag1": "Товарная ниша",
-        "tag2": "Средний объем поставки"
-      })
-      @@include('../cards/service-result-card.html', {
-        "alt": "Курьер оформляет доставку коробок",
-        "percent": "**%",
-        "company": "Название компании",
-        "tag1": "Товарная ниша",
-        "tag2": "Средний объем поставки"
-      })
-    </ul>
+    <div class="services__slider swiper">
+      <ul class="services__results swiper-wrapper">
+        @@include('../cards/service-result-card.html', {
+          "slide": true,
+          "alt": "Курьер оформляет доставку коробок",
+          "percent": "**%",
+          "company": "Название компании",
+          "tag1": "Товарная ниша",
+          "tag2": "Средний объем поставки"
+        })
+        @@include('../cards/service-result-card.html', {
+          "slide": true,
+          "alt": "Курьер оформляет доставку коробок",
+          "percent": "**%",
+          "company": "Название компании",
+          "tag1": "Товарная ниша",
+          "tag2": "Средний объем поставки"
+        })
+        @@include('../cards/service-result-card.html', {
+          "slide": true,
+          "alt": "Курьер оформляет доставку коробок",
+          "percent": "**%",
+          "company": "Название компании",
+          "tag1": "Товарная ниша",
+          "tag2": "Средний объем поставки"
+        })
+      </ul>
+    </div>
+
+    <div class="services__nav">
+      <button class="nav-arrow services__arrow services__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow services__arrow services__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="@img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
   </div>
 </section>

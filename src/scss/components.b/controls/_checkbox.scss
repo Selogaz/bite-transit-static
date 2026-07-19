@@ -83,6 +83,7 @@
 // который специфичнее одиночного класса.
 .checkbox__link:any-link {
   text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 // Ошибка: не отмечен, но форма отправлена.

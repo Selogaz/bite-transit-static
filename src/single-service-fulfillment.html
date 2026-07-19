@@ -26,6 +26,7 @@
         "mediaVariant": "wide-fade",
         "mediaShape": "wide-bleed",
         "photoSrc": "@img/service-hero.bit/hero-photo-fulfillment@2x.jpg",
+        "photoSrcMobile": "@img/service-hero.bit/hero-photo-fulfillment-m@2x.jpg",
         "photoAlt": "Погрузчик у склада фулфилмента с товарами для WB, Ozon и Яндекс.Маркета",
         "photoW": "2150",
         "photoH": "1238",
@@ -39,66 +40,68 @@
 
       @@include('tpls/sections/services-intro.html')
 
-      <section class="service-steps" id="service-steps">
+      <section class="service-steps service-steps--fulfillment" id="service-steps">
         <div class="service-steps__container section__container container">
           <div class="section__head">
-            <h2 class="section-title">Как проходят <b>официальные поставки</b> с Байт Транзит?</h2>
-            <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
+            <h2 class="section-title"><b>Фулфилмент полного цикла</b> для селлеров</h2>
+            <p class="section-desc">Забудьте про хранение упаковку, маркировку и отгрузку товаров</p>
           </div>
 
-          <ul class="service-steps__list">
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "fulfillment-1",
-                "title": 'Прием<br>и <b>хранение товара</b>',
-                "list": "<li>Сверяем фактическую поставку с документами и присваиваем товарам коды для отслеживания</li><li>Размещаем товары на складе, учитывая характеристики: температурный режим, категорию и сроки годности</li>",
-                "image": "step-1-fulfillment@2x.jpg",
-                "imageW": "1280",
-                "imageH": "960",
-                "mediaVariant": "contain"
-              })
-            </li>
+          <div class="service-steps__slider swiper">
+            <ul class="service-steps__list swiper-wrapper">
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "fulfillment-1",
+                  "title": 'Прием<br>и <b>хранение товара</b>',
+                  "list": "<li>Сверяем фактическую поставку с документами и присваиваем товарам коды для отслеживания</li><li>Размещаем товары на складе, учитывая характеристики: температурный режим, категорию и сроки годности</li>",
+                  "image": "step-1-fulfillment@2x.jpg",
+                  "imageW": "1280",
+                  "imageH": "960",
+                  "mediaVariant": "contain"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "fulfillment-2",
-                "title": '<b>Упаковка</b><br>и маркировка',
-                "list": "<li>Маркируем товары в системе ЧЗ.</li><li>Упаковываем, опираясь на ваши требования и стандарты маркетплейсов</li>",
-                "image": "step-2-fulfillment-bg@2x.jpg",
-                "imageW": "1536",
-                "imageH": "1024",
-                "mediaVariant": "cover"
-              })
-            </li>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "fulfillment-2",
+                  "title": '<b>Упаковка</b><br>и маркировка',
+                  "list": "<li>Маркируем товары в системе ЧЗ.</li><li>Упаковываем, опираясь на ваши требования и стандарты маркетплейсов</li>",
+                  "image": "step-2-fulfillment-bg@2x.jpg",
+                  "imageW": "1536",
+                  "imageH": "1024",
+                  "mediaVariant": "cover"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "fulfillment-3",
-                "title": '<b>Отгрузка</b><br>на маркетплейсы',
-                "list": "<li>Доставим на ближайший склад Ozon / WB / Яндекс.Маркета.</li><li>Отгружаем ежедневно, чтобы обеспечить быструю доставку вашим клиентам</li>",
-                "image": "step-3-fulfillment@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "contain"
-              })
-            </li>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "fulfillment-3",
+                  "title": '<b>Отгрузка</b><br>на маркетплейсы',
+                  "list": "<li>Доставим на ближайший склад Ozon / WB / Яндекс.Маркета.</li><li>Отгружаем ежедневно, чтобы обеспечить быструю доставку вашим клиентам</li>",
+                  "image": "step-3-fulfillment@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "contain"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "fulfillment-4",
-                "title": 'Работа<br><b>с возвратами</b>',
-                "list": "<li>Принимаем возвращенные товары, проверяем и готовим к повторным продажам</li>",
-                "image": "step-4-fulfillment-bg@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "cover"
-              })
-            </li>
-          </ul>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "fulfillment-4",
+                  "title": 'Работа<br><b>с возвратами</b>',
+                  "list": "<li>Принимаем возвращенные товары, проверяем и готовим к повторным продажам</li>",
+                  "image": "step-4-fulfillment-bg@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "cover"
+                })
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

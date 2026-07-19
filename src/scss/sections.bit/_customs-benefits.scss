@@ -56,14 +56,8 @@
 }
 
 .customs-benefits__slider {
-  width: calc(100% + (100vw - var(--w-container) - 2 * var(--p-container)) / 2);
+  width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, black 0%, black calc(100% - 6rem), transparent 100%);
-
-  @media (max-width: $laptop) {
-    width: 100%;
-    mask-image: none;
-  }
 }
 
 .customs-benefits__wrapper {
@@ -80,7 +74,7 @@
   align-items: flex-start;
   width: 46.7rem;
   min-height: 27.7rem;
-  padding: 4.3rem 0.6rem 4.3rem 4.9rem;
+  padding: 0.6rem 0 0.5rem 4.8rem;
   background: var(--bg-app-light);
   border: 0.1rem solid var(--c-divider-light);
   border-radius: 2rem;
@@ -90,6 +84,7 @@
 .customs-benefit-card__body {
   flex-shrink: 0;
   width: 24.5rem;
+  padding-top: 3.6rem;
 }
 
 .customs-benefit-card__title {
@@ -115,7 +110,7 @@
 
 .customs-benefit-card__media {
   flex-shrink: 0;
-  align-self: center;
+  align-self: stretch;
   width: 17.2rem;
   aspect-ratio: 172 / 264;
   margin-left: auto;
@@ -167,6 +162,7 @@
 
   .customs-benefit-card__body {
     width: 100%;
+    padding-top: 0;
   }
 
   .customs-benefit-card__title {

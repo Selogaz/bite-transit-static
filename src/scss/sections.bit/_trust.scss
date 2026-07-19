@@ -39,6 +39,16 @@
   font-weight: 700;
 }
 
+.service-hero__trust-list .trust-card__text,
+.course-hero__perks .trust-card__text {
+  margin-top: 1.3rem;
+}
+
+.course-hero__perks .trust-card:nth-child(4) .trust-card__media {
+  width: 9.2rem;
+  margin-top: -0.4rem;
+}
+
 @media (max-width: $laptop) {
   .trust__list {
     grid-template-columns: repeat(3, 1fr);
@@ -55,7 +65,15 @@
 @media (max-width: $mobile) {
   .trust {
     padding-top: 1.4rem;
-    padding-bottom: 2.4rem;
+    padding-bottom: 0;
+  }
+
+  .trust__container::after {
+    display: block;
+    height: 0.1rem;
+    margin-top: 3rem;
+    content: "";
+    background: var(--border-trust-divider);
   }
 
   .trust__list {
@@ -85,5 +103,19 @@
 
   .trust-card__text {
     font-size: var(--fz-small);
+  }
+
+  .service-hero__trust-list .trust-card__text,
+  .course-hero__perks .trust-card__text {
+    margin-top: 0;
+  }
+
+  .course-hero__perks .trust-card__text br {
+    display: none;
+  }
+
+  .course-hero__perks .trust-card:nth-child(4) .trust-card__media {
+    width: 8rem;
+    margin-top: 0;
   }
 }

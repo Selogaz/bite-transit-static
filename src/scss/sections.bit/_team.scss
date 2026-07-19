@@ -38,7 +38,11 @@
 
 .team__bg .media__img {
   filter: blur(0.7rem);
-  transform: scale(1.05);
+  transform: scale(-1.05, 1.05);
+
+  @media (max-width: $mobile) {
+    filter: none;
+  }
 }
 
 .team__bg::after {

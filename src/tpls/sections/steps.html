@@ -1,72 +1,73 @@
 
 <section class="steps" id="steps">
   <div class="steps__container container">
-    <ul class="steps__list">
-      <li class="steps__item">
-        @@include('../cards/step-card.html', {
-          "theme": "light",
-          "size": "1",
-          "title": 'Начинаем искать<br><span class="step-card__accent">выгодный</span> формат',
-          "list": '<li>Проведем <span class="step-card__term">аудит логистики</span> и выявим возможности для оптимизации: чтобы в результате сотрудничества ваша маржинальность выросла</li><li><span class="step-card__term">Напишем вам с первичной сметой</span>, если уделите 1 минуту <span class="step-card__term">5 вопросам</span></li><li><span class="step-card__term">Проконсультируем по точечному вопросу</span>: оплате и забору товара в Китая, таможенному оформлению, доставке по РФ или фулфилменту</li>',
-          "image": "card-01-tablet@2x.jpg",
-          "imageW": "640",
-          "imageH": "457",
-          "mediaVariant": "cover"
-        })
-      </li>
+    <div class="steps__slider swiper">
+      <ul class="steps__list swiper-wrapper">
+        <li class="steps__item swiper-slide">
+          @@include('../cards/step-card.html', {
+            "theme": "light",
+            "size": "1",
+            "title": 'Начинаем искать<br><span class="step-card__accent">выгодный</span> формат',
+            "list": '<li>Проведем <span class="step-card__term">аудит логистики</span> и выявим возможности для оптимизации: чтобы в результате сотрудничества ваша маржинальность выросла</li><li><span class="step-card__term">Напишем вам с первичной сметой</span>, если уделите 1 минуту <span class="step-card__term">5 вопросам</span></li><li><span class="step-card__term">Проконсультируем по точечному вопросу</span>: оплате и забору товара в Китая, таможенному оформлению, доставке по РФ или фулфилменту</li>',
+            "image": "card-01-tablet@2x.jpg",
+            "imageW": "640",
+            "imageH": "457",
+            "mediaVariant": "cover"
+          })
+        </li>
 
-      <li class="steps__item">
-        @@include('../cards/step-card.html', {
-          "theme": "dark",
-          "size": "2",
-          "bgImage": "bg-warehouse-dusk.jpg",
-          "title": "Выдвигаем <b>предложение</b>",
-          "list": "<li>Договариваемся, в каком формате будем работать и какие этапы официального импорта возьмем на себя</li><li>Согласовываем все нюансы</li><li>Менеджер расскажет о решении вопросов в процессе оказания услуг</li>",
-          "image": "card-02-folder@2x.png",
-          "imageW": "686",
-          "imageH": "531",
-          "mediaVariant": "contain"
-        })
-      </li>
+        <li class="steps__item swiper-slide">
+          @@include('../cards/step-card.html', {
+            "theme": "dark",
+            "size": "2",
+            "bgImage": "bg-warehouse-dusk.jpg",
+            "title": "Выдвигаем <b>предложение</b>",
+            "list": "<li>Договариваемся, в каком формате будем работать и какие этапы официального импорта возьмем на себя</li><li>Согласовываем все нюансы</li><li>Менеджер расскажет о решении вопросов в процессе оказания услуг</li>"
+          })
+        </li>
 
-      <li class="steps__item steps__item--row">
-        @@include('../cards/step-card.html', {
-          "theme": "dark",
-          "size": "half-3",
-          "bgImage": "bg-port-sunset.jpg",
-          "title": "Готовим <b>первую поставку</b>",
-          "list": "<li>Берём инвойс, пакинг-лист и данные по грузу, чтобы подобрать код ТН ВЭД, упаковку, негабарит, требования к перевозке и нужные документы.</li><li>Прозрачно формируем стоимость поставки и рассчитываем реальные сроки — так, чтобы не было сюрпризов</li>",
-          "image": "card-03-clipboard@2x.png",
-          "imageW": "575",
-          "imageH": "384",
-          "mediaVariant": "contain",
-          "mediaTilt": true
-        })
-        @@include('../cards/step-card.html', {
-          "theme": "light",
-          "size": "half-4",
-          "title": "<b>Привозим груз,</b> куда нужно",
-          "list": "<li>Организуем забор, доставку, оформление, фулфилмент и передачу груза вам в руки или на склад МП</li><li>С вами работает один менеджер, который знает всё о маршруте и сам постоянно поддерживает связь с вами</li><li>Отправляем все закрывающие документы</li>",
-          "image": "card-04-box@2x.jpg",
-          "imageW": "355",
-          "imageH": "493",
-          "mediaVariant": "contain"
-        })
-      </li>
+        <li class="steps__item steps__item--half swiper-slide">
+          @@include('../cards/step-card.html', {
+            "theme": "dark",
+            "size": "half-3",
+            "bgImage": "bg-port-sunset.jpg",
+            "title": "Готовим <b>первую поставку</b>",
+            "list": "<li>Берём инвойс, пакинг-лист и данные по грузу, чтобы подобрать код ТН ВЭД, упаковку, негабарит, требования к перевозке и нужные документы.</li><li>Прозрачно формируем стоимость поставки и рассчитываем реальные сроки — так, чтобы не было сюрпризов</li>",
+            "image": "card-03-clipboard@2x.png",
+            "imageW": "575",
+            "imageH": "384",
+            "mediaVariant": "contain",
+            "mediaTilt": true
+          })
+        </li>
 
-      <li class="steps__item">
-        @@include('../cards/step-card.html', {
-          "theme": "light",
-          "size": "5",
-          "title": "Поддерживаем ваше развитие",
-          "list": "<li>Стабильно поставляем нужные товары в слаженом ритме, чтобы ничего не мешало масштабированию</li><li><b>Начните сейчас!</b></li>",
-          "actions": '<button class="step-card__action button button--primary" type="button" data-b_modal-open="audit-request" data-form-name="Шаги — аудит логистики">Заказать аудит логистики</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — консультация">Получить консультацию</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — тестовая поставка">Расчет тестовой поставки</button>',
-          "image": "card-05-truck@2x.jpg",
-          "imageW": "589",
-          "imageH": "457",
-          "mediaVariant": "cover"
-        })
-      </li>
-    </ul>
+        <li class="steps__item steps__item--half swiper-slide">
+          @@include('../cards/step-card.html', {
+            "theme": "light",
+            "size": "half-4",
+            "title": '<span class="step-card__accent">Привозим груз,</span> куда нужно',
+            "list": "<li>Организуем забор, доставку, оформление, фулфилмент и передачу груза вам в руки или на склад МП</li><li>С вами работает один менеджер, который знает всё о маршруте и сам постоянно поддерживает связь с вами</li><li>Отправляем все закрывающие документы</li>",
+            "image": "card-04-box@2x.jpg",
+            "imageW": "355",
+            "imageH": "493",
+            "mediaVariant": "contain"
+          })
+        </li>
+
+        <li class="steps__item swiper-slide">
+          @@include('../cards/step-card.html', {
+            "theme": "light",
+            "size": "5",
+            "title": "Поддерживаем ваше развитие",
+            "list": "<li>Стабильно поставляем нужные товары в слаженом ритме, чтобы ничего не мешало масштабированию</li><li><b>Начните сейчас!</b></li>",
+            "actions": '<button class="step-card__action button button--primary" type="button" data-b_modal-open="audit-request" data-form-name="Шаги — аудит логистики">Заказать аудит логистики</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — консультация">Получить консультацию</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — тестовая поставка">Расчет тестовой поставки</button>',
+            "image": "card-05-truck@2x.jpg",
+            "imageW": "589",
+            "imageH": "457",
+            "mediaVariant": "cover"
+          })
+        </li>
+      </ul>
+    </div>
   </div>
 </section>

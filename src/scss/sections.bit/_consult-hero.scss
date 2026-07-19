@@ -110,6 +110,10 @@
 }
 
 @media (max-width: $mobile) {
+  .consult-hero {
+    padding-bottom: 1rem;
+  }
+
   .consult-hero__container {
     padding-inline: 1rem;
   }
@@ -126,7 +130,7 @@
   .consult-hero__media {
     width: calc(100% + 2rem);
     aspect-ratio: 394 / 295;
-    margin: 2.4rem -1rem 0;
+    margin: 1rem -1rem 0;
   }
 
   // z-index: auto гасит десктопный stacking context (база даёт z-index: 2 для нахлёста над

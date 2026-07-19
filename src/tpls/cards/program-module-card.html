@@ -1,17 +1,29 @@
-<li class="program-module-card">
-  <div class="program-module-card__media media">
-    <picture class="media__pic">
-      <img class="media__img" src="@img/course.bit/@@image" alt="" width="472" height="218" loading="lazy">
-    </picture>
+<li class="program-module-card bayan @@open">
+  <div class="program-module-card__head">
+    <span class="program-module-card__head-num">@@num</span>
+    <span class="program-module-card__toggle">
+      <svg class="program-module-card__toggle-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line class="program-module-card__toggle-bar program-module-card__toggle-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="program-module-card__toggle-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
   </div>
 
-  <div class="program-module-card__body">
-    <span class="program-module-card__badge">@@num</span>
+  <div class="program-module-card__content">
+    <div class="program-module-card__media media @@crop">
+      <picture class="media__pic">
+        <img class="media__img" src="@img/course.bit/@@image" alt="" width="472" height="218" loading="lazy">
+      </picture>
+    </div>
 
-    <h3 class="program-module-card__title">@@title</h3>
+    <div class="program-module-card__body">
+      <span class="program-module-card__badge">@@num</span>
 
-    <div class="program-module-card__lessons">
-      @@lessons
+      <h3 class="program-module-card__title">@@title</h3>
+
+      <div class="program-module-card__lessons">
+        @@lessons
+      </div>
     </div>
   </div>
 </li>

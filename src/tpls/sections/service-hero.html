@@ -30,6 +30,9 @@
 
   <div class="service-hero__media media service-hero__media--@@mediaShape">
     <picture class="media__pic">
+      @@if (typeof photoSrcMobile != 'undefined') {
+      <source media="(max-width: 991px)" srcset="@@photoSrcMobile">
+      }
       <img class="media__img" src="@@photoSrc" alt="@@photoAlt" width="@@photoW" height="@@photoH" loading="lazy">
     </picture>
     @@if (typeof heroWaypoints != 'undefined') {
@@ -41,7 +44,7 @@
     }
   </div>
 
-  <div class="service-hero__trust-bar">
+  <div class="service-hero__trust-bar@@if (typeof trustHighlightCenter != 'undefined') { service-hero__trust-bar--highlight-center}">
     <div class="service-hero__trust-container container">
       <ul class="service-hero__trust-list">
         @@include('../cards/trust-card.html', {

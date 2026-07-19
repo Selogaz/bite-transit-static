@@ -19,7 +19,6 @@
 
 .reviews__button {
   --size: 5.6rem;
-  --radius: 50%;
 }
 
 .reviews__slider {
@@ -98,7 +97,7 @@
 
   .reviews__button {
     --size: 4.5rem;
-    --radius: var(--radius-md);
+    --radius: 0;
     --border-color: var(--c-divider);
     box-shadow: none;
   }

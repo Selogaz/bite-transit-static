@@ -4,7 +4,7 @@
   background: var(--bg-app-light-secondary);
 
   @media (max-width: $mobile) {
-    padding-top: 5rem;
+    padding-top: 0;
   }
 }
 
@@ -26,7 +26,7 @@
   position: relative;
   padding: 6.7rem 4rem 10.7rem;
   overflow: hidden;
-  background: var(--bg-app-dark) url("@img/partners.bit/bg-lights.jpg") center / cover no-repeat;
+  background: var(--bg-partners-plate);
   border-radius: var(--radius-panel);
 
   @media (max-width: $mobile) {
@@ -40,8 +40,19 @@
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0.7) 50%, var(--bg-app-dark) 100%),
-    rgba(var(--bg-app-dark-rgb), 0.6);
+    linear-gradient(270deg, var(--bg-partners-plate) 0%, rgba(var(--bg-partners-plate-rgb), 0) 7.48%),
+    linear-gradient(90deg, var(--bg-partners-plate) 1.7%, rgba(var(--bg-partners-plate-rgb), 0) 18.35%),
+    linear-gradient(rgba(var(--bg-partners-plate-rgb), 0.6), rgba(var(--bg-partners-plate-rgb), 0.6)),
+    url("@img/partners.bit/bg-lights.jpg") 50% 62% / cover no-repeat;
+  filter: blur(0.7rem);
+
+  @media (max-width: $mobile) {
+    background:
+      linear-gradient(270deg, var(--bg-partners-plate) 0%, rgba(var(--bg-partners-plate-rgb), 0) 7.48%),
+      linear-gradient(90deg, var(--bg-partners-plate) 1.7%, rgba(var(--bg-partners-plate-rgb), 0) 18.35%),
+      url("@img/partners.bit/bg-lights.jpg") center / cover no-repeat;
+    filter: none;
+  }
 }
 
 .partners .section__head {
@@ -114,18 +125,36 @@
   min-height: 0;
 }
 
-@media (max-width: $mobile) {
-  .partners--rastamozhka,
-  .partners--rastamozhka .partners__card {
+.partners--rastamozhka .partners__card {
+  background: var(--bg-app-light);
+  border-radius: 0;
+}
+
+.partners--rastamozhka .partners__container {
+  padding-inline: 0;
+}
+
+.partners--rastamozhka .partners__card::before {
+  content: none;
+}
+
+.partners--rastamozhka .section-title {
+  color: var(--fg-app-light);
+}
+
+.partners--rastamozhka .partner-card:not(.partner-card--cover) {
+  background: var(--bg-partner-card);
+}
+
+.partners--rastamozhka {
+  background: var(--bg-app-light);
+
+  @media (max-width: $laptop) {
+    background: var(--bg-app-light-secondary);
+  }
+
+  @media (max-width: $mobile) {
     background: var(--bg-app-light);
-  }
-
-  .partners--rastamozhka .partners__card::before {
-    content: none;
-  }
-
-  .partners--rastamozhka .section-title {
-    color: var(--fg-regular);
   }
 }
 

@@ -34,7 +34,7 @@
 
 
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css?_v=20260715141708">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260719173407">
 </head>
 <body>
   <div class="wrapper">
@@ -54,7 +54,7 @@
       </div>
 
       <p class="topbar__promo">
-        Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+        Ограниченное предложение: <b>Получите курс по официальному импорту БЕСПЛАТНО</b>
       </p>
 
       <a class="topbar__course button button--pill" href="page-course.html">Пройти курс</a>
@@ -193,9 +193,12 @@
     </button>
   </div>
 
-  <div class="service-hero__media media service-hero__media--wide">
+  <div class="service-hero__media media service-hero__media--wide-crop">
     <picture class="media__pic">
-      <img class="media__img" src="./img/service-hero.bit/hero-photo-delivery@2x.jpg" alt="Паллета со сборным грузом и флаги Казахстана и Кыргызстана" width="1846" height="1238" loading="lazy">
+      
+      <source media="(max-width: 991px)" srcset="./img/service-hero.bit/hero-photo-delivery-m@2x.jpg">
+      
+      <img class="media__img" src="./img/service-hero.bit/hero-photo-delivery@2x.jpg" alt="Паллета со сборным грузом из Казахстана и Кыргызстана" width="1846" height="1238" loading="lazy">
     </picture>
     
   </div>
@@ -288,8 +291,9 @@
 
     </ul>
 
-    <ul class="services__results">
-      <li class="service-result-card">
+    <div class="services__slider swiper">
+      <ul class="services__results swiper-wrapper">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -304,7 +308,7 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-      <li class="service-result-card">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -319,7 +323,7 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-      <li class="service-result-card">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -334,7 +338,17 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-    </ul>
+      </ul>
+    </div>
+
+    <div class="services__nav">
+      <button class="nav-arrow services__arrow services__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow services__arrow services__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
   </div>
 </section>
 
@@ -346,9 +360,10 @@
             <p class="section-desc">Гарантируем сроки доставки</p>
           </div>
 
-          <ul class="service-steps__list">
-            <li class="service-steps__item">
-              <div class="step-card step-card--light step-card--delivery-1">
+          <div class="service-steps__slider swiper">
+            <ul class="service-steps__list swiper-wrapper">
+              <li class="service-steps__item swiper-slide">
+                <div class="step-card step-card--light step-card--delivery-1">
   
 
   <div class="step-card__content">
@@ -361,17 +376,20 @@
     
   </div>
 
+  
   <div class="step-card__media media media--contain">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/step-1-delivery@2x.jpg" alt="" width="694" height="457" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-            </li>
+              </li>
 
-            <li class="service-steps__item">
-              <div class="step-card step-card--dark step-card--delivery-2">
+              <li class="service-steps__item swiper-slide">
+                <div class="step-card step-card--dark step-card--delivery-2">
   
 
   <div class="step-card__content">
@@ -384,17 +402,22 @@
     
   </div>
 
+  
   <div class="step-card__media media media--cover">
     <picture class="media__pic">
+      
+      <source media="(max-width: 991px)" srcset="./img/steps.bit/step-2-delivery-m@2x.jpg">
+      
       <img class="media__img" src="./img/steps.bit/step-2-delivery@2x.jpg" alt="" width="1440" height="914" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-            </li>
+              </li>
 
-            <li class="service-steps__item">
-              <div class="step-card step-card--light step-card--delivery-3">
+              <li class="service-steps__item swiper-slide">
+                <div class="step-card step-card--light step-card--delivery-3">
   
 
   <div class="step-card__content">
@@ -407,17 +430,20 @@
     
   </div>
 
+  
   <div class="step-card__media media media--cover">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/step-3-delivery@2x.jpg" alt="" width="1440" height="914" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-            </li>
+              </li>
 
-            <li class="service-steps__item">
-              <div class="step-card step-card--dark step-card--delivery-4">
+              <li class="service-steps__item swiper-slide">
+                <div class="step-card step-card--dark step-card--delivery-4">
   
 
   <div class="step-card__content">
@@ -430,15 +456,21 @@
     
   </div>
 
+  
   <div class="step-card__media media media--cover">
     <picture class="media__pic">
+      
+      <source media="(max-width: 991px)" srcset="./img/steps.bit/step-4-delivery-m@2x.jpg">
+      
       <img class="media__img" src="./img/steps.bit/step-4-delivery@2x.jpg" alt="" width="1440" height="914" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -626,6 +658,6 @@
 
   </div>
 
-  <script src="./js/index.min.js?_v=20260715141708" defer></script>
+  <script src="./js/index.min.js?_v=20260719173407" defer></script>
 </body>
 </html>

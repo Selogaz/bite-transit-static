@@ -56,7 +56,7 @@
   padding: 0.8em 1.2em;
   font-family: var(--ff-regular);
   font-size: var(--fz-small);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
   color: var(--fg-regular);
   text-align: center;
@@ -70,6 +70,7 @@
 
 .service-tabs__link--active {
   position: relative;
+  font-weight: 700;
   color: var(--fg-app-dark);
   background: var(--c-primary-dark);
   opacity: 1;
@@ -101,6 +102,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 8rem;
+}
+
+.services__nav {
+  display: none;
 }
 
 .service-result-card {
@@ -638,26 +643,30 @@
     transform: rotate(180deg);
   }
 
-  // min-height — только страховочный пол на время загрузки фото: реальная высота на всех
-  // ширинах 991→320 держится натуральным аспектом фото (592×643, портрет) при full-width.
   .service-detail__media {
     display: block;
     height: auto;
-    min-height: 28.1rem;
+    aspect-ratio: 299 / 281;
   }
 
   .service-detail__media .media__img {
     border-radius: 1.5rem;
+    object-position: bottom;
   }
 
   .service-detail__submit {
     display: none;
+  }
+
+  .service-detail__list {
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: $mobile) {
   .services {
     padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .services__title {
@@ -673,9 +682,36 @@
     margin-bottom: 1.6rem;
   }
 
+  .services__slider {
+    width: auto;
+    margin-right: calc(-1 * var(--p-container));
+    margin-left: 0;
+  }
+
   .services__results {
-    gap: 1.6rem;
-    margin-bottom: 3.2rem;
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .services__results .service-result-card {
+    width: 27.5rem;
+  }
+
+  .services__results .service-result-card:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+
+  .services__nav {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .services__arrow {
+    --size: 4.5rem;
   }
 
   .service-result-card__media {
@@ -712,10 +748,17 @@
 
   .service-detail {
     padding-top: 6.6rem;
+    background:
+      linear-gradient(var(--bg-app-dark), rgba(var(--bg-app-dark-rgb), 0) 6.65rem),
+      linear-gradient(90deg, var(--bg-app-dark), rgba(var(--bg-app-dark-rgb), 0) 13.28%),
+      linear-gradient(270deg, var(--bg-app-dark) 15.36%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),
+      url("@img/services.bit/bg-port.jpg") 50% -9.4rem / 102.4rem auto no-repeat,
+      url("@img/services.bit/bg-port.jpg") 50% calc(100% + 13.1rem) / 102.4rem auto no-repeat,
+      var(--bg-app-dark);
   }
 
   .service-detail__content {
-    padding: 3.2rem 2rem;
+    padding: 3.2rem 2rem 1.4rem;
   }
 
   .service-detail__decor {
@@ -745,15 +788,20 @@
     max-width: none;
   }
 
+  .service-cta {
+    padding-bottom: 5rem;
+  }
+
   .service-cta__card {
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem 0;
+    padding: 2rem 1.5rem 0;
   }
 
   .service-cta__title {
     order: 1;
     margin-bottom: 1.4rem;
+    font-size: 2rem;
   }
 
   .service-cta__fields {

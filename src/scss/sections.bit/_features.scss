@@ -12,6 +12,14 @@
   }
 }
 
+.features--rastamozhka {
+  background: var(--bg-app-light);
+}
+
+.features--rastamozhka .feature-card:not(.feature-card--accent) {
+  background: var(--bg-app-light-secondary);
+}
+
 .features .section-title {
   font-weight: 400;
 }
@@ -204,8 +212,20 @@
 }
 
 @media (max-width: $mobile) {
+  .features:has(+ .categories) {
+    padding-bottom: 0;
+  }
+
   .features .section__head {
     text-align: left;
+  }
+
+  .features__desc {
+    font-size: var(--fz-small);
+  }
+
+  .features__desc br {
+    display: none;
   }
 
   .feature-card,

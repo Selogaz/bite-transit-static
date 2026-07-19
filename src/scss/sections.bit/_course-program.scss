@@ -28,6 +28,19 @@
   max-width: 28.1rem;
 }
 
+.program-module-card__head {
+  display: none;
+}
+
+.program-module-card > .bayan__top {
+  display: none;
+}
+
+.program-module-card > .bayan__bottom,
+.program-module-card__content {
+  display: contents;
+}
+
 // Фото над телом: боковой инсет 2.26rem, z-index держит его поверх белого тела в зоне нахлёста.
 // flex-shrink:0 обязателен: иначе в колоночной карточке (мобайл) фото схлопывается в height:0.
 .program-module-card__media {
@@ -38,6 +51,14 @@
   aspect-ratio: 472 / 218;
   margin: 0 2.26rem;
   border-radius: var(--radius-card);
+}
+
+.program-module-card__media--top .media__img {
+  object-position: 50% 0%;
+}
+
+.program-module-card__media--upper .media__img {
+  object-position: 50% 30%;
 }
 
 .program-module-card__body {
@@ -117,14 +138,103 @@
   }
 
   .program-module-card {
+    display: block;
+    flex: none;
     max-width: none;
+    overflow: hidden;
+    background: var(--bg-app-light);
+    border-radius: var(--radius-card);
+  }
+
+  .program-module-card > .bayan__top {
+    display: block;
+  }
+
+  .program-module-card > .bayan__bottom {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .program-module-card.bayan--opened > .bayan__bottom {
+    max-height: 200rem;
+  }
+
+  .program-module-card__head {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 5.4rem;
+    padding: 0.8rem 1rem 0.8rem 1.7rem;
+    cursor: pointer;
+  }
+
+  .program-module-card__head-num {
+    font-family: var(--ff-regular);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--fg-program-card);
+  }
+
+  .program-module-card__toggle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    color: var(--fg-app-dark);
+    background: var(--c-primary-dark);
+    border-radius: 50%;
+  }
+
+  .program-module-card__toggle-svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .program-module-card__toggle-bar--vertical {
+    transition: transform var(--tr) ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .program-module-card.bayan--opened .program-module-card__toggle-bar--vertical {
+    transform: scaleY(0);
+  }
+
+  .program-module-card__content {
+    display: block;
+    padding: 1.9rem 1.5rem 2rem;
+  }
+
+  .program-module-card__media {
+    width: 100%;
+    aspect-ratio: 269 / 99;
+    margin: 0;
+  }
+
+  .program-module-card__body {
+    padding: 0;
+    margin-top: 1.6rem;
+    background: transparent;
+  }
+
+  .program-module-card__badge {
+    padding: 0.17rem 0.98rem;
+    line-height: var(--lh-regular);
   }
 
   .program-module-card__title {
+    margin-top: 0.8rem;
+    margin-right: 0;
     font-size: 2rem;
   }
 
   .program-module-card__lessons {
+    margin-top: 1.3rem;
     font-size: 1.4rem;
   }
 }

@@ -17,36 +17,6 @@
       }
     </div>
 
-    @@if (typeof pageMode == 'undefined') {
-    <div class="faq__tabs">
-      <button class="faq__tab faq__tab--active" type="button" data-faq-tab="customs">
-        Таможенное оформление
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="logistics">
-        Транспортно-экспедиционные услуги
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="certification">
-        Сертификация, ввоз образцов
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="payments">
-        Платежи
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="outsourcing">
-        Аутсорсинг ВЭД под ключ
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="fulfillment">
-        Фулфилмент для маркетплейсов
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-    </div>
-    }
-
-    @@if (typeof pageMode != 'undefined') {
     <div class="faq__tabs">
       <button class="faq__tab faq__tab--active" type="button" data-faq-tab="general">
         Общие вопросы
@@ -73,123 +43,7 @@
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
     </div>
-    }
 
-    @@if (typeof pageMode == 'undefined') {
-    <div class="faq__panels">
-      <div class="faq__panel faq__panel--active" data-faq-panel="customs">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "Что входит в белую растаможку?",
-            "answer": "Полное таможенное оформление груза с уплатой всех пошлин и НДС, подготовкой деклараций и разрешительных документов."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можете помочь перейти с карго на белую схему?",
-            "answer": "Да, разработаем поэтапный план перехода на официальный импорт с учётом текущей номенклатуры и объёмов поставок."
-          })
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="logistics">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "Откуда вы можете забрать груз?",
-            "answer": "Забираем товар у любого поставщика на территории Китая — от фабрики до склада агента, включая консолидацию из нескольких точек."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можно заказать только перевозку по Китаю?",
-            "answer": "Да, доступна услуга внутренней перевозки до склада консолидации без последующей растаможки — под ваши задачи."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Есть ли ограничения по объёму или весу?",
-            "answer": "Ограничений нет — от одной коробки до сборной партии в несколько тонн."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можете забрать уже оформленный груз и довезти до нашего склада?",
-            "answer": "Да, организуем доставку растаможенного груза до любого склада в России — от терминала до двери."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Возите только в Москву?",
-            "answer": "Нет, доставляем по всей территории России — маршрут и сроки согласуем индивидуально."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можно доставить прямо до двери или конкретного склада?",
-            "answer": "Да, возможна доставка «до двери» — точный адрес и условия въезда транспорта уточняем при оформлении заявки."
-          })
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="certification">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "Помогаете с сертификатами и разрешительными документами?",
-            "answer": "Да, оформляем сертификаты соответствия, декларации и другие разрешительные документы под вашу категорию товара."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Что запрещено провозить?",
-            "answer": "Список запрещённых и ограниченных к ввозу товаров регулируется законодательством РФ и ЕАЭС — уточним по вашей номенклатуре на этапе консультации."
-          })
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="payments">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "Как оплачивается доставка?",
-            "answer": "Оплата производится по счёту на основании договора: предоплата и окончательный расчёт после получения груза на складе в РФ."
-          })
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="outsourcing">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "Как начать сотрудничество с вашей компанией?",
-            "answer": "Оставьте заявку на сайте или позвоните нам — менеджер уточнит детали груза и предложит оптимальную схему доставки в течение рабочего дня."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Есть ли ограничения по объёму или весу?",
-            "answer": "Работаем с грузами любого объёма — от небольших сборных партий до полных контейнеров, ограничений по весу нет."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можно ли отслеживать статус груза?",
-            "answer": "Да, на каждом этапе поставки менеджер сообщает актуальный статус, дополнительно предоставляем трек-номера транспортных компаний."
-          })
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="fulfillment">
-        <div class="faq__list">
-          @@include('../cards/faq-item.html', {
-            "question": "На какие маркетплейсы вы доставляете?",
-            "answer": "Работаем с крупнейшими маркетплейсами — Wildberries, Ozon, Яндекс Маркет и другими по запросу."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можете забрать товар с нашего склада или фулфилмента?",
-            "answer": "Да, заберём груз с любого склада или фулфилмент-центра и организуем дальнейшую логистику."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Помогаете учесть требования маркетплейса к поставке?",
-            "answer": "Да, учитываем требования площадки к маркировке, упаковке и сопроводительным документам перед приёмкой."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "В какие города вы доставляете товар до склада маркетплейса?",
-            "answer": "Доставляем до региональных складов маркетплейсов по всей России — маршрут зависит от выбранной площадки."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Можно доставить одной партией на несколько складов?",
-            "answer": "Да, распределим груз по нескольким складам маркетплейса согласно вашей раскладке."
-          })
-          @@include('../cards/faq-item.html', {
-            "question": "Сколько занимает доставка до склада маркетплейса?",
-            "answer": "Сроки зависят от региона и загрузки склада приёмки — ориентировочные даты сообщает менеджер после бронирования слота."
-          })
-        </div>
-      </div>
-    </div>
-    }
-
-    @@if (typeof pageMode != 'undefined') {
     <div class="faq__panels">
       <div class="faq__panel faq__panel--active" data-faq-panel="general">
         <div class="faq__list">
@@ -301,6 +155,5 @@
         </div>
       </div>
     </div>
-    }
   </div>
 </section>

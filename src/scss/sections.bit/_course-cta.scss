@@ -48,16 +48,18 @@
   position: absolute;
   top: 2.9rem;
   left: 1.4rem;
-  width: 0;
+  width: 0.1rem;
   height: 2rem;
   content: "";
-  border-left: 0.1rem dashed var(--c-divider);
+  background-image: repeating-linear-gradient(var(--c-divider) 0 0.6rem, transparent 0.6rem 1.2rem);
   transform: translateX(-50%);
 }
 
 // height, не min-height: кружок-бейдж должен остаться circle (border-radius:50%) — с
 // min-height двузначный номер мог бы растянуть его в овал.
 .course-cta__step-num {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -112,7 +114,7 @@
   z-index: 1;
   pointer-events: none;
   content: "";
-  background: linear-gradient(to right, var(--bg-app-light-tertiary) 14%, rgba(var(--bg-app-light-tertiary-rgb), 0) 26%);
+  background: linear-gradient(to right, var(--bg-app-light-tertiary) 2.2rem, rgba(var(--bg-app-light-tertiary-rgb), 0) 8.7rem);
 }
 
 .course-cta__form-card {
@@ -180,12 +182,21 @@
     gap: 1.6rem;
   }
 
+  .course-cta__step:not(:last-child)::after {
+    height: auto;
+    bottom: -3rem;
+  }
+
+  .course-cta__container {
+    gap: 2.8rem;
+  }
+
   .course-cta__visual {
-    padding-top: 1.6rem;
+    padding-top: 0;
   }
 
   .course-cta__form-card {
-    margin-top: 1.8rem;
+    margin-top: 0;
   }
 
   .course-cta__media {

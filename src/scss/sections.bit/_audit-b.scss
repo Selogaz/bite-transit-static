@@ -177,15 +177,15 @@
     display: block;
   }
 
-  .audit-b__photo {
-    width: 100%;
-    margin: 0;
-  }
-
   .audit-b__form-card {
     position: static;
     width: 100%;
-    margin-top: 2.4rem;
+  }
+
+  .audit-b__photo {
+    width: 100%;
+    margin: 2.4rem 0 0;
+    mask-image: linear-gradient(to bottom, transparent 0, black 2.6rem);
   }
 }
 
@@ -207,11 +207,11 @@
     gap: 1.6rem;
   }
 
-  // height вместо min-height — фото-иконка фикс. размера, контент внутри не растёт.
   // Мобильная рамка 60×74, скругление 8px (не десктопные 20px) и белый кант 1px.
   .audit-b-point__media {
     width: 6rem;
     height: 7.4rem;
+    min-height: 7.4rem;
     border: 0.1rem solid var(--bg-app-light);
     border-radius: var(--radius-photo-icon);
   }
@@ -237,7 +237,15 @@
     font-size: 1.4rem;
   }
 
-  .audit-b__form-card {
+  .audit-b__photo {
+    width: auto;
+    aspect-ratio: 320 / 291;
     margin-top: 1.8rem;
+    margin-right: calc(var(--p-container) * -1);
+    margin-left: calc(var(--p-container) * -1);
+  }
+
+  .audit-b__photo .media__img {
+    object-position: 55.9% center;
   }
 }

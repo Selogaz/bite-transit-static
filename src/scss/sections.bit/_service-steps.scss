@@ -14,26 +14,33 @@
   font-weight: 700;
 }
 
+.service-steps--fulfillment .section-title {
+  max-width: 56.7rem;
+}
+
 .service-steps__container {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
 .service-steps__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2.4rem;
   margin-top: 4rem;
   counter-reset: step;
 }
 
-.service-steps__item--row {
-  display: flex;
-  gap: 2.4rem;
+.service-steps__item {
+  display: grid;
+  grid-column: 1 / -1;
 }
 
-.service-steps__item--row > .step-card {
-  flex: 1 1 50%;
+.service-steps__item--half {
+  grid-column: auto;
+}
+
+.service-steps__item--half > .step-card {
   min-height: 49.3rem;
 }
 
@@ -46,20 +53,97 @@
   opacity: 0;
 }
 
+.service-steps .step-card--dark {
+  background: var(--bg-step-card-dark);
+}
+
 .service-steps .step-card--dark .step-card__media:not(.step-card__media--ghost)::after {
   position: absolute;
   inset: 0;
   z-index: 1;
   content: "";
-  background: linear-gradient(90deg, var(--bg-app-dark), rgba(var(--bg-app-dark-rgb), 0) 42%);
+  background: linear-gradient(90deg, var(--bg-step-card-dark), rgba(var(--bg-step-card-dark-rgb), 0) 42%);
+}
+
+@media (min-width: $mobile + 1) {
+  .service-steps .step-card--teu-2 .step-card__bg {
+    left: auto;
+    width: 65.68%;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__bg::after {
+    content: none;
+  }
+
+  .service-steps .step-card--teu-2 .step-card__bg .media__img {
+    object-position: 50% 60%;
+  }
+
+  .service-steps .step-card--teu-half-4 .step-card__title b {
+    font-weight: inherit;
+  }
+
+  .service-steps .step-card--outsourcing-1 .step-card__media {
+    flex: none;
+    width: 84.7rem;
+  }
+
+  .service-steps .step-card--outsourcing-1 .step-card__media .media__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: auto;
+  }
+
+  .service-steps .step-card--delivery-1 .step-card__content,
+  .service-steps .step-card--delivery-2 .step-card__content,
+  .service-steps .step-card--delivery-3 .step-card__content,
+  .service-steps .step-card--delivery-4 .step-card__content,
+  .service-steps .step-card--fulfillment-1 .step-card__content,
+  .service-steps .step-card--fulfillment-2 .step-card__content,
+  .service-steps .step-card--fulfillment-3 .step-card__content,
+  .service-steps .step-card--fulfillment-4 .step-card__content {
+    justify-content: flex-start;
+    padding-top: 6.4rem;
+  }
+
+  .service-steps .step-card--fulfillment-1 .step-card__media,
+  .service-steps .step-card--fulfillment-2 .step-card__media {
+    flex: none;
+    width: 57.23%;
+  }
+
+  .service-steps .step-card--fulfillment-4 .step-card__media {
+    flex: none;
+    width: 59.86%;
+  }
+
+  .service-steps .step-card--fulfillment-1 .step-card__media .media__img,
+  .service-steps .step-card--fulfillment-2 .step-card__media .media__img {
+    position: absolute;
+    top: -2.4rem;
+    right: 0;
+    width: auto;
+    max-width: none;
+    height: 54rem;
+  }
+
+  .service-steps .step-card--fulfillment-4 .step-card__media .media__img {
+    position: absolute;
+    top: -2.4rem;
+    left: 0;
+    width: 100%;
+    height: 54rem;
+  }
 }
 
 @media (max-width: $laptop) {
-  .service-steps__item--row {
-    flex-direction: column;
+  .service-steps__item--half {
+    grid-column: 1 / -1;
   }
 
-  .service-steps__item--row > .step-card {
+  .service-steps__item--half > .step-card {
     min-height: 45.7rem;
   }
 
@@ -71,7 +155,7 @@
 
 @media (max-width: $mobile) {
   .service-steps__container {
-    padding-top: 2.4rem;
+    padding-top: 5rem;
     padding-bottom: 2.4rem;
   }
 
@@ -83,6 +167,127 @@
   .service-steps .step-card__media--ghost {
     height: 0;
     min-height: 0;
+  }
+
+  .service-steps .step-card--teu-half-4 .step-card__media {
+    flex: none;
+    aspect-ratio: 270 / 191;
+  }
+
+  .service-steps .step-card--teu-half-4 .step-card__media .media__img {
+    position: absolute;
+    top: -16.16%;
+    left: 9.13%;
+    width: 83.33%;
+    max-width: none;
+    height: auto;
+  }
+
+  .service-steps .step-card--outsourcing-1 .step-card__media {
+    flex: none;
+    height: auto;
+    aspect-ratio: 270 / 191;
+  }
+
+  .service-steps .step-card--outsourcing-1 .step-card__media .media__img {
+    position: absolute;
+    top: 13.09%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .service-steps .step-card--delivery-1 .step-card__media,
+  .service-steps .step-card--delivery-2 .step-card__media,
+  .service-steps .step-card--delivery-3 .step-card__media,
+  .service-steps .step-card--delivery-4 .step-card__media {
+    flex: none;
+  }
+
+  .service-steps .step-card--delivery-1 .step-card__content,
+  .service-steps .step-card--delivery-2 .step-card__content,
+  .service-steps .step-card--delivery-3 .step-card__content,
+  .service-steps .step-card--delivery-4 .step-card__content {
+    padding-right: 0.5rem;
+    padding-left: 1.6rem;
+  }
+
+  .service-steps .step-card--delivery-1 .step-card__list,
+  .service-steps .step-card--delivery-2 .step-card__list,
+  .service-steps .step-card--delivery-3 .step-card__list,
+  .service-steps .step-card--delivery-4 .step-card__list {
+    padding-left: 1.3rem;
+  }
+
+  .service-steps .step-card--delivery-2 .step-card__content {
+    padding-bottom: 0.6rem;
+  }
+
+  .service-steps .step-card--delivery-2 .step-card__media .media__img {
+    position: absolute;
+    left: 16.5%;
+    width: 83.5%;
+    max-width: none;
+  }
+
+  .service-steps .step-card--delivery-2 .step-card__media:not(.step-card__media--ghost)::after {
+    background:
+      linear-gradient(270deg, var(--bg-step-card-dark) 13.8%, rgba(var(--bg-step-card-dark-rgb), 0) 26%),
+      linear-gradient(90deg, var(--bg-step-card-dark) 17.2%, rgba(var(--bg-step-card-dark-rgb), 0) 26.5%),
+      linear-gradient(180deg, var(--bg-step-card-dark) 2.1%, rgba(var(--bg-step-card-dark-rgb), 0) 29.3%);
+  }
+
+  .service-steps .step-card--delivery-4 .step-card__media:not(.step-card__media--ghost)::after {
+    background: linear-gradient(180deg, var(--bg-step-card-dark) 13%, rgba(var(--bg-step-card-dark-rgb), 0) 43.5%);
+  }
+
+  .service-steps .step-card--outsourcing-2 .step-card__media,
+  .service-steps .step-card--outsourcing-4 .step-card__media {
+    flex: none;
+    height: 24rem;
+  }
+
+  .service-steps .step-card--outsourcing-2 .step-card__media:not(.step-card__media--ghost)::after,
+  .service-steps .step-card--outsourcing-4 .step-card__media:not(.step-card__media--ghost)::after {
+    background: linear-gradient(180deg, var(--bg-step-card-dark) 4.1%, rgba(var(--bg-step-card-dark-rgb), 0) 19.4%);
+  }
+
+  .service-steps .step-card--outsourcing-2 .step-card__media .media__img {
+    position: absolute;
+    top: 0;
+    left: -48.21%;
+    width: 148.07%;
+    max-width: none;
+    height: 104.2%;
+    object-fit: fill;
+  }
+
+  .service-steps__slider {
+    width: auto;
+    margin-right: calc(-1 * var(--p-container));
+    margin-left: 0;
+  }
+
+  .service-steps__slider .service-steps__list {
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .service-steps__slider .service-steps__item,
+  .service-steps__slider .service-steps__item--half {
+    flex-shrink: 0;
+    grid-column: auto;
+    width: 27rem;
+  }
+
+  .service-steps__slider .service-steps__item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .service-steps__container:has(.service-steps__slider) {
+    padding-bottom: 5rem;
   }
 }
 
@@ -117,14 +322,14 @@
   }
 
   .service-steps .step-card--teu-2 .step-card__bg::after {
-    background: linear-gradient(180deg, var(--bg-app-dark) 45.6%, rgba(var(--bg-app-dark-rgb), 0) 58%);
+    background: linear-gradient(180deg, var(--bg-step-card-dark) 45.6%, rgba(var(--bg-step-card-dark-rgb), 0) 58%);
   }
 
   .service-steps .step-card--teu-half-3 .step-card__bg::after {
-    background: linear-gradient(180deg, var(--bg-app-dark) 52.4%, rgba(var(--bg-app-dark-rgb), 0) 58%);
+    background: linear-gradient(180deg, var(--bg-step-card-dark) 52.4%, rgba(var(--bg-step-card-dark-rgb), 0) 58%);
   }
 
-  .service-steps .step-card--teu-half-3 .step-card__title br:first-of-type {
+  .service-steps .step-card--teu-half-3 .step-card__title br {
     display: none;
   }
 }

@@ -24,8 +24,9 @@
         "ctaLabel": "Получить консультацию",
         "ctaFormName": "Услуга — Аутсорсинг ВЭД, консультация",
         "mediaVariant": "wide-fade",
-        "mediaShape": "wide",
+        "mediaShape": "wide-tall",
         "photoSrc": "@img/service-hero.bit/hero-photo-outsourcing@2x.jpg",
+        "photoSrcMobile": "@img/service-hero.bit/hero-photo-outsourcing-m@2x.jpg",
         "photoAlt": "Грузовик, самолёт, поезд и корабль сходятся в единый логистический маршрут",
         "photoW": "1846",
         "photoH": "1238",
@@ -48,59 +49,61 @@
             <p class="section-desc">Реализуем <b>все этапы или удешевим логистику</b> точечными решениями</p>
           </div>
 
-          <ul class="service-steps__list">
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "outsourcing-1",
-                "title": '<b>Подготовка</b><br>и оплата',
-                "list": "<li>Оформим внешнеторговый контракт. Если сумма от $7000 — предоставим свое юрлицо для оплаты</li><li>Контракты от 3 000 000 рублей — зарегистрируем в банке самостоятельно.</li><li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Составим таможенную декларацию и заранее рассчитаем пошлины, НДС и сборы.</li>",
-                "image": "step-1-outsourcing@2x.jpg",
-                "imageW": "1024",
-                "imageH": "768",
-                "mediaVariant": "contain"
-              })
-            </li>
+          <div class="service-steps__slider swiper">
+            <ul class="service-steps__list swiper-wrapper">
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "outsourcing-1",
+                  "title": '<b>Подготовка</b><br>и оплата',
+                  "list": "<li>Оформим внешнеторговый контракт. Если сумма от $7000 — предоставим свое юрлицо для оплаты</li><li>Контракты от 3 000 000 рублей — зарегистрируем в банке самостоятельно.</li><li>Проверим пакинг-лист, инвойс, наличие разрешительных документов и соответствие кода ТН ВЭД.</li><li>Составим таможенную декларацию и заранее рассчитаем пошлины, НДС и сборы.</li>",
+                  "image": "step-1-outsourcing@2x.jpg",
+                  "imageW": "1024",
+                  "imageH": "768",
+                  "mediaVariant": "contain"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "outsourcing-2",
-                "title": '<b>Складская обработка</b><br>и страхование',
-                "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
-                "image": "step-2-outsourcing-bg@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "cover"
-              })
-            </li>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "outsourcing-2",
+                  "title": '<b>Складская обработка</b><br>и страхование',
+                  "list": "<li>Обеспечим временное хранение, упаковку и маркировку товаров, соблюдая все условия.</li><li>Защитим финансы от форс-мажоров, застраховав каждую единицу поставки</li>",
+                  "image": "step-2-outsourcing-bg@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "cover"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "light",
-                "size": "outsourcing-3",
-                "title": '<b>Доставка до таможни</b><br>и выпуск из Китая',
-                "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара.</li><li>Зарегистрируем декларацию, внесем обязательные платежи, пройдем валютный и таможенный контроль.</li><li>Получим разрешение на ввоз груза в РФ</li>",
-                "image": "step-3-outsourcing@2x.jpg",
-                "imageW": "1448",
-                "imageH": "1086",
-                "mediaVariant": "contain"
-              })
-            </li>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "light",
+                  "size": "outsourcing-3",
+                  "title": '<b>Доставка до таможни</b><br>и выпуск из Китая',
+                  "list": "<li>Доставим на таможенный пункт по асфальту, рельсам, морю или воздуху.</li><li>Получим разрешение на вывоз товара.</li><li>Зарегистрируем декларацию, внесем обязательные платежи, пройдем валютный и таможенный контроль.</li><li>Получим разрешение на ввоз груза в РФ</li>",
+                  "image": "step-3-outsourcing@2x.jpg",
+                  "imageW": "1448",
+                  "imageH": "1086",
+                  "mediaVariant": "contain"
+                })
+              </li>
 
-            <li class="service-steps__item">
-              @@include('tpls/cards/step-card.html', {
-                "theme": "dark",
-                "size": "outsourcing-4",
-                "title": 'Выгодная <b>транспортировка по РФ</b>',
-                "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
-                "image": "step-4-outsourcing-bg@2x.jpg",
-                "imageW": "1672",
-                "imageH": "941",
-                "mediaVariant": "cover"
-              })
-            </li>
-          </ul>
+              <li class="service-steps__item swiper-slide">
+                @@include('tpls/cards/step-card.html', {
+                  "theme": "dark",
+                  "size": "outsourcing-4",
+                  "title": 'Выгодная <b>транспортировка по РФ</b>',
+                  "list": "<li>Спланируем маршрут, опираясь на желаемые сроки и ожидания по стоимости.</li><li>Учтем температурные требования перевозки груза и отчитаемся по выполнению.</li><li>Привезем на ваш склад или наш фулфилмент, либо сразу отгрузим на маркетплейсы</li>",
+                  "image": "step-4-outsourcing-bg@2x.jpg",
+                  "imageW": "1672",
+                  "imageH": "941",
+                  "mediaVariant": "cover"
+                })
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

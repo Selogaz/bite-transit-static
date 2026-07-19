@@ -2,16 +2,39 @@
   position: relative;
   padding-block: 7rem;
   overflow: hidden;
-  background: var(--bg-app-dark) url("@img/process.bit/bg-warehouse.jpg") center / cover no-repeat;
+  background-color: var(--bg-app-dark);
+  background-image:
+    linear-gradient(to left, var(--bg-app-dark) 15.36%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),
+    linear-gradient(to right, var(--bg-app-dark) 15.74%, rgba(var(--bg-app-dark-rgb), 0) 37.56%),
+    linear-gradient(to top, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 83.97%),
+    linear-gradient(to bottom, var(--bg-app-dark) 25.34%, rgba(var(--bg-app-dark-rgb), 0) 64.9%),
+    url("@img/process.bit/bg-warehouse.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 142.34vw 61.04vw;
 }
 
 .process::before {
   position: absolute;
   inset: 0;
   content: "";
-  background:
-    radial-gradient(circle at 92% 8%, rgba(var(--c-primary-rgb), 0.35) 0%, rgba(var(--c-primary-rgb), 0) 45%),
-    radial-gradient(circle at 4% 92%, rgba(var(--c-primary-rgb), 0.3) 0%, rgba(var(--c-primary-rgb), 0) 45%);
+  background-image:
+    radial-gradient(
+      circle 54.7vw at 119.01vw -6.3vw,
+      rgba(var(--c-glow-rgb), 0.5) 37%,
+      rgba(var(--c-glow-rgb), 0.42) 43%,
+      rgba(var(--c-glow-rgb), 0.13) 67%,
+      rgba(var(--c-glow-rgb), 0.05) 80%,
+      rgba(var(--c-glow-rgb), 0) 100%
+    ),
+    radial-gradient(
+      circle 54.7vw at -22.08vw calc(100% + 16.88vw),
+      rgba(var(--c-glow-rgb), 0.5) 37%,
+      rgba(var(--c-glow-rgb), 0.42) 43%,
+      rgba(var(--c-glow-rgb), 0.13) 67%,
+      rgba(var(--c-glow-rgb), 0.05) 80%,
+      rgba(var(--c-glow-rgb), 0) 100%
+    );
 }
 
 .process__container {
@@ -41,11 +64,35 @@
 .process__steps::before {
   position: absolute;
   top: 1.4rem;
+  right: 12.2rem;
+  bottom: calc(100% - 7.7rem);
   left: 12.2rem;
-  width: calc(100% - 12.2rem - 12.2rem);
-  height: 0;
   content: "";
-  border-top: 0.1rem dashed rgba(var(--border-app-light-rgb), 0.25);
+  background-image:
+    repeating-linear-gradient(to right, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem),
+    linear-gradient(rgb(var(--border-app-light-rgb)), rgb(var(--border-app-light-rgb))),
+    repeating-linear-gradient(to bottom, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem),
+    repeating-linear-gradient(to bottom, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem),
+    repeating-linear-gradient(to bottom, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem),
+    repeating-linear-gradient(to bottom, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem),
+    linear-gradient(rgb(var(--border-app-light-rgb)), rgb(var(--border-app-light-rgb)));
+  background-repeat: no-repeat;
+  background-position:
+    left top,
+    right top,
+    0% top,
+    25% top,
+    50% top,
+    75% top,
+    100% top;
+  background-size:
+    75% 0.1rem,
+    25% 0.1rem,
+    0.1rem 100%,
+    0.1rem 100%,
+    0.1rem 100%,
+    0.1rem 100%,
+    0.1rem 100%;
 }
 
 .process__docs-title {
@@ -70,25 +117,24 @@
   flex-direction: column;
   align-items: center;
   width: 24.4rem;
-  padding-top: 4.9rem;
+  padding-top: 7.7rem;
 }
 
 .process-step-card__dot {
   position: absolute;
-  top: 0;
+  top: 6.3rem;
   left: 50%;
   z-index: 1;
   width: 2.8rem;
   height: 2.8rem;
-  background: var(--fg-secondary);
-  border: 0.3rem solid rgba(var(--border-app-light-rgb), 0.15);
+  background: var(--bg-process-dot);
+  border: 0.3rem solid var(--bg-app-dark);
   border-radius: 50%;
   transform: translateX(-50%);
 }
 
 .process-step-card:last-child .process-step-card__dot {
   background: var(--bg-app-light);
-  border-color: var(--bg-app-light);
 }
 
 .process-step-card__media {
@@ -131,20 +177,42 @@
   margin-bottom: 1.4rem;
   font-family: var(--ff-regular);
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
   color: var(--fg-app-dark);
   text-align: center;
 }
 
+.doc-card__title b {
+  font-weight: 700;
+}
+
 .doc-card__media {
+  position: relative;
   width: 21.1rem;
-  margin: 0 auto;
+  margin: auto auto 0;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .doc-card__zoom {
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.6rem;
+  height: 4.6rem;
+  background: rgba(var(--border-app-light-rgb), 0.5);
+  backdrop-filter: blur(1.7rem);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.doc-card__zoom-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  color: rgba(var(--bg-app-dark-rgb), 0.35);
 }
 
 @media (max-width: $laptop) {
@@ -166,6 +234,11 @@
 @media (max-width: $tablet) {
   .process__steps {
     justify-content: center;
+  }
+
+  .process {
+    background-position: -100.94vw top;
+    background-size: 269.69vw 115.63vw;
   }
 }
 
@@ -194,6 +267,7 @@
   .process__steps {
     flex-direction: column;
     row-gap: 2rem;
+    padding-left: 0.4rem;
     margin-bottom: 5rem;
   }
 
@@ -201,18 +275,29 @@
     position: absolute;
     top: 3.05rem;
     bottom: 3.05rem;
-    left: 0;
-    width: 0;
+    left: -1.2rem;
+    width: 0.1rem;
     content: "";
-    border-left: 0.1rem dashed rgba(var(--border-app-light-rgb), 0.25);
+    background-image: repeating-linear-gradient(to bottom, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem);
   }
 
   .process-step-card {
     flex-direction: row;
-    gap: 1.6rem;
+    gap: 1.2rem;
     align-items: center;
     width: auto;
     padding-top: 0;
+  }
+
+  .process-step-card::before {
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    width: 0.8rem;
+    height: 0.1rem;
+    content: "";
+    background-image: repeating-linear-gradient(to right, rgba(var(--border-app-light-rgb), 0.3) 0 0.8rem, transparent 0.8rem 1.6rem);
+    transform: translateY(-50%);
   }
 
   // height вместо min-height — здесь и ниже это квадратный/круглый декор фикс. размера
@@ -222,13 +307,14 @@
     left: 0;
     width: 1.4rem;
     height: 1.4rem;
+    background: var(--fg-secondary);
+    border-color: rgba(var(--border-app-light-rgb), 0.15);
     border-width: 0.15rem;
     transform: translate(-50%, -50%);
   }
 
   .process-step-card:last-child .process-step-card__dot {
     background: var(--fg-secondary);
-    border-color: rgba(var(--border-app-light-rgb), 0.15);
   }
 
   .process-step-card__media {
@@ -278,7 +364,6 @@
   }
 
   .doc-card__media {
-    position: relative;
     flex-shrink: 0;
     align-self: flex-end;
     width: 9.24rem;
@@ -287,23 +372,12 @@
   }
 
   .doc-card__zoom {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 6.1rem;
     height: 6.1rem;
-    background: rgba(var(--border-app-light-rgb), 0.5);
-    backdrop-filter: blur(1.7rem);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .doc-card__zoom-icon {
     width: 3.7rem;
     height: 3.7rem;
-    color: rgba(var(--bg-app-dark-rgb), 0.35);
   }
 }

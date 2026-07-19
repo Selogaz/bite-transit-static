@@ -15,7 +15,7 @@
   // align-items: center центрирует его и роняет вниз лишним отступом.
   gap: 3.6em;
   align-items: start;
-  margin-bottom: 5.4rem;
+  margin-bottom: 0;
 }
 
 .course-hero__desc {
@@ -38,26 +38,38 @@
   border-radius: var(--radius-card);
 }
 
-.course-hero__perks {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.4em;
-  padding: 3.2rem var(--p-container) 1.9rem;
-  margin: 0 calc(var(--p-container) * -1);
+.course-hero__perks-bar {
+  position: relative;
+  margin-top: -11.5rem;
   background: var(--bg-app-light);
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.course-hero__perks {
+  display: grid;
+  grid-template-columns: 396fr 364fr 380fr 340fr;
+  gap: 0;
+  padding-top: 2.1rem;
+  padding-bottom: 1.3rem;
 }
 
 @media (max-width: $laptop) {
   .course-hero__grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 3.2em;
+    margin-bottom: 5.4rem;
+  }
+
+  .course-hero__perks-bar {
+    margin-top: 0;
   }
 
   .course-hero__perks {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
+    column-gap: 2.4em;
+    padding-bottom: 1.9rem;
   }
 }
 
@@ -81,6 +93,10 @@
     max-width: none;
     margin-bottom: 1.6rem;
     font-size: var(--fz-small);
+  }
+
+  .course-hero__perks-bar {
+    border-top-color: var(--bg-app-light);
   }
 
   .course-hero__perks {

@@ -34,7 +34,7 @@
 
 
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css?_v=20260715141708">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260719173407">
 </head>
 <body>
   <div class="wrapper">
@@ -54,7 +54,7 @@
       </div>
 
       <p class="topbar__promo">
-        Ограниченное предложение: <b>Получите курс по официальному импорту <u>БЕСПЛАТНО</u></b>
+        Ограниченное предложение: <b>Получите курс по официальному импорту БЕСПЛАТНО</b>
       </p>
 
       <a class="topbar__course button button--pill" href="page-course.html">Пройти курс</a>
@@ -414,8 +414,9 @@
 
     </ul>
 
-    <ul class="services__results">
-      <li class="service-result-card">
+    <div class="services__slider swiper">
+      <ul class="services__results swiper-wrapper">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -430,7 +431,7 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-      <li class="service-result-card">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -445,7 +446,7 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-      <li class="service-result-card">
+        <li class="service-result-card swiper-slide">
   <div class="service-result-card__media media">
     <picture class="media__pic">
       <img class="media__img" src="./img/services.bit/card-service@2x.jpg" alt="Курьер оформляет доставку коробок" width="466" height="267" loading="lazy">
@@ -460,7 +461,17 @@
   <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
 </li>
 
-    </ul>
+      </ul>
+    </div>
+
+    <div class="services__nav">
+      <button class="nav-arrow services__arrow services__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow services__arrow services__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
   </div>
 </section>
 
@@ -780,6 +791,7 @@
 
           <div class="service-cta__media media media--contain">
             <picture class="media__pic">
+              <source media="(max-width: 991px)" srcset="./img/services.bit/cta-booklet-mobile@2x.png">
               <img class="media__img" src="./img/services.bit/cta-booklet@2x.png" alt="Буклет «Пакет услуг»" width="496" height="336" loading="lazy">
             </picture>
           </div>
@@ -1027,9 +1039,6 @@
             </ul>
 
             <div class="quiz__nav">
-              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
-                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
-              </button>
               <button class="quiz__submit button button--primary" type="button">Далее</button>
             </div>
           </li>
@@ -1106,9 +1115,6 @@
             </ul>
 
             <div class="quiz__nav">
-              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
-                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
-              </button>
               <button class="quiz__submit button button--primary" type="button">Далее</button>
             </div>
           </li>
@@ -1185,9 +1191,6 @@
             </ul>
 
             <div class="quiz__nav">
-              <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
-                <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
-              </button>
               <button class="quiz__submit button button--primary" type="button">Далее</button>
             </div>
           </li>
@@ -1247,10 +1250,6 @@
                 </span>
               </label>
             </div>
-
-            <button class="nav-arrow quiz__back" type="button" aria-label="Назад">
-              <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
-            </button>
           </li>
         </ul>
       </div>
@@ -1393,6 +1392,18 @@
     </picture>
   </div>
 
+  <div class="audit__photo audit__photo--top media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/audit.bit/bg-containers@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="audit__photo audit__photo--bottom media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/audit.bit/bg-containers@2x.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
   <div class="audit__container section__container container">
     <div class="audit__content">
       <h2 class="audit__title">
@@ -1441,6 +1452,12 @@
     </div>
 
     <div class="audit__card js_form">
+      <div class="audit__photo audit__photo--middle media">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/audit.bit/bg-containers@2x.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+
       <input type="hidden" name="form_name" value="Секция — Получить аудит">
 
       <p class="audit__card-title">
@@ -1626,6 +1643,8 @@
 <section class="categories" id="categories">
   <div class="categories__container">
     <div class="categories__panel">
+      
+
       <div class="section__head">
         <h2 class="section-title"><b>Выгодная</b> логистика для вашего бизнеса</h2>
         <p class="section-desc">Помогаем работать официально и зарабатывать больше селлерам маркетплейсов, владельцам магазинов и производств</p>
@@ -1895,12 +1914,6 @@
     </div>
 
     <div class="audit-b__visual">
-      <div class="audit-b__photo media">
-        <picture class="media__pic">
-          <img class="media__img" src="./img/audit-b.bit/manager-truck@2x.jpg" alt="" loading="lazy">
-        </picture>
-      </div>
-
       <div class="audit-b__form-card audit__card js_form">
         <input type="hidden" name="form_name" value="Аудит логистики — оптимизация">
 
@@ -1959,6 +1972,12 @@
           </span>
         </label>
       </div>
+
+      <div class="audit-b__photo media">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/audit-b.bit/manager-truck@2x.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
     </div>
   </div>
 </section>
@@ -1971,6 +1990,11 @@
         <img class="media__img" src="./img/stats.bit/bg-port.jpg" alt="" loading="lazy">
       </picture>
       <div class="stats__photo-blur"></div>
+    </div>
+    <div class="stats__photo stats__photo--card media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/stats.bit/bg-port.jpg" alt="" loading="lazy">
+      </picture>
     </div>
     <div class="stats__glow stats__glow--top"></div>
     <div class="stats__glow stats__glow--bottom"></div>
@@ -2101,9 +2125,10 @@
       
 <section class="steps" id="steps">
   <div class="steps__container container">
-    <ul class="steps__list">
-      <li class="steps__item">
-        <div class="step-card step-card--light step-card--1">
+    <div class="steps__slider swiper">
+      <ul class="steps__list swiper-wrapper">
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--light step-card--1">
   
 
   <div class="step-card__content">
@@ -2116,17 +2141,20 @@
     
   </div>
 
+  
   <div class="step-card__media media media--cover">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/card-01-tablet@2x.jpg" alt="" width="640" height="457" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-      </li>
+        </li>
 
-      <li class="steps__item">
-        <div class="step-card step-card--dark step-card--2">
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--dark step-card--2">
   
   <div class="step-card__bg media media--cover">
     <picture class="media__pic">
@@ -2145,17 +2173,13 @@
     
   </div>
 
-  <div class="step-card__media media media--contain">
-    <picture class="media__pic">
-      <img class="media__img" src="./img/steps.bit/card-02-folder@2x.png" alt="" width="686" height="531" loading="lazy">
-    </picture>
-  </div>
+  
 </div>
 
-      </li>
+        </li>
 
-      <li class="steps__item steps__item--row">
-        <div class="step-card step-card--dark step-card--half-3">
+        <li class="steps__item steps__item--half swiper-slide">
+          <div class="step-card step-card--dark step-card--half-3">
   
   <div class="step-card__bg media media--cover">
     <picture class="media__pic">
@@ -2174,18 +2198,24 @@
     
   </div>
 
+  
   <div class="step-card__media media media--contain step-card__media--tilt">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/card-03-clipboard@2x.png" alt="" width="575" height="384" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-        <div class="step-card step-card--light step-card--half-4">
+        </li>
+
+        <li class="steps__item steps__item--half swiper-slide">
+          <div class="step-card step-card--light step-card--half-4">
   
 
   <div class="step-card__content">
-    <h3 class="step-card__title"><b>Привозим груз,</b> куда нужно</h3>
+    <h3 class="step-card__title"><span class="step-card__accent">Привозим груз,</span> куда нужно</h3>
 
     <ul class="step-card__list">
       <li>Организуем забор, доставку, оформление, фулфилмент и передачу груза вам в руки или на склад МП</li><li>С вами работает один менеджер, который знает всё о маршруте и сам постоянно поддерживает связь с вами</li><li>Отправляем все закрывающие документы</li>
@@ -2194,17 +2224,20 @@
     
   </div>
 
+  
   <div class="step-card__media media media--contain">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/card-04-box@2x.jpg" alt="" width="355" height="493" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-      </li>
+        </li>
 
-      <li class="steps__item">
-        <div class="step-card step-card--light step-card--5">
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--light step-card--5">
   
 
   <div class="step-card__content">
@@ -2221,15 +2254,19 @@
     
   </div>
 
+  
   <div class="step-card__media media media--cover">
     <picture class="media__pic">
+      
       <img class="media__img" src="./img/steps.bit/card-05-truck@2x.jpg" alt="" width="589" height="457" loading="lazy">
     </picture>
   </div>
+  
 </div>
 
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -2478,6 +2515,38 @@
   <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
 </li>
 
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
       </ul>
     </div>
 
@@ -2550,44 +2619,39 @@
       
     </div>
 
-    
     <div class="faq__tabs">
-      <button class="faq__tab faq__tab--active" type="button" data-faq-tab="customs">
-        Таможенное оформление
+      <button class="faq__tab faq__tab--active" type="button" data-faq-tab="general">
+        Общие вопросы
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <button class="faq__tab" type="button" data-faq-tab="logistics">
-        Транспортно-экспедиционные услуги
+      <button class="faq__tab" type="button" data-faq-tab="purchase">
+        Выкуп груза в Китае
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <button class="faq__tab" type="button" data-faq-tab="certification">
-        Сертификация, ввоз образцов
+      <button class="faq__tab" type="button" data-faq-tab="customs-white">
+        Белая растаможка
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <button class="faq__tab" type="button" data-faq-tab="payments">
-        Платежи
-        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <button class="faq__tab" type="button" data-faq-tab="outsourcing">
-        Аутсорсинг ВЭД под ключ
+      <button class="faq__tab" type="button" data-faq-tab="rf-delivery">
+        Доставка до склада в РФ
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <button class="faq__tab" type="button" data-faq-tab="fulfillment">
-        Фулфилмент для маркетплейсов
+        Фулфилмент
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="marketplace-delivery">
+        Доставка до склада маркетплейса
         <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
     </div>
-    
 
-    
-
-    
     <div class="faq__panels">
-      <div class="faq__panel faq__panel--active" data-faq-panel="customs">
+      <div class="faq__panel faq__panel--active" data-faq-panel="general">
         <div class="faq__list">
           <div class="faq-item bayan">
   <div class="faq-item__question">
-    <span class="faq-item__question-text">Что входит в белую растаможку?</span>
+    <span class="faq-item__question-text">Как начать сотрудничество с вашей компанией?</span>
     <span class="faq-item__icon">
       <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
@@ -2596,13 +2660,13 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Полное таможенное оформление груза с уплатой всех пошлин и НДС, подготовкой деклараций и разрешительных документов.</div>
+    <div class="faq-item__answer-inner">Оставьте заявку на консультацию, аудит, экскурсию или просто заполните форму расчета. Менеджер свяжется, и мы предложим следующий шаг.</div>
   </div>
 </div>
 
           <div class="faq-item bayan">
   <div class="faq-item__question">
-    <span class="faq-item__question-text">Можете помочь перейти с карго на белую схему?</span>
+    <span class="faq-item__question-text">Как оплачивается доставка?</span>
     <span class="faq-item__icon">
       <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
@@ -2611,42 +2675,7 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, разработаем поэтапный план перехода на официальный импорт с учётом текущей номенклатуры и объёмов поставок.</div>
-  </div>
-</div>
-
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="logistics">
-        <div class="faq__list">
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Откуда вы можете забрать груз?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Забираем товар у любого поставщика на территории Китая — от фабрики до склада агента, включая консолидацию из нескольких точек.</div>
-  </div>
-</div>
-
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Можно заказать только перевозку по Китаю?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, доступна услуга внутренней перевозки до склада консолидации без последующей растаможки — под ваши задачи.</div>
+    <div class="faq-item__answer-inner">Оплата вносится до отгрузки. Физические лица могут оплатить по QR-коду, юридические — по выставленному счёту.</div>
   </div>
 </div>
 
@@ -2661,72 +2690,7 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Ограничений нет — от одной коробки до сборной партии в несколько тонн.</div>
-  </div>
-</div>
-
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Можете забрать уже оформленный груз и довезти до нашего склада?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, организуем доставку растаможенного груза до любого склада в России — от терминала до двери.</div>
-  </div>
-</div>
-
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Возите только в Москву?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Нет, доставляем по всей территории России — маршрут и сроки согласуем индивидуально.</div>
-  </div>
-</div>
-
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Можно доставить прямо до двери или конкретного склада?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, возможна доставка «до двери» — точный адрес и условия въезда транспорта уточняем при оформлении заявки.</div>
-  </div>
-</div>
-
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="certification">
-        <div class="faq__list">
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Помогаете с сертификатами и разрешительными документами?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, оформляем сертификаты соответствия, декларации и другие разрешительные документы под вашу категорию товара.</div>
+    <div class="faq-item__answer-inner">Для поставок на маркетплейсы максимальный вес одного места — до 30 кг. Если объём больше 1 м³, груз должен быть размещён на палете. Также груз не должен выходить за лимиты конкретного маркетплейса.</div>
   </div>
 </div>
 
@@ -2741,62 +2705,7 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Список запрещённых и ограниченных к ввозу товаров регулируется законодательством РФ и ЕАЭС — уточним по вашей номенклатуре на этапе консультации.</div>
-  </div>
-</div>
-
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="payments">
-        <div class="faq__list">
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Как оплачивается доставка?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Оплата производится по счёту на основании договора: предоплата и окончательный расчёт после получения груза на складе в РФ.</div>
-  </div>
-</div>
-
-        </div>
-      </div>
-
-      <div class="faq__panel" data-faq-panel="outsourcing">
-        <div class="faq__list">
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Как начать сотрудничество с вашей компанией?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Оставьте заявку на сайте или позвоните нам — менеджер уточнит детали груза и предложит оптимальную схему доставки в течение рабочего дня.</div>
-  </div>
-</div>
-
-          <div class="faq-item bayan">
-  <div class="faq-item__question">
-    <span class="faq-item__question-text">Есть ли ограничения по объёму или весу?</span>
-    <span class="faq-item__icon">
-      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
-        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-    </span>
-  </div>
-  <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Работаем с грузами любого объёма — от небольших сборных партий до полных контейнеров, ограничений по весу нет.</div>
+    <div class="faq-item__answer-inner">Не принимаем к перевозке лекарства и БАДы, огнеопасные вещества, оружие и военную продукцию, биологические образцы, дорогую ювелирку, алкоголь, табак, животных, контрафакт, а также радио- и беспроводные устройства без нужной сертификации. Если сомневаетесь по товару — лучше сразу уточнить у менеджера.</div>
   </div>
 </div>
 
@@ -2811,7 +2720,157 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, на каждом этапе поставки менеджер сообщает актуальный статус, дополнительно предоставляем трек-номера транспортных компаний.</div>
+    <div class="faq-item__answer-inner">Да. Сообщаем статус на ключевых этапах: приём, отправка, доставка. Если нужен регулярный апдейт, менеджер подскажет удобный формат связи.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="purchase">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Откуда вы можете забрать груз?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Из любой точки Китая — от поставщика, со склада или с фабрики.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно заказать только перевозку по Китаю?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Можем просто забрать груз и перевезти его из точки А в точку Б по Китаю, без дальнейшей международной доставки.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Есть ли ограничения по объёму или весу?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Для поставок на маркетплейсы максимальный вес одного места — до 30 кг. Если объём больше 1 м³, груз должен быть размещён на палете. Также груз не должен выходить за лимиты конкретного маркетплейса.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="customs-white">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Что входит в белую растаможку?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Проверяем документы на груз, смотрим требования по товару, забираем на себя всё оформление и сопровождаем груз до выпуска.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можете помочь перейти с карго на белую схему?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Разберём вашу текущую схему, покажем, что нужно для официального ввоза, и скажем, где могут быть риски, лишние расходы или точки роста по марже.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Помогаете с сертификатами и разрешительными документами?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если по товару нужны сертификаты, декларации или другие документы, подскажем это заранее и объясним, что обязательно, а что нет.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="rf-delivery">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можете забрать уже оформленный груз и довезти до нашего склада?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если груз уже выпущен, забираем его и везём до вашего склада или другой точки в России.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Возите только в Москву?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Нет. Доставляем по Москве, области и в другие города России.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно доставить прямо до двери или конкретного склада?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если есть точный адрес и условия приёмки, довезём до нужной точки.</div>
   </div>
 </div>
 
@@ -2831,7 +2890,7 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Работаем с крупнейшими маркетплейсами — Wildberries, Ozon, Яндекс Маркет и другими по запросу.</div>
+    <div class="faq-item__answer-inner">Работаем с ключевыми площадками: Wildberries, Ozon, Яндекс Маркет. Если у вас другая площадка, лучше уточнить маршрут отдельно.</div>
   </div>
 </div>
 
@@ -2846,7 +2905,7 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, заберём груз с любого склада или фулфилмент-центра и организуем дальнейшую логистику.</div>
+    <div class="faq-item__answer-inner">Да. Можем забрать товар как с нашего фулфилмента, так и с вашей точки, если маршрут и параметры поставки подходят.</div>
   </div>
 </div>
 
@@ -2861,10 +2920,15 @@
     </span>
   </div>
   <div class="faq-item__answer">
-    <div class="faq-item__answer-inner">Да, учитываем требования площадки к маркировке, упаковке и сопроводительным документам перед приёмкой.</div>
+    <div class="faq-item__answer-inner">Да. Заранее смотрим ограничения по весу, объёму, палетам и другим условиям, чтобы груз доехал без лишних переделок.</div>
   </div>
 </div>
 
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="marketplace-delivery">
+        <div class="faq__list">
           <div class="faq-item bayan">
   <div class="faq-item__question">
     <span class="faq-item__question-text">В какие города вы доставляете товар до склада маркетплейса?</span>
@@ -2913,9 +2977,6 @@
         </div>
       </div>
     </div>
-    
-
-    
   </div>
 </section>
 
@@ -2923,6 +2984,7 @@
 <div class="footer__tour">
   <div class="footer__tour-bg media media--cover">
     <picture class="media__pic">
+      <source media="(max-width: 991px)" srcset="./img/footer.bit/bg-tour-mobile.jpg">
       <img class="media__img" src="./img/footer.bit/bg-tour.jpg" alt="" loading="lazy">
     </picture>
   </div>
@@ -3252,6 +3314,6 @@
 
   </div>
 
-  <script src="./js/index.min.js?_v=20260715141708" defer></script>
+  <script src="./js/index.min.js?_v=20260719173407" defer></script>
 </body>
 </html>

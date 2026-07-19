@@ -1,3 +1,14 @@
+.customs-banner {
+  position: relative;
+  z-index: 1;
+  margin-top: -31.2rem;
+
+  @media (max-width: $mobile) {
+    z-index: 0;
+    margin-top: 0;
+  }
+}
+
 .customs-banner__media {
   aspect-ratio: 1920 / 823;
 
@@ -6,19 +17,17 @@
   }
 }
 
-@media (max-width: $mobile) {
-  .customs-banner {
-    position: relative;
-  }
+.customs-banner::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.1rem;
+  left: 0;
+  height: 20.4rem;
+  pointer-events: none;
+  content: "";
+  background: url("@img/customs-banner.bit/edge-clouds.png") center bottom / cover no-repeat;
 
-  .customs-banner::after {
-    position: absolute;
-    right: 0;
-    bottom: -0.1rem;
-    left: 0;
+  @media (max-width: $mobile) {
     height: 5.4rem;
-    pointer-events: none;
-    content: "";
-    background: url("@img/customs-banner.bit/edge-clouds.png") center bottom / cover no-repeat;
   }
 }
