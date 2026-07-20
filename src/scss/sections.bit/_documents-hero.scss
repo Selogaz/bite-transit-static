@@ -1,5 +1,5 @@
 .documents-hero {
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
 }
 
 .documents-hero__title {
@@ -9,5 +9,11 @@
   @media (max-width: $mobile) {
     margin-top: 2.9rem;
     text-align: left;
+  }
+}
+
+@media (max-width: $mobile) {
+  .documents-hero {
+    padding-top: 1.6rem;
   }
 }

@@ -12,7 +12,9 @@
 
 <meta name="format-detection" content="telephone=no">
 
-<link rel="icon" type="image/png" href="./img/common/favicon.png">
+<link rel="icon" type="image/svg+xml" href="./img/common.bit/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/common.bit/favicon.png">
+<link rel="apple-touch-icon" href="./img/common.bit/apple-touch-icon.png">
 
 
   <meta property="og:description" content="Растаможим товар официально, без переплат и серых схем. Официальный импорт из Китая через одну компанию: расчёт поставки, документы, логистика «под ключ».">
@@ -34,7 +36,7 @@
 
 
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css?_v=20260719173407">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260720164122">
 </head>
 <body>
   <div class="wrapper">
@@ -194,9 +196,9 @@
           <span class="button__icon hero__action-icon" aria-hidden="true"></span>
           Получить аудит
         </button>
-        <a class="hero__action-link button button--third" href="#services">
+        <button class="hero__action-link button button--third" type="button" data-b_modal-open="callback" data-form-name="Hero — консультация по ВЭД">
           Консультация по ВЭД
-        </a>
+        </button>
       </div>
     </div>
 
@@ -428,7 +430,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
         <li class="service-result-card swiper-slide">
@@ -443,7 +445,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
         <li class="service-result-card swiper-slide">
@@ -458,7 +460,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
       </ul>
@@ -559,7 +561,7 @@
               <li>Работаем только через проверенных брокеров с опытом более 10 лет</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -602,7 +604,7 @@
               <li>Уведомляем о статусах поставки в личном кабинете или через менеджера</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-teu.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -636,7 +638,7 @@
               <li>Работаем с проверенными органами по сертификации с собственными испытательными лабораториями</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-samples.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -671,7 +673,7 @@
               <li>Гарантия возврата денежных средств, в случае незачисления фабрике</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-payments.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -712,7 +714,7 @@
               <li>Вы получите очищенный товар со всеми необходимыми документами</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-outsourcing.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -749,7 +751,7 @@
               <li>Работаем по гибкой схеме: забираем товар у вас или отгружаем со своего фулфилмента</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-fulfillment.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -770,7 +772,7 @@
               <li>Собственный автопарк</li>
             </ul>
 
-            <button class="service-detail__submit button button--primary" type="button">Подробнее</button>
+            <a class="service-detail__submit button button--primary" href="single-service-delivery.html">Подробнее</a>
           </div>
 
           <div class="service-detail__media media">
@@ -3284,6 +3286,35 @@
   </label>
 </div>
 
+<div class="b_modal modal-case" id="case-detail">
+  <h2 class="modal-case__title">Заголовок кейса</h2>
+  <p class="modal-case__company">Название компании</p>
+
+  <ul class="modal-case__tags">
+    <li class="modal-case__tag">Товарная ниша</li>
+    <li class="modal-case__tag">Средний объем поставки</li>
+  </ul>
+
+  <div class="modal-case__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/cases.bit/case-photo@2x.jpg" alt="Курьер оформляет доставку коробок" width="1306" height="615" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="modal-case__text wysiwyg">
+    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+
+    <h3>Подзаголовок</h3>
+    <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+
+    <ul>
+      <li>Список</li>
+      <li>Список</li>
+      <li>Список</li>
+    </ul>
+  </div>
+</div>
+
 
 
     
@@ -3314,6 +3345,6 @@
 
   </div>
 
-  <script src="./js/index.min.js?_v=20260719173407" defer></script>
+  <script src="./js/index.min.js?_v=20260720164122" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 .contacts-hero {
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
 }
 
 .contacts-hero__title {
@@ -7,6 +7,10 @@
 }
 
 @media (max-width: $mobile) {
+  .contacts-hero {
+    padding-top: 1.6rem;
+  }
+
   .contacts-hero__container {
     padding-inline: 1rem;
   }

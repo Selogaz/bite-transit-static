@@ -12,7 +12,9 @@
 
 <meta name="format-detection" content="telephone=no">
 
-<link rel="icon" type="image/png" href="./img/common/favicon.png">
+<link rel="icon" type="image/svg+xml" href="./img/common.bit/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/common.bit/favicon.png">
+<link rel="apple-touch-icon" href="./img/common.bit/apple-touch-icon.png">
 
 
   <meta property="og:description" content="Переведём бизнес на официальную ВЭД или оптимизируем текущую схему: полный аутсорсинг официального ввоза товаров из Китая в Россию под ключ.">
@@ -34,7 +36,7 @@
 
 
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css?_v=20260719173407">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260720164122">
 </head>
 <body>
   <div class="wrapper">
@@ -157,7 +159,7 @@
 <section class="service-hero service-hero--wide-fade" id="service-hero">
   <div class="service-hero__container container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-  <a class="breadcrumbs__item" href="/">Главная</a>
+  <a class="breadcrumbs__item" href="page-homepage.html">Главная</a>
   <span class="breadcrumbs__divider">/</span>
   
   
@@ -315,7 +317,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
         <li class="service-result-card swiper-slide">
@@ -330,7 +332,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
         <li class="service-result-card swiper-slide">
@@ -345,7 +347,7 @@
     <li class="service-result-card__tag">Товарная ниша</li>
     <li class="service-result-card__tag">Средний объем поставки</li>
   </ul>
-  <button class="service-result-card__more button button--secondary" type="button">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
 </li>
 
       </ul>
@@ -592,6 +594,2030 @@
           </div>
         </div>
       </section>
+
+      <section class="quiz" id="quiz">
+  <div class="quiz__container section__container container">
+    <h2 class="quiz__title section-title">Ответьте на <b>5 вопросов и получите:</b></h2>
+
+    <ul class="quiz__benefits">
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-estimate@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Смету</b> на тестовую поставку</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-offer@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Персональное&nbsp;предложение</b> по оптимизации расходов на логистику</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-calc@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Расчет</b> стоимости отдельных услуг или логистики под ключ</p>
+      </li>
+      <li class="quiz-benefit">
+        <div class="quiz-benefit__media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/quiz.bit/benefit-article@2x.png" alt="" width="75" height="75" loading="lazy">
+          </picture>
+        </div>
+        <p class="quiz-benefit__text"><b>Статья</b> «7 точек, в которых чаще всего теряется маржинальность»</p>
+      </li>
+    </ul>
+
+    <div class="quiz__card js_form">
+      <input type="hidden" name="form_name" value="Квиз — 5 вопросов">
+
+      <ul class="quiz__progress">
+        <li class="quiz__dot is-active"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+        <li class="quiz__dot"></li>
+      </ul>
+
+      <div class="quiz__slider swiper">
+        <ul class="quiz__wrapper swiper-wrapper">
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как сейчас устроен ваш импорт?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Везу через карго-посредника (S-China и аналоги)</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-cargo@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Оформляю все официально сам или через сотрудника</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-official@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Только планирую перейти к импорту</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-planning@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Был неудачный опыт в импорте</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-failed@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-1" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Работаю в белую через логистическую компанию</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-legal@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Есть ли у вас полный пакет документов на товар?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Однозначно да, все ввозится в белую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-full@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Нет уверенности, что комплект полный</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-unsure@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Документы оформляет посредник — я не видел</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-agent@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Документов нет — везу неофициально</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-docs-none@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-2" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Ещё не закупал — только планирую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-notyet@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Как вы сейчас платите поставщику в Китае?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">SWIFT-перевод</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-swift@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Через российский банк с конвертацией</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-bank@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Через посредника / агента</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-agent@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">USDT или криптовалюта</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-pay-crypto@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-3" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Ещё не закупал — только планирую</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-notyet@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step swiper-slide">
+            <h3 class="quiz__question">Что для вас сейчас важнее всего в импорте?</h3>
+
+            <ul class="quiz__options">
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" checked>
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Снизить риски и перейти на официальную схему</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-risk@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Разобраться сколько это будет стоить</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-cost@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Найти нишу и начать с нуля</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-niche@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Разобраться в документах — у меня есть пробелы</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-docs@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+              <li class="quiz-option quiz-option--wide">
+  <label class="quiz-option__label">
+    <input type="radio" name="quiz-step-4" class="quiz-option__input" >
+    <span class="quiz-option__radio"></span>
+    <span class="quiz-option__text">Убедиться что мой текущий логист надёжен</span>
+    <div class="quiz-option__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/quiz.bit/option-goal-logist@2x.png" alt="" width="97" height="98" loading="lazy">
+      </picture>
+    </div>
+  </label>
+</li>
+
+            </ul>
+
+            <div class="quiz__nav">
+              <button class="quiz__submit button button--primary" type="button">Далее</button>
+            </div>
+          </li>
+
+          <li class="quiz__step quiz__step--final swiper-slide">
+            <h3 class="quiz__final-title">Последний шаг</h3>
+
+            <div class="quiz__form">
+              <div class="quiz__form-fields">
+                <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Имя"
+      required
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+                <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+              </div>
+
+              <button class="quiz__form-submit button button--primary button--block js_form__submit" type="button">
+                Получить аудит
+              </button>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="privacy.html">условия политики конфиденциальности</a>
+                </span>
+              </label>
+
+              <label class="checkbox quiz__form-agreement js_form__control">
+                <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+                <span class="checkbox__check"></span>
+                <span class="checkbox__label">
+                  Нажимая на кнопку, Вы принимаете
+                  <a class="checkbox__link" href="#">условия договора оферты</a>
+                </span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="customs-banner">
+  <div class="customs-banner__media media media--cover">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/customs-banner.bit/containers@2x.jpg" alt="Грузовики с контейнерами на контейнерном терминале" width="1920" height="823" loading="lazy">
+    </picture>
+  </div>
+</section>
+
+      <section class="features features--service" id="features">
+  <div class="features__container section__container container">
+    <div class="section__head">
+      <h2 class="features__title section-title">Прописано = <b>соблюдено</b></h2>
+      <p class="features__desc section-desc">7 столпов <b>прозрачной поставки в срок</b><br> без сюрпризов в виде доплат</p>
+    </div>
+
+    <div class="features__slider swiper">
+      <ul class="features__wrapper swiper-wrapper">
+        <li class="feature-card feature-card--vertical swiper-slide">
+  <h3 class="feature-card__title">Персональное <b>сопровождение</b></h3>
+
+  <ul class="feature-card__list">
+    <li>Персональный менеджер, который закрывает все вопросы от забора груза до передачи на склад МП</li><li>Поддержка даже после завершения доставки</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/personal@2x.png" alt="" width="357" height="208" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--vertical swiper-slide">
+  <h3 class="feature-card__title">Экспертная <b>команда</b></h3>
+
+  <ul class="feature-card__list">
+    <li>Эксперты по логистике, ВЭД и таможенному оформлению</li><li>Контроль документов перед отправкой груза для минимизации рисков импорта</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/expert@2x.png" alt="" width="357" height="197" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--vertical swiper-slide">
+  <h3 class="feature-card__title"><b>Прозрачность</b> и точность</h3>
+
+  <ul class="feature-card__list">
+    <li>Расчёт стоимости до начала перевозки</li><li>Предупреждение о возможных рисках и помощь в их предотвращении</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/transparency@2x.png" alt="" width="357" height="207" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--accent swiper-slide">
+  <h3 class="feature-card__title"><b>Своя система в Китае</b></h3>
+
+  <ul class="feature-card__list">
+    <li>Платежные инструменты для расчетов с поставщиками</li><li>Свои склады рядом таможенными пунктами</li><li>Страхование груза</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/china@2x.png" alt="" width="358" height="197" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--horizontal swiper-slide">
+  <h3 class="feature-card__title"><b>Контроль</b> груза<br> на каждом этапе</h3>
+
+  <ul class="feature-card__list">
+    <li>Уведомления о статусе перевозки</li><li>Возможность отследить статус поставки у личного менеджера</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/control@2x.png" alt="" width="160" height="212" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--horizontal swiper-slide">
+  <h3 class="feature-card__title"><b>Защита</b> каждой<br> единицы товара</h3>
+
+  <ul class="feature-card__list">
+    <li>Строгое соблюдение условий перевозки и возможность дополнительной упаковки, при необходимости</li><li>Все грузы застрахованы</li>
+  </ul>
+
+  <div class="feature-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/protection@2x.png" alt="" width="160" height="212" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="feature-card feature-card--horizontal swiper-slide">
+  <h3 class="feature-card__title"><b>Сроки</b> и цены<br> гарантированы</h3>
+
+  <ul class="feature-card__list">
+    <li>Еще до начала работ<br> заркепляем реальную стоимость и дату прибытия груза</li>
+  </ul>
+
+  <div class="feature-card__media media feature-card__media--fade">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/features.bit/terms@2x.png" alt="" width="159" height="212" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+      </ul>
+    </div>
+
+    <div class="features__nav">
+      <button class="nav-arrow features__arrow features__arrow--prev" type="button" aria-label="Назад">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+      </button>
+      <button class="nav-arrow features__arrow features__arrow--next" type="button" aria-label="Вперед">
+        <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+      </button>
+    </div>
+  </div>
+</section>
+
+      
+<section class="categories categories--service" id="categories">
+  <div class="categories__container">
+    <div class="categories__panel">
+      
+      <div class="categories__backdrop media media--cover">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/categories.bit/bg-loading-night.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+      
+
+      <div class="section__head">
+        <h2 class="section-title"><b>Выгодная</b> логистика для вашего бизнеса</h2>
+        <p class="section-desc">Помогаем работать официально и зарабатывать больше селлерам маркетплейсов, владельцам магазинов и производств</p>
+      </div>
+
+      <ul class="categories__grid">
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/fmcg@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Товары FMCG</h3>
+    <p class="category-card__text">Товары широкого ассортимента с повседневным спросом, высокими ритмом поставок и оборачиваемостью</p>
+  </div>
+</li>
+
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/electronics@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Электроника</h3>
+    <p class="category-card__text">Все, в чем есть провода и чипы: от комплектующих для ремонта до бытовой техники</p>
+  </div>
+</li>
+
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/auto-parts@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Автозапчасти</h3>
+    <p class="category-card__text">Расходные материалы и комплектующие из Китая для автомобилей любых марок</p>
+  </div>
+</li>
+
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/project-cargo@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Проектные грузы</h3>
+    <p class="category-card__text">Нестандартные поставки с большими объёмами, весом, габаритами или особыми условиями перевозки.</p>
+  </div>
+</li>
+
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/furniture@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Мебель и товары для дома</h3>
+    <p class="category-card__text">То, что делает жилые и коммерческие помещения удобными <br>и эстетичными</p>
+  </div>
+</li>
+
+      <li class="category-card">
+  <div class="category-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/categories.bit/raw-materials@2x.png" alt="" width="174" height="252" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="category-card__body">
+    <h3 class="category-card__title">Сырьё для производств</h3>
+    <p class="category-card__text">Материалы, комплектующие и заготовки, которые используются в выпуске готовой продукции</p>
+  </div>
+</li>
+
+      </ul>
+
+      
+      <div class="categories__media media media--cover">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/categories.bit/bg-loading-night.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+      
+<section class="partners section partners--service" id="partners">
+  <div class="partners__container">
+    <div class="partners__card">
+      <div class="section__head">
+        <h2 class="section-title">Наши партнеры</h2>
+      </div>
+
+      <ul class="partners__grid">
+        <li class="partner-card partner-card--cover swiper-slide">
+  <div class="partner-card__media media media--cover">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-ff1-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-ff1@2x.png" alt="FF1" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-ff1-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--wide swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-mpstats-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-mpstats@2x.png" alt="MPSTATS" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-mpstats-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--default swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-alt1-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-alt1@2x.png" alt="ALT1 finance" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-alt1-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--default swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-marketguru-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-marketguru@2x.png" alt="Market GURU" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-marketguru-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--compact swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-apet-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-apet@2x.png" alt="АПЭТ" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-apet-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--default swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-sber-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-sber@2x.png" alt="СБЕР" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-sber-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--default swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-fabrix-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-fabrix@2x.png" alt="FABRIX" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-fabrix-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+        <li class="partner-card partner-card--default swiper-slide">
+  <div class="partner-card__media media media--contain">
+    <picture class="media__pic partner-card__mono">
+      <source media="(max-width: 991px)" srcset="./img/partners.bit/logo-sellplus-color@2x.png">
+      <img class="media__img" src="./img/partners.bit/logo-sellplus@2x.png" alt="sellplus" loading="lazy">
+    </picture>
+    <picture class="media__pic partner-card__color" aria-hidden="true">
+      <img class="media__img" src="./img/partners.bit/logo-sellplus-color@2x.png" alt="" loading="lazy">
+    </picture>
+  </div>
+</li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+      
+<section class="audit-b section" id="audit-b">
+  <div class="audit-b__container section__container container">
+    <div class="audit-b__content">
+      <h2 class="audit-b__title">
+        Покажем, как <b>оптимизировать логистику</b> и увеличить маржу без потери сроков
+      </h2>
+
+      <ul class="audit-b__list">
+        <li class="audit-b-point">
+  <div class="audit-b-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/audit-b.bit/icon-overpay@2x.png" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <div class="audit-b-point__body">
+    <p class="audit-b-point__title">Найдём точки переплаты</p>
+    <p class="audit-b-point__text">Лишние подрядчики или ненужные документы, невыгодные маршруты, завышенные цены на доставку или юридические услуги</p>
+  </div>
+</li>
+
+        <li class="audit-b-point">
+  <div class="audit-b-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/audit-b.bit/icon-delay@2x.png" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <div class="audit-b-point__body">
+    <p class="audit-b-point__title">Выявим причины задержек</p>
+    <p class="audit-b-point__text">Разберём, где вы теряете время и как можно сократить длительность одной поставки</p>
+  </div>
+</li>
+
+        <li class="audit-b-point">
+  <div class="audit-b-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/audit-b.bit/icon-plan@2x.png" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <div class="audit-b-point__body">
+    <p class="audit-b-point__title">Соберем план оптимизации</p>
+    <p class="audit-b-point__text">Расскажем о конкретных услугах, которые помогут вам экономить деньги и время на поставках</p>
+  </div>
+</li>
+
+      </ul>
+
+      <div class="audit-b__bonus">
+        <div class="audit-b__bonus-media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/audit-b.bit/bonus-margin@2x.png" alt="" width="86" height="86" loading="lazy">
+          </picture>
+        </div>
+        <div class="audit-b__bonus-body">
+          <p class="audit-b__bonus-label">
+            Бонус
+            <svg class="audit-b__bonus-icon" viewBox="0 0 14.6667 13.38" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.37333 2.73413e-05C4.11333 -0.00663933 2.88667 1.20669 3.44667 2.71336H1.33333C0.979711 2.71336 0.640573 2.85384 0.390524 3.10389C0.140476 3.35393 0 3.69307 0 4.04669V5.38003C0 5.55684 0.0702379 5.72641 0.195262 5.85143C0.320286 5.97646 0.489856 6.04669 0.666667 6.04669H6.66667V4.04669H8V6.04669H14C14.1768 6.04669 14.3464 5.97646 14.4714 5.85143C14.5964 5.72641 14.6667 5.55684 14.6667 5.38003V4.04669C14.6667 3.69307 14.5262 3.35393 14.2761 3.10389C14.0261 2.85384 13.687 2.71336 13.3333 2.71336H11.22C12 0.533361 9.06667 -1.00664 7.71333 0.873361L7.33333 1.38003L6.95333 0.860027C6.53333 0.266694 5.95333 0.00669401 5.37333 2.73413e-05ZM5.33333 1.38003C5.92667 1.38003 6.22667 2.10003 5.80667 2.52003C5.38667 2.94003 4.66667 2.64003 4.66667 2.04669C4.66667 1.86988 4.7369 1.70031 4.86193 1.57529C4.98695 1.45027 5.15652 1.38003 5.33333 1.38003ZM9.33333 1.38003C9.92667 1.38003 10.2267 2.10003 9.80667 2.52003C9.38667 2.94003 8.66667 2.64003 8.66667 2.04669C8.66667 1.86988 8.7369 1.70031 8.86193 1.57529C8.98695 1.45027 9.15652 1.38003 9.33333 1.38003ZM0.666667 6.71336V12.0467C0.666667 12.4003 0.807142 12.7395 1.05719 12.9895C1.30724 13.2396 1.64638 13.38 2 13.38H12.6667C13.0203 13.38 13.3594 13.2396 13.6095 12.9895C13.8595 12.7395 14 12.4003 14 12.0467V6.71336H8V12.0467H6.66667V6.71336H0.666667Z" fill="currentColor"/>
+            </svg>
+          </p>
+          <p class="audit-b__bonus-text">
+            Статья <b>«7 точек, в которых чаще всего теряется маржинальность»</b>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-b__visual">
+      <div class="audit-b__form-card audit__card js_form">
+        <input type="hidden" name="form_name" value="Аудит логистики — оптимизация">
+
+        <p class="audit__card-title">
+          <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+        </p>
+
+        <div class="audit__card-fields">
+          <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Имя"
+      required
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+          <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+        </div>
+
+        <button class="audit__card-submit button button--primary button--block js_form__submit" type="button">
+          Получить аудит
+        </button>
+
+        <label class="checkbox audit__card-agreement js_form__control">
+          <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+          <span class="checkbox__check"></span>
+          <span class="checkbox__label">
+            Нажимая на кнопку, Вы принимаете условия
+            <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+          </span>
+        </label>
+
+        <label class="checkbox audit__card-agreement js_form__control">
+          <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+          <span class="checkbox__check"></span>
+          <span class="checkbox__label">
+            Нажимая на кнопку, Вы принимаете условия
+            <a class="checkbox__link" href="#">договора оферты</a>
+          </span>
+        </label>
+      </div>
+
+      <div class="audit-b__photo media">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/audit-b.bit/manager-truck@2x.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="stats section section--dark" id="stats">
+  <div class="stats__bg">
+    <div class="stats__photo media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/stats.bit/bg-port.jpg" alt="" loading="lazy">
+      </picture>
+      <div class="stats__photo-blur"></div>
+    </div>
+    <div class="stats__photo stats__photo--card media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/stats.bit/bg-port.jpg" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="stats__glow stats__glow--top"></div>
+    <div class="stats__glow stats__glow--bottom"></div>
+  </div>
+
+  <div class="stats__container section__container container">
+    <div class="stats__assets">
+      <p class="stats__assets-label">Активы компании</p>
+
+      <ul class="stats__assets-list">
+        <li class="stat-item">
+  <p class="stat-item__value">35</p>
+  <p class="stat-item__text">лет на рынке в составе группы</p>
+</li>
+
+        <li class="stat-item">
+  <p class="stat-item__value">500<span class="stat-item__plus">+</span></p>
+  <p class="stat-item__text">единиц собственного большегрузного транспорта</p>
+</li>
+
+        <li class="stat-item">
+  <p class="stat-item__value">50<span class="stat-item__plus">+</span></p>
+  <p class="stat-item__text stat-item__text--narrow">багажных вагонов</p>
+</li>
+
+        <li class="stat-item">
+  <p class="stat-item__value">1 000<span class="stat-item__plus">+</span></p>
+  <p class="stat-item__text stat-item__text--narrow">сотрудников в группе</p>
+</li>
+
+        <li class="stat-item">
+  <p class="stat-item__value">10 000<span class="stat-item__unit">м²</span><span class="stat-item__plus">+</span></p>
+  <p class="stat-item__text">складских площадей в Москве</p>
+</li>
+
+      </ul>
+    </div>
+
+    <div class="stats__reasons">
+      <h2 class="stats__title"><span class="stats__title-highlight">8 причин</span> выбрать Байт Транзит</h2>
+      <p class="stats__desc">Возможность быть краткими в изложении преимуществ — <b>результат эффективности и устойчивости</b></p>
+
+      <ul class="stats__reasons-grid">
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-flag@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Официальные поставки</b> из Китая</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-docs@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Персональный</b> менеджер на всех этапах</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-calculator@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Прозрачная</b> стоимость до старта поставки</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-truck@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Минимизируем</b> риски задержки груза в пути</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-book@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text">Предоставляем <b>бесплатный курс</b> по официальному импорту</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-analytics@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Вникаем</b> в экономику бизнеса и оптимизируем издержки</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-phone@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text"><b>Уведомляем</b> о статусе поставки ежедневно</p>
+</li>
+
+        <li class="reason-card">
+  <div class="reason-card__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/stats.bit/icon-warehouse@2x.jpg" alt="" width="100" height="100" loading="lazy">
+    </picture>
+  </div>
+  <p class="reason-card__text">Предоставляем <b>фулфилмент</b> и доставку на склады МП</p>
+</li>
+
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="stats__head section__container">
+    <h2 class="stats__head-title"><b>Надежное</b> партнерство с&nbsp;Байт Транзит:</h2>
+    <p class="stats__head-lead">5 первых шагов</p>
+  </div>
+  
+</section>
+
+      
+<section class="steps" id="steps">
+  <div class="steps__container container">
+    <div class="steps__slider swiper">
+      <ul class="steps__list swiper-wrapper">
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--light step-card--1">
+  
+
+  <div class="step-card__content">
+    <h3 class="step-card__title">Начинаем искать<br><span class="step-card__accent">выгодный</span> формат</h3>
+
+    <ul class="step-card__list">
+      <li>Проведем <span class="step-card__term">аудит логистики</span> и выявим возможности для оптимизации: чтобы в результате сотрудничества ваша маржинальность выросла</li><li><span class="step-card__term">Напишем вам с первичной сметой</span>, если уделите 1 минуту <span class="step-card__term">5 вопросам</span></li><li><span class="step-card__term">Проконсультируем по точечному вопросу</span>: оплате и забору товара в Китая, таможенному оформлению, доставке по РФ или фулфилменту</li>
+    </ul>
+
+    
+  </div>
+
+  
+  <div class="step-card__media media media--cover">
+    <picture class="media__pic">
+      
+      <img class="media__img" src="./img/steps.bit/card-01-tablet@2x.jpg" alt="" width="640" height="457" loading="lazy">
+    </picture>
+  </div>
+  
+</div>
+
+        </li>
+
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--dark step-card--2">
+  
+  <div class="step-card__bg media media--cover">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/steps.bit/bg-warehouse-dusk.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+  
+
+  <div class="step-card__content">
+    <h3 class="step-card__title">Выдвигаем <b>предложение</b></h3>
+
+    <ul class="step-card__list">
+      <li>Договариваемся, в каком формате будем работать и какие этапы официального импорта возьмем на себя</li><li>Согласовываем все нюансы</li><li>Менеджер расскажет о решении вопросов в процессе оказания услуг</li>
+    </ul>
+
+    
+  </div>
+
+  
+</div>
+
+        </li>
+
+        <li class="steps__item steps__item--half swiper-slide">
+          <div class="step-card step-card--dark step-card--half-3">
+  
+  <div class="step-card__bg media media--cover">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/steps.bit/bg-port-sunset.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+  
+
+  <div class="step-card__content">
+    <h3 class="step-card__title">Готовим <b>первую поставку</b></h3>
+
+    <ul class="step-card__list">
+      <li>Берём инвойс, пакинг-лист и данные по грузу, чтобы подобрать код ТН ВЭД, упаковку, негабарит, требования к перевозке и нужные документы.</li><li>Прозрачно формируем стоимость поставки и рассчитываем реальные сроки — так, чтобы не было сюрпризов</li>
+    </ul>
+
+    
+  </div>
+
+  
+  <div class="step-card__media media media--contain step-card__media--tilt">
+    <picture class="media__pic">
+      
+      <img class="media__img" src="./img/steps.bit/card-03-clipboard@2x.png" alt="" width="575" height="384" loading="lazy">
+    </picture>
+  </div>
+  
+</div>
+
+        </li>
+
+        <li class="steps__item steps__item--half swiper-slide">
+          <div class="step-card step-card--light step-card--half-4">
+  
+
+  <div class="step-card__content">
+    <h3 class="step-card__title"><span class="step-card__accent">Привозим груз,</span> куда нужно</h3>
+
+    <ul class="step-card__list">
+      <li>Организуем забор, доставку, оформление, фулфилмент и передачу груза вам в руки или на склад МП</li><li>С вами работает один менеджер, который знает всё о маршруте и сам постоянно поддерживает связь с вами</li><li>Отправляем все закрывающие документы</li>
+    </ul>
+
+    
+  </div>
+
+  
+  <div class="step-card__media media media--contain">
+    <picture class="media__pic">
+      
+      <img class="media__img" src="./img/steps.bit/card-04-box@2x.jpg" alt="" width="355" height="493" loading="lazy">
+    </picture>
+  </div>
+  
+</div>
+
+        </li>
+
+        <li class="steps__item swiper-slide">
+          <div class="step-card step-card--light step-card--5">
+  
+
+  <div class="step-card__content">
+    <h3 class="step-card__title">Поддерживаем ваше развитие</h3>
+
+    <ul class="step-card__list">
+      <li>Стабильно поставляем нужные товары в слаженом ритме, чтобы ничего не мешало масштабированию</li><li><b>Начните сейчас!</b></li>
+    </ul>
+
+    
+    <div class="step-card__actions">
+      <button class="step-card__action button button--primary" type="button" data-b_modal-open="audit-request" data-form-name="Шаги — аудит логистики">Заказать аудит логистики</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — консультация">Получить консультацию</button><button class="step-card__action button button--outline" type="button" data-b_modal-open="callback" data-form-name="Шаги — тестовая поставка">Расчет тестовой поставки</button>
+    </div>
+    
+  </div>
+
+  
+  <div class="step-card__media media media--cover">
+    <picture class="media__pic">
+      
+      <img class="media__img" src="./img/steps.bit/card-05-truck@2x.jpg" alt="" width="589" height="457" loading="lazy">
+    </picture>
+  </div>
+  
+</div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      
+<section class="course" id="course">
+  <div class="course__container container">
+    <span class="course__glow" aria-hidden="true"></span>
+
+    <div class="course__card">
+      <div class="course__text">
+        <h2 class="course__title"><span class="course__title-thin">Получите</span><br>бесплатный курс по официальному ВЭД</h2>
+
+        <p class="course__desc">
+          25 уроков о том, как перейти на официальный ввоз товаров из Китая.
+          Узнайте, как исключить убытки из-за ошибок или поймите, как
+          <b>увеличить маржинальность</b> текущей схемы
+        </p>
+      </div>
+
+      <div class="course__offer">
+        <div class="course__offer-top">
+          <div class="course__media media">
+            <picture class="media__pic">
+              <img class="media__img" src="./img/course.bit/course-book@2x.jpg" alt="Курс по официальному ВЭД" width="290" height="212" loading="lazy">
+            </picture>
+          </div>
+
+          <div class="course__timer timer timer--lg" data-timer data-timer-deadline="">
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-minutes>00</span>
+              <span class="timer__label">минут</span>
+            </span>
+            <span class="timer__unit">
+              <span class="timer__num" data-timer-seconds>00</span>
+              <span class="timer__label">секунды</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="course__offer-bottom">
+          <p class="course__price">
+            <span class="course__price-old">16 990₽</span>
+            <span class="course__price-new">0₽</span>
+          </p>
+
+          <button class="course__cta button button--primary" type="button" data-b_modal-open="callback" data-form-name="Курс — забрать бесплатно">
+            Забрать курс <b>бесплатно</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="map section" id="map">
+  <div class="map__container section__container container">
+    <div class="section__head">
+      <h2 class="section-title">Терминалы на карте</h2>
+    </div>
+
+    <div class="map__media media">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/map.bit/map-terminals@2x.jpg" alt="Карта терминалов «Байт Транзит»" loading="lazy">
+      </picture>
+
+      <ul class="map__pins">
+        <li class="map__pin map__pin--1"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--2"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--3"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--4"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--5"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--6"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+        <li class="map__pin map__pin--7"><img class="map__pin-icon" src="./img/map.bit/icon-pin.svg" alt="" loading="lazy"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <!-- Секция «team» — фото и подписи карточек плейсхолдерные, различаются только роли -->
+<section class="team section" id="team">
+  <div class="team__container">
+    <div class="team__card">
+      <div class="team__bg media">
+        <picture class="media__pic">
+          <img class="media__img" src="./img/team.bit/bg-terminal.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+
+      <div class="section__head">
+        <h2 class="section-title"><b>Ключевые</b> члены команды</h2>
+      </div>
+
+      <div class="team__slider swiper">
+        <ul class="team__grid swiper-wrapper">
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">Лучший менеджер квартала</p>
+</li>
+
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">Топ-юрист<br>квартала</p>
+</li>
+
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">№1 экспедитор<br>квартала</p>
+</li>
+
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">Первый аудитор<br>квартала</p>
+</li>
+
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">Самый аккуратный<br>водитель квартала</p>
+</li>
+
+          <li class="team-card swiper-slide">
+  <div class="team-card__media media">
+    <span class="team-card__deco" aria-hidden="true"></span>
+    <picture class="media__pic">
+      <img class="media__img" src="./img/team.bit/photo-member@2x.png" alt="" width="224" height="268" loading="lazy">
+    </picture>
+  </div>
+
+  <p class="team-card__name">Имя Фамилия</p>
+  <p class="team-card__role">Генеральный<br>директор</p>
+</li>
+
+        </ul>
+      </div>
+
+      <div class="team__nav">
+        <button class="nav-arrow team__arrow team__arrow--prev" type="button" aria-label="Назад">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+        </button>
+        <button class="nav-arrow team__arrow team__arrow--next" type="button" aria-label="Вперед">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="reviews section" id="reviews">
+  <div class="reviews__container section__container">
+    <div class="reviews__head">
+      <h2 class="section-title">Отзывы</h2>
+
+      <div class="reviews__nav">
+        <button class="nav-arrow nav-arrow--soft reviews__button reviews__button--prev" type="button" aria-label="Назад">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+        </button>
+        <button class="nav-arrow nav-arrow--soft reviews__button reviews__button--next" type="button" aria-label="Вперед">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+        </button>
+      </div>
+    </div>
+
+    <div class="reviews__slider swiper">
+      <ul class="reviews__wrapper swiper-wrapper">
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+        <li class="review-card swiper-slide">
+  <div class="review-card__header">
+    <div class="review-card__avatar media media--cover">
+      <picture class="media__pic">
+        <img class="media__img" src="./img/reviews.bit/avatar-woman@2x.png" alt="Зинаида Александровна, 69 лет, санкт-петербург" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__author">
+      <p class="review-card__name">Зинаида Александровна, 69 лет, санкт-петербург</p>
+      <p class="review-card__quote">«Исполнилась моя давняя мечта!»</p>
+    </div>
+  </div>
+
+  <p class="review-card__text">Этот текст прекрасен, он завлекает и интригует, каждое новое слово побуждает интерес все больше и больше, но вскоре вы поймете, что этот текст цикличен и не несет в себе никакого смысла, но вы продолжите читать, потому что Этот текст прекрасен, он завлекает и интригует</p>
+</li>
+
+      </ul>
+    </div>
+
+    <div class="reviews__pagination swiper-pagination"></div>
+  </div>
+</section>
+
+      <!-- Секция «videos» — заголовок + 5 превью-карточек с play-кнопкой (превью придут из CMS) -->
+<section class="videos section" id="videos">
+  <div class="videos__container section__container container">
+    <div class="section__head">
+      <h2 class="section-title">Вас может<br><b>заинтересовать</b></h2>
+    </div>
+
+    <div class="videos__slider swiper">
+      <ul class="videos__wrapper swiper-wrapper">
+        <li class="video-card swiper-slide">
+  <button class="video-card__media" type="button" aria-label="Смотреть видео 1">
+    <img class="video-card__play" src="./img/videos.bit/icon-play.svg" alt="" width="68" height="48">
+  </button>
+</li>
+
+        <li class="video-card swiper-slide">
+  <button class="video-card__media" type="button" aria-label="Смотреть видео 2">
+    <img class="video-card__play" src="./img/videos.bit/icon-play.svg" alt="" width="68" height="48">
+  </button>
+</li>
+
+        <li class="video-card swiper-slide">
+  <button class="video-card__media" type="button" aria-label="Смотреть видео 3">
+    <img class="video-card__play" src="./img/videos.bit/icon-play.svg" alt="" width="68" height="48">
+  </button>
+</li>
+
+        <li class="video-card swiper-slide">
+  <button class="video-card__media" type="button" aria-label="Смотреть видео 4">
+    <img class="video-card__play" src="./img/videos.bit/icon-play.svg" alt="" width="68" height="48">
+  </button>
+</li>
+
+        <li class="video-card swiper-slide">
+  <button class="video-card__media" type="button" aria-label="Смотреть видео 5">
+    <img class="video-card__play" src="./img/videos.bit/icon-play.svg" alt="" width="68" height="48">
+  </button>
+</li>
+
+      </ul>
+
+      <div class="videos__nav">
+        <button class="nav-arrow nav-arrow--soft videos__arrow videos__arrow--prev" type="button" aria-label="Назад">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-left.svg" alt="" width="21" height="10">
+        </button>
+        <button class="nav-arrow nav-arrow--soft videos__arrow videos__arrow--next" type="button" aria-label="Вперед">
+          <img class="nav-arrow__icon" src="./img/common.bit/icon-arrow-right.svg" alt="" width="21" height="10">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="faq section" id="faq">
+  <div class="faq__container section__container">
+    
+
+    <div class="section__head">
+      
+      <h2 class="section-title">Есть вопрос?<br><span class="faq__title-accent">Поищите ответ здесь!</span></h2>
+      
+      
+    </div>
+
+    <div class="faq__tabs">
+      <button class="faq__tab faq__tab--active" type="button" data-faq-tab="general">
+        Общие вопросы
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="purchase">
+        Выкуп груза в Китае
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="customs-white">
+        Белая растаможка
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="rf-delivery">
+        Доставка до склада в РФ
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="fulfillment">
+        Фулфилмент
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="faq__tab" type="button" data-faq-tab="marketplace-delivery">
+        Доставка до склада маркетплейса
+        <svg class="faq__tab-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+
+    <div class="faq__panels">
+      <div class="faq__panel faq__panel--active" data-faq-panel="general">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Как начать сотрудничество с вашей компанией?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Оставьте заявку на консультацию, аудит, экскурсию или просто заполните форму расчета. Менеджер свяжется, и мы предложим следующий шаг.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Как оплачивается доставка?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Оплата вносится до отгрузки. Физические лица могут оплатить по QR-коду, юридические — по выставленному счёту.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Есть ли ограничения по объёму или весу?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Для поставок на маркетплейсы максимальный вес одного места — до 30 кг. Если объём больше 1 м³, груз должен быть размещён на палете. Также груз не должен выходить за лимиты конкретного маркетплейса.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Что запрещено провозить?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Не принимаем к перевозке лекарства и БАДы, огнеопасные вещества, оружие и военную продукцию, биологические образцы, дорогую ювелирку, алкоголь, табак, животных, контрафакт, а также радио- и беспроводные устройства без нужной сертификации. Если сомневаетесь по товару — лучше сразу уточнить у менеджера.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно ли отслеживать статус груза?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Сообщаем статус на ключевых этапах: приём, отправка, доставка. Если нужен регулярный апдейт, менеджер подскажет удобный формат связи.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="purchase">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Откуда вы можете забрать груз?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Из любой точки Китая — от поставщика, со склада или с фабрики.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно заказать только перевозку по Китаю?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Можем просто забрать груз и перевезти его из точки А в точку Б по Китаю, без дальнейшей международной доставки.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Есть ли ограничения по объёму или весу?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Для поставок на маркетплейсы максимальный вес одного места — до 30 кг. Если объём больше 1 м³, груз должен быть размещён на палете. Также груз не должен выходить за лимиты конкретного маркетплейса.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="customs-white">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Что входит в белую растаможку?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Проверяем документы на груз, смотрим требования по товару, забираем на себя всё оформление и сопровождаем груз до выпуска.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можете помочь перейти с карго на белую схему?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Разберём вашу текущую схему, покажем, что нужно для официального ввоза, и скажем, где могут быть риски, лишние расходы или точки роста по марже.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Помогаете с сертификатами и разрешительными документами?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если по товару нужны сертификаты, декларации или другие документы, подскажем это заранее и объясним, что обязательно, а что нет.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="rf-delivery">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можете забрать уже оформленный груз и довезти до нашего склада?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если груз уже выпущен, забираем его и везём до вашего склада или другой точки в России.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Возите только в Москву?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Нет. Доставляем по Москве, области и в другие города России.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно доставить прямо до двери или конкретного склада?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Если есть точный адрес и условия приёмки, довезём до нужной точки.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="fulfillment">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">На какие маркетплейсы вы доставляете?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Работаем с ключевыми площадками: Wildberries, Ozon, Яндекс Маркет. Если у вас другая площадка, лучше уточнить маршрут отдельно.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можете забрать товар с нашего склада или фулфилмента?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Можем забрать товар как с нашего фулфилмента, так и с вашей точки, если маршрут и параметры поставки подходят.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Помогаете учесть требования маркетплейса к поставке?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да. Заранее смотрим ограничения по весу, объёму, палетам и другим условиям, чтобы груз доехал без лишних переделок.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="faq__panel" data-faq-panel="marketplace-delivery">
+        <div class="faq__list">
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">В какие города вы доставляете товар до склада маркетплейса?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Доставляем до региональных складов маркетплейсов по всей России — маршрут зависит от выбранной площадки.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Можно доставить одной партией на несколько складов?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Да, распределим груз по нескольким складам маркетплейса согласно вашей раскладке.</div>
+  </div>
+</div>
+
+          <div class="faq-item bayan">
+  <div class="faq-item__question">
+    <span class="faq-item__question-text">Сколько занимает доставка до склада маркетплейса?</span>
+    <span class="faq-item__icon">
+      <svg class="faq-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line class="faq-item__icon-bar faq-item__icon-bar--vertical" x1="12" y1="5" x2="12" y2="19"></line>
+        <line class="faq-item__icon-bar" x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </span>
+  </div>
+  <div class="faq-item__answer">
+    <div class="faq-item__answer-inner">Сроки зависят от региона и загрузки склада приёмки — ориентировочные даты сообщает менеджер после бронирования слота.</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<div class="footer__tour">
+  <div class="footer__tour-bg media media--cover">
+    <picture class="media__pic">
+      <source media="(max-width: 991px)" srcset="./img/footer.bit/bg-tour-mobile.jpg">
+      <img class="media__img" src="./img/footer.bit/bg-tour.jpg" alt="" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="footer__tour-container container">
+    <div class="footer__tour-content">
+      <h2 class="footer__tour-title">
+        <b>Онлайн-экскурсия в БАЙТ-Транзит:</b> посмотрите, кому вы доверяете груз, время и деньги
+      </h2>
+
+      <ul class="footer__tour-list">
+        <li class="tour-point">
+  <div class="tour-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/footer.bit/icon-cases@2x.jpg" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <p class="tour-point__body"><b class="tour-point__title">Покажем реальные кейсы из смежных ниш. </b><span class="tour-point__text">Увидите нашу работу в деле:как мы уже сделали логистику более выгодной похожим бизнесам</span></p>
+</li>
+
+        <li class="tour-point">
+  <div class="tour-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/footer.bit/icon-infrastructure@2x.jpg" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <p class="tour-point__body"><b class="tour-point__title">Покажем инфраструктуру</b><span class="tour-point__text"><br>Схема организации, реальные фотографии, адреса складов, юрлицо и даже наши дела в КАД</span></p>
+</li>
+
+        <li class="tour-point">
+  <div class="tour-point__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/footer.bit/icon-team@2x.jpg" alt="" width="78" height="96" loading="lazy">
+    </picture>
+  </div>
+  <p class="tour-point__body"><b class="tour-point__title">Познакомим с командой</b><span class="tour-point__text"><br>Поймёте, кто будет вести вашу поставку, отвечать за документы, планировать маршрут и почему сотрудники знают свое дело</span></p>
+</li>
+
+      </ul>
+
+      <div class="footer__tour-bonus">
+        <div class="footer__tour-bonus-media media">
+          <picture class="media__pic">
+            <img class="media__img" src="./img/footer.bit/icon-checklist@2x.jpg" alt="" width="86" height="86" loading="lazy">
+          </picture>
+        </div>
+        <div class="footer__tour-bonus-body">
+          <p class="footer__tour-bonus-label">
+            Бонус
+            <span class="footer__tour-bonus-icon" aria-hidden="true"></span>
+          </p>
+          <p class="footer__tour-bonus-text">Чек-лист: «Готовы ли вы к первой партии из Китая»</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__tour-card js_form">
+      <input type="hidden" name="form_name" value="Футер — Получить аудит">
+
+      <p class="footer__tour-card-title">
+        <b>Персональный менеджер перезвонит вам,</b> отправит анкету для аудита и согласует время консультации
+      </p>
+
+      <div class="footer__tour-card-fields">
+        <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="text"
+      name="name"
+      placeholder="Имя"
+      required
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+        <label class="input js_form__control">
+  <div class="input__area">
+    <input
+      class="input__field"
+      type="tel"
+      name="phone"
+      placeholder="+ 7 (___) ___ __ __"
+      required data-mask="phone"
+    >
+  </div>
+  <span class="input__error">Поле должно быть заполнено!</span>
+</label>
+
+      </div>
+
+      <button class="footer__tour-card-submit button button--primary button--block js_form__submit" type="button">
+        Получить аудит
+      </button>
+
+      <label class="checkbox footer__tour-card-agreement js_form__control">
+        <input type="checkbox" name="agreement_privacy" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="privacy.html">политики конфиденциальности</a>
+        </span>
+      </label>
+
+      <label class="checkbox footer__tour-card-agreement js_form__control">
+        <input type="checkbox" name="agreement_offer" class="checkbox__input" required>
+        <span class="checkbox__check"></span>
+        <span class="checkbox__label">
+          Нажимая на кнопку, Вы принимаете условия
+          <a class="checkbox__link" href="#">договора оферты</a>
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
     </main>
 
     
@@ -774,9 +2800,38 @@
   </label>
 </div>
 
+<div class="b_modal modal-case" id="case-detail">
+  <h2 class="modal-case__title">Заголовок кейса</h2>
+  <p class="modal-case__company">Название компании</p>
+
+  <ul class="modal-case__tags">
+    <li class="modal-case__tag">Товарная ниша</li>
+    <li class="modal-case__tag">Средний объем поставки</li>
+  </ul>
+
+  <div class="modal-case__media media">
+    <picture class="media__pic">
+      <img class="media__img" src="./img/cases.bit/case-photo@2x.jpg" alt="Курьер оформляет доставку коробок" width="1306" height="615" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="modal-case__text wysiwyg">
+    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+
+    <h3>Подзаголовок</h3>
+    <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+
+    <ul>
+      <li>Список</li>
+      <li>Список</li>
+      <li>Список</li>
+    </ul>
+  </div>
+</div>
+
 
   </div>
 
-  <script src="./js/index.min.js?_v=20260719173407" defer></script>
+  <script src="./js/index.min.js?_v=20260720164122" defer></script>
 </body>
 </html>

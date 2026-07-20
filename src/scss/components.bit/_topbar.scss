@@ -24,9 +24,12 @@
 }
 
 .topbar__course {
-  --padding-block: 0.6em;
+  --padding-block: 0;
+  --padding-inline: 2.25em;
   --fz: var(--fz-small);
+  --fw: 400;
   flex-shrink: 0;
+  min-height: 3.1rem;
 }
 
 @media (max-width: $has-burger) {

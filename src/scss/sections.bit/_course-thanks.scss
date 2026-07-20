@@ -1,6 +1,6 @@
 .course-thanks {
   position: relative;
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
   padding-bottom: 0;
   overflow: hidden;
   background: var(--bg-app-light-secondary);
@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
 
@@ -27,6 +26,7 @@
 }
 
 .course-thanks__title {
+  margin-top: 0;
   margin-bottom: 2.1rem;
   font-family: var(--ff-title);
   font-size: var(--fz-h2);
@@ -178,13 +178,17 @@
     padding-top: 2.4rem;
   }
 
+  .course-thanks__content {
+    padding-top: 2.5rem;
+  }
+
   .course-thanks__container {
     gap: 2.4rem;
     padding-inline: 1rem;
   }
 
   .course-thanks__content > .breadcrumbs {
-    margin-bottom: 2rem;
+    margin-bottom: 2.9rem;
   }
 
   // Плотнее десктопных 20px, иначе абзац не укладывается в макетную высоту.

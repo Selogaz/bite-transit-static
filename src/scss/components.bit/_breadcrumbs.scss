@@ -4,7 +4,7 @@
   align-items: center;
   font-family: var(--ff-regular);
   font-size: 1.4rem;
-  line-height: 1.3;
+  line-height: 2.2rem;
 }
 
 a.breadcrumbs__item {
@@ -21,6 +21,11 @@ span.breadcrumbs__item {
   color: var(--fg-regular);
 }
 
+.breadcrumbs__item:first-child {
+  font-weight: 550;
+}
+
 .breadcrumbs__divider {
+  font-weight: 550;
   color: var(--fg-breadcrumbs-divider);
 }

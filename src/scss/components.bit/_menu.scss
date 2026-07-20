@@ -1,7 +1,7 @@
 .menu {
   display: flex;
   flex: 1;
-  gap: 3.2em;
+  gap: 1.6rem;
   align-items: center;
 
   @media (max-width: $has-burger) {
@@ -60,7 +60,7 @@
 
 .menu__list {
   display: flex;
-  gap: 3.2em;
+  gap: 3.5rem;
   align-items: center;
 
   @media (max-width: $has-burger) {
@@ -83,7 +83,7 @@
 
 .menu__link {
   display: inline-flex;
-  gap: 0.6em;
+  gap: 0.3rem;
   align-items: center;
   font-family: var(--ff-regular);
   font-size: var(--fz-small);
@@ -112,8 +112,8 @@
 }
 
 .menu__link--has-sub::after {
-  width: 0.8em;
-  height: 0.5em;
+  width: 0.8rem;
+  height: 0.6rem;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   content: "";
   background: currentColor;
@@ -171,6 +171,10 @@
 }
 
 @media (min-width: $has-burger + 1) {
+  .menu__item {
+    display: flex;
+  }
+
   .menu__submenu {
     position: absolute;
     top: 100%;
@@ -212,6 +216,17 @@
   color: var(--fg-regular);
   white-space: nowrap;
   transition: color var(--tr) ease;
+
+  @media (min-width: $has-burger + 1) {
+    padding-top: 0.4rem;
+    font-family: var(--ff-title);
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.135;
+    color: var(--fg-header-phone);
+    text-underline-offset: 0.3rem;
+    text-transform: uppercase;
+  }
 }
 
 a.menu__phone {
@@ -226,6 +241,10 @@ a.menu__phone {
 
 .menu__socials {
   flex-shrink: 0;
+
+  @media (min-width: $has-burger + 1) {
+    margin-left: 5.7rem;
+  }
 }
 
 .menu__cta {
@@ -233,6 +252,13 @@ a.menu__phone {
   --tt: none;
   --ls: normal;
   --radius: var(--radius-lg);
+
+  @media (min-width: $has-burger + 1) {
+    --fz: var(--fz-small);
+    --padding-block: 0;
+    --padding-inline: 2.6em;
+    min-height: 5rem;
+  }
 }
 
 .menu__offer {
@@ -298,10 +324,13 @@ a.menu__phone {
 }
 
 .menu-overlay {
+  display: none;
+
   @media (max-width: $has-burger) {
     position: fixed;
     inset: 0;
     z-index: 1;
+    display: block;
     visibility: hidden;
     background: rgba(var(--bg-app-dark-rgb), 0.7);
     opacity: 0;

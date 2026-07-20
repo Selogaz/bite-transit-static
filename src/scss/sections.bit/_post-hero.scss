@@ -1,5 +1,5 @@
 .post-hero {
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
 }
 
 .post-hero__card {
@@ -14,6 +14,10 @@
 }
 
 @media (max-width: $mobile) {
+  .post-hero {
+    padding-top: 1.6rem;
+  }
+
   .post-hero__container {
     padding-inline: 1rem;
   }

@@ -4,7 +4,7 @@
 }
 
 .faq--page {
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
 }
 
 .faq--page .breadcrumbs {
@@ -12,6 +12,10 @@
 }
 
 @media (max-width: $mobile) {
+  .faq--page {
+    padding-top: 1.6rem;
+  }
+
   .faq--page .breadcrumbs {
     margin-bottom: 2.9rem;
   }

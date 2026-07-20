@@ -148,7 +148,7 @@
   }
 }
 
-.categories--rastamozhka {
+.categories--service {
   background: var(--bg-app-light);
 
   @media (max-width: $laptop) {
@@ -156,12 +156,12 @@
   }
 }
 
-.categories--rastamozhka .categories__panel {
+.categories--service .categories__panel {
   position: relative;
   overflow: hidden;
 }
 
-.categories--rastamozhka .categories__media {
+.categories--service .categories__media {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -171,7 +171,7 @@
   display: none;
 }
 
-.categories--rastamozhka .categories__media::after {
+.categories--service .categories__media::after {
   position: absolute;
   inset: 0;
   content: "";
@@ -182,31 +182,31 @@
     linear-gradient(180deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 38.31%);
 }
 
-.categories--rastamozhka .section__head,
-.categories--rastamozhka .categories__grid {
+.categories--service .section__head,
+.categories--service .categories__grid {
   position: relative;
   z-index: 1;
 }
 
-.categories--rastamozhka .section-title {
+.categories--service .section-title {
   color: var(--fg-app-dark);
 }
 
-.categories--rastamozhka .section-desc {
+.categories--service .section-desc {
   color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: $mobile) {
-  .categories--rastamozhka .categories__panel {
+  .categories--service .categories__panel {
     padding-bottom: 0;
     background: var(--bg-app-dark);
   }
 
-  .categories--rastamozhka .section__head {
+  .categories--service .section__head {
     text-align: center;
   }
 
-  .categories--rastamozhka .categories__backdrop {
+  .categories--service .categories__backdrop {
     position: absolute;
     inset: 0 0 auto;
     z-index: 0;
@@ -214,12 +214,12 @@
     height: 31.6rem;
   }
 
-  .categories--rastamozhka .categories__backdrop .media__img {
+  .categories--service .categories__backdrop .media__img {
     object-position: left bottom;
     filter: blur(0.1rem) brightness(0.3);
   }
 
-  .categories--rastamozhka .categories__backdrop::after {
+  .categories--service .categories__backdrop::after {
     position: absolute;
     inset: 0;
     content: "";
@@ -229,14 +229,14 @@
       linear-gradient(90deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 15%);
   }
 
-  .categories--rastamozhka .categories__media {
+  .categories--service .categories__media {
     position: relative;
     inset: auto;
     aspect-ratio: 320 / 276;
     margin: 0.6rem -1rem 0;
   }
 
-  .categories--rastamozhka .categories__media::after {
+  .categories--service .categories__media::after {
     background:
       linear-gradient(90deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 14.69%),
       linear-gradient(270deg, var(--bg-app-dark) 0%, rgba(var(--bg-app-dark-rgb), 0) 22.03%),

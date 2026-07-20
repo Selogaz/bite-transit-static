@@ -1,0 +1,74 @@
+.modal-case {
+  --max-width: 78rem;
+  --padding: 4rem;
+  --radius: var(--radius-card);
+}
+
+.modal-case__title {
+  font-family: var(--ff-title);
+  font-size: var(--fz-h2);
+  font-weight: var(--fw-h2);
+  line-height: var(--lh-tight);
+  color: var(--fg-app-light);
+  letter-spacing: -0.02em;
+}
+
+.modal-case__company {
+  margin-top: 0.8rem;
+  font-size: var(--fz-regular);
+  line-height: 1.2;
+  color: var(--fg-regular);
+}
+
+.modal-case__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-top: 1.6rem;
+}
+
+.modal-case__tag {
+  padding: 0.8em 1.4em;
+  font-size: var(--fz-small);
+  line-height: 1.178;
+  color: var(--fg-regular);
+  border: 0.1rem solid var(--c-divider);
+  border-radius: var(--radius-pill);
+}
+
+.modal-case__media {
+  width: 100%;
+  aspect-ratio: 1306 / 615;
+  margin-top: 2.4rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.modal-case__text {
+  margin-top: 2.4rem;
+}
+
+@media (max-width: $mobile) {
+  .modal-case {
+    --max-width: none;
+    --padding: 2.4rem 1.6rem;
+  }
+
+  .modal-case__tags {
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+  }
+
+  .modal-case__tag {
+    padding: 0.6em 0.8em;
+    font-size: 1.2rem;
+  }
+
+  .modal-case__media {
+    margin-top: 1.6rem;
+  }
+
+  .modal-case__text {
+    margin-top: 1.6rem;
+  }
+}

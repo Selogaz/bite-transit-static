@@ -1,5 +1,5 @@
 .consult-hero {
-  padding-top: 1.6rem;
+  padding-top: 2.9rem;
   padding-bottom: 10rem;
 }
 
@@ -7,7 +7,7 @@
   display: flex;
   gap: 2.4rem;
   align-items: flex-start;
-  margin-top: 6.2rem;
+  margin-top: 4rem;
 }
 
 .consult-hero__content {
@@ -17,6 +17,7 @@
 }
 
 .consult-hero__title {
+  margin-top: 0;
   margin-bottom: 4rem;
   font-family: var(--ff-title);
   font-size: var(--fz-h2);
@@ -111,6 +112,7 @@
 
 @media (max-width: $mobile) {
   .consult-hero {
+    padding-top: 1.6rem;
     padding-bottom: 1rem;
   }
 
