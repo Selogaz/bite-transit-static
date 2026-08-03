@@ -10,5 +10,10 @@
     <li class="service-result-card__tag">@@tag1</li>
     <li class="service-result-card__tag">@@tag2</li>
   </ul>
+  @@if (typeof link != 'undefined') {
+  <a class="service-result-card__more button button--secondary" href="@@href">Читать полностью</a>
+  }
+  @@if (typeof link == 'undefined') {
   <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
+  }
 </li>

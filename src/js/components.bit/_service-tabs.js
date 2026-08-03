@@ -8,8 +8,10 @@
 
   lists.forEach((list) => {
     const links = list.querySelectorAll(".service-tabs__link");
+    const panes = list.closest("section")?.querySelectorAll(".service-pane") || [];
+    const hasPanes = links.length > 0 && links.length === panes.length;
 
-    links.forEach((link) => {
+    links.forEach((link, index) => {
       link.addEventListener("click", () => {
         if (collapse.matches && !list.classList.contains(OPEN)) {
           list.classList.add(OPEN);
@@ -17,6 +19,9 @@
         }
 
         links.forEach((other) => other.classList.toggle(ACTIVE, other === link));
+        if (hasPanes) panes.forEach((pane, i) => {
+          pane.hidden = i !== index;
+        });
         list.classList.remove(OPEN);
       });
     });
