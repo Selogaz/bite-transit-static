@@ -88,6 +88,7 @@
   width: 23.3rem;
   min-height: 41.3rem;
   padding: 0;
+  overflow: hidden;
   cursor: pointer;
   background: var(--bg-media-placeholder);
   border: 0;
@@ -98,6 +99,11 @@
     min-height: 0;
     aspect-ratio: 0.7;
   }
+}
+
+.video-card__media {
+  position: absolute;
+  inset: 0;
 }
 
 .video-card__play {
