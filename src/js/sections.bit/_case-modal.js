@@ -45,8 +45,11 @@
 
     const root = nodes.length === 1 && nodes[0].nodeType === Node.ELEMENT_NODE ? nodes[0] : null;
     const wrapper = root && (root.classList.contains("modal-case") || root.classList.contains("b_modal"));
+    if (!wrapper) return html;
 
-    return wrapper ? root.innerHTML.trim() : html;
+    const inner = root.querySelector(".modal-case__body");
+
+    return (inner && inner.innerHTML.trim() ? inner.innerHTML : root.innerHTML).trim();
   };
 
   const render = (html) => {
@@ -102,10 +105,9 @@
     if (!trigger) return;
 
     window.b_modal?.openPop(id);
-    if (!endpoint) return;
 
     currentId = trigger.dataset.caseId || "";
-    if (currentId) {
+    if (endpoint && currentId) {
       load(currentId);
     } else {
       setState("error");
