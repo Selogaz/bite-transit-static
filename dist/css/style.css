@@ -2993,6 +2993,84 @@ a.menu__phone {
   margin-top: 2.4rem;
 }
 
+.modal-case__loader,
+.modal-case__error {
+  display: none;
+}
+
+.modal-case--loading .modal-case__body,
+.modal-case--error .modal-case__body {
+  display: none;
+}
+
+.modal-case--loading,
+.modal-case--error {
+  min-height: 24rem;
+}
+
+.modal-case--loading .modal-case__loader,
+.modal-case--error .modal-case__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-case__loader {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 16rem;
+}
+
+.modal-case__loader::before {
+  width: 4.8rem;
+  height: 4.8rem;
+  content: "";
+  border: 0.4rem solid var(--c-divider);
+  border-top-color: var(--c-primary);
+  border-radius: 50%;
+  -webkit-animation: modal-case-spin 0.8s linear infinite;
+          animation: modal-case-spin 0.8s linear infinite;
+}
+
+@-webkit-keyframes modal-case-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes modal-case-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+.modal-case__error {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 16rem;
+  text-align: center;
+}
+
+.modal-case__error-text {
+  font-size: var(--fz-regular);
+  line-height: var(--lh-regular);
+  color: var(--fg-regular);
+}
+
 @media (max-width: 991px) {
   .modal-case {
     --max-width: none;
@@ -3011,6 +3089,17 @@ a.menu__phone {
   }
   .modal-case__text {
     margin-top: 1.6rem;
+  }
+  .modal-case--loading,
+  .modal-case--error {
+    min-height: 18rem;
+  }
+  .modal-case__loader,
+  .modal-case__error {
+    min-height: 12rem;
+  }
+  .modal-case__error {
+    gap: 1.6rem;
   }
 }
 .modal-founder {

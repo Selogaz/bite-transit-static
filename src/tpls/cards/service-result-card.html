@@ -14,6 +14,6 @@
   <a class="service-result-card__more button button--secondary" href="@@href">Читать полностью</a>
   }
   @@if (typeof link == 'undefined') {
-  <button class="service-result-card__more button button--secondary" type="button" data-b_modal-open="case-detail">Читать полностью</button>
+  <button class="service-result-card__more button button--secondary" type="button" data-case-more data-case-id="@@if (typeof caseId != 'undefined') {@@caseId}">Читать полностью</button>
   }
 </li>
