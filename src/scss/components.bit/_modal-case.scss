@@ -48,8 +48,6 @@
   margin-top: 2.4rem;
 }
 
-// Состояния динамической загрузки тела кейса (src/js/sections.bit/_case-modal.js).
-// Спиннер и блок ошибки лежат в разметке рядом с телом и показываются модификаторами.
 .modal-case__loader,
 .modal-case__error {
   display: none;

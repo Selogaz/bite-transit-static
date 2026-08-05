@@ -1,6 +1,3 @@
-// Модалка кейса с подгрузкой тела по id. Оболочка #case-detail одна на весь сайт (tpls/footer.html),
-// карточки несут data-case-more + data-case-id, адрес запроса приходит в data-case-endpoint.
-// Пустой адрес = режим вёрстки: открывается статичная демо-заглушка, сеть не трогаем.
 (() => {
   const modal = document.querySelector(".modal-case");
   if (!modal) return;
@@ -17,16 +14,10 @@
   let controller = null;
   let currentId = null;
 
-  // b_modal автооткрывает попап, если хэш совпал с id (openb_modalHash), а хэш он же и пишет при
-  // каждом открытии — после перезагрузки в динамическом режиме показывать нечего, гасим оболочку.
-  // Закрытие отложено намеренно: класс `_show` движок вешает собственным setTimeout, синхронный
-  // closePop() его ещё не видит и попап всплывает уже после нас.
   if (endpoint && window.location.hash === `#${id}` && window.b_modal) {
     setTimeout(() => window.b_modal.closePop(id));
   }
 
-  // Высоту попапа b_modal замеряет один раз через 600 мс после открытия, а контент приезжает
-  // позже — пересчитываем прокрутку сами, иначе длинный кейс не проскроллить.
   const syncScrollable = () => {
     const overlay = modal.closest(".b_modal__overlay");
     if (overlay) {
@@ -44,9 +35,6 @@
     syncScrollable();
   };
 
-  // Ответ ждём фрагментом без обёртки, но прислать могут и модалку целиком — тогда снимаем
-  // внешний слой, иначе в документе окажется второй #case-detail и модалка внутри модалки.
-  // Разбор идёт в <template>: его содержимое инертно, картинки фрагмента не грузятся дважды.
   const unwrap = (html) => {
     const holder = document.createElement("template");
     holder.innerHTML = html;
@@ -64,8 +52,6 @@
   const render = (html) => {
     body.innerHTML = html;
     setState("ready");
-    // Точка расширения: если в теле кейса приедет карусель или форма, их инициализация
-    // вешается на это событие — контент к моменту вызова уже в DOM.
     modal.dispatchEvent(new CustomEvent("case-modal:content", {
       bubbles: true,
       detail: { id: currentId },
@@ -105,8 +91,6 @@
     }
   };
 
-  // Capture: сработать раньше обработчиков на самих кнопках и поймать карточки,
-  // добавленные в DOM после инициализации b_modal.
   document.addEventListener("click", (event) => {
     const retry = event.target.closest("[data-case-retry]");
     if (retry && modal.contains(retry)) {
