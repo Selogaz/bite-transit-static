@@ -5,15 +5,15 @@
     <p class="services__subtitle">Находим <b>оптимальные</b> маршруты, снижаем риски импортера, соблюдаем <b>сроки</b></p>
 
     <ul class="service-tabs" role="tablist">
-      @@include('../cards/service-tab.html', { "modifier": " service-tabs__link--active", "label": "Таможенное оформление" })
-      @@include('../cards/service-tab.html', { "modifier": "", "label": "Транспортно-экспедиционные услуги" })
-      @@include('../cards/service-tab.html', { "modifier": "", "label": "Сертификация, ввоз образцов" })
-      @@include('../cards/service-tab.html', { "modifier": "", "label": "Платежи" })
-      @@include('../cards/service-tab.html', { "modifier": "", "label": "Аутсорсинг ВЭД под ключ" })
-      @@include('../cards/service-tab.html', { "modifier": "", "label": "Фулфилмент для маркетплейсов" })
+      @@include('../cards/service-tab.html', { "modifier": " service-tabs__link--active", "slug": "customs-clearance", "label": "Таможенное оформление" })
+      @@include('../cards/service-tab.html', { "modifier": "", "slug": "forwarding", "label": "Транспортно-экспедиционные услуги" })
+      @@include('../cards/service-tab.html', { "modifier": "", "slug": "certification", "label": "Сертификация, ввоз образцов" })
+      @@include('../cards/service-tab.html', { "modifier": "", "slug": "payments", "label": "Платежи" })
+      @@include('../cards/service-tab.html', { "modifier": "", "slug": "outsourcing", "label": "Аутсорсинг ВЭД под ключ" })
+      @@include('../cards/service-tab.html', { "modifier": "", "slug": "fulfillment", "label": "Фулфилмент для маркетплейсов" })
     </ul>
 
-    <div class="service-pane">
+    <div class="service-pane" data-service-pane="customs-clearance">
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="service-pane" hidden>
+    <div class="service-pane" data-service-pane="forwarding" hidden>
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <div class="service-pane" hidden>
+    <div class="service-pane" data-service-pane="certification" hidden>
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
@@ -115,7 +115,7 @@
       </div>
     </div>
 
-    <div class="service-pane" hidden>
+    <div class="service-pane" data-service-pane="payments" hidden>
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
@@ -149,7 +149,7 @@
       </div>
     </div>
 
-    <div class="service-pane" hidden>
+    <div class="service-pane" data-service-pane="outsourcing" hidden>
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
@@ -183,7 +183,7 @@
       </div>
     </div>
 
-    <div class="service-pane" hidden>
+    <div class="service-pane" data-service-pane="fulfillment" hidden>
       <div class="services__slider swiper">
         <ul class="services__results swiper-wrapper">
           @@include('../cards/service-result-card.html', {
