@@ -36,7 +36,7 @@
 
 
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css?_v=20260806161427">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20260806204301">
 </head>
 <body>
   <div class="wrapper">
@@ -1104,7 +1104,7 @@
 
     <div class="service-cta">
       <div class="service-cta__container container">
-        <div class="service-cta__card">
+        <div class="service-cta__card js_form">
           <p class="service-cta__title"><b>Оставьте заявку</b> и получите персональный пакет услуг для вашего бизнеса</p>
 
           <div class="service-cta__media media media--contain">
@@ -1116,7 +1116,7 @@
 
           <div class="service-cta__fields">
             <input type="hidden" name="form_name" value="Услуги — пакет услуг">
-            <label class="input service-cta__field">
+            <label class="input service-cta__field js_form__control">
   <div class="input__area">
     <input
       class="input__field"
@@ -1129,22 +1129,22 @@
   <span class="input__error">Введите имя</span>
 </label>
 
-            <label class="input service-cta__field">
+            <label class="input service-cta__field js_form__control">
   <div class="input__area">
     <input
       class="input__field"
       type="tel"
       name="phone"
       placeholder="Номер телефона"
-      required
+      required data-mask="phone"
     >
   </div>
   <span class="input__error">Введите телефон</span>
 </label>
 
-            <button class="service-cta__submit button button--secondary" type="submit">Отправить заявку</button>
+            <button class="service-cta__submit button button--secondary js_form__submit" type="button">Отправить заявку</button>
 
-            <label class="checkbox service-cta__privacy">
+            <label class="checkbox service-cta__privacy js_form__control">
               <input type="checkbox" name="privacy" class="checkbox__input" required>
               <span class="checkbox__check"></span>
               <span class="checkbox__label">
@@ -3658,6 +3658,6 @@
 
   </div>
 
-  <script src="./js/index.min.js?_v=20260806161427" defer></script>
+  <script src="./js/index.min.js?_v=20260806204301" defer></script>
 </body>
 </html>

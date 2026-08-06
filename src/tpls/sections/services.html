@@ -273,7 +273,7 @@
 
     <div class="service-cta">
       <div class="service-cta__container container">
-        <div class="service-cta__card">
+        <div class="service-cta__card js_form">
           <p class="service-cta__title"><b>Оставьте заявку</b> и получите персональный пакет услуг для вашего бизнеса</p>
 
           <div class="service-cta__media media media--contain">
@@ -286,7 +286,7 @@
           <div class="service-cta__fields">
             <input type="hidden" name="form_name" value="Услуги — пакет услуг">
             @@include('../b/input.html', {
-              "className": "service-cta__field",
+              "className": "service-cta__field js_form__control",
               "type": "text",
               "name": "name",
               "placeholder": "Имя",
@@ -294,16 +294,16 @@
               "error": "Введите имя"
             })
             @@include('../b/input.html', {
-              "className": "service-cta__field",
+              "className": "service-cta__field js_form__control",
               "type": "tel",
               "name": "phone",
               "placeholder": "Номер телефона",
-              "attributes": "required",
+              "attributes": "required data-mask=\"phone\"",
               "error": "Введите телефон"
             })
-            <button class="service-cta__submit button button--secondary" type="submit">Отправить заявку</button>
+            <button class="service-cta__submit button button--secondary js_form__submit" type="button">Отправить заявку</button>
 
-            <label class="checkbox service-cta__privacy">
+            <label class="checkbox service-cta__privacy js_form__control">
               <input type="checkbox" name="privacy" class="checkbox__input" required>
               <span class="checkbox__check"></span>
               <span class="checkbox__label">
