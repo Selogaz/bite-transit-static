@@ -38,6 +38,21 @@
 }
 
 @media (max-width: $has-burger) {
+  .header {
+    transition: transform var(--tr) ease;
+  }
+
+  .header--hidden {
+    transform: translateY(-100%);
+  }
+
+  // Пока открыто бургер-меню — .menu и .header__burger внутри становятся position: fixed
+  // относительно .header, и transform на предке сломает им контейнер; поведение прятанья
+  // отключается уже в JS, здесь — подстраховка на случай гонки классов.
+  .header--burger-opened.header--hidden {
+    transform: none;
+  }
+
   .header__bar {
     border-bottom: 0.1rem solid var(--c-divider);
     border-radius: 0;
@@ -78,7 +93,6 @@
   top: 0.6rem;
   right: 1rem;
   --c-burger-line: var(--fg-app-dark);
-  --line-width: 1.6rem;
 }
 
 .header--burger-opened .header__burger::before {

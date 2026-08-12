@@ -1,13 +1,14 @@
 .burger {
-  --line-width: 60%;
-  --line-height: 0.2rem;
-  --line-offset: 0.7rem;
   --c-burger-line: var(--fg-app-dark);
 
   position: relative;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: var(--burger-width, 4rem);
   height: var(--burger-height, 4rem);
+  color: var(--c-burger-line);
   cursor: pointer;
   transition: var(--tr);
 
@@ -16,41 +17,46 @@
   }
 }
 
-.burger__line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: var(--line-width);
-  height: var(--line-height);
+.burger__icon {
+  position: relative; // ставит иконку в тот же слой наложения, что и ::before подложки крестика (.header--burger-opened);
+  // иконка идёт по разметке ПОСЛЕ ::before, поэтому рисуется поверх неё
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: visible; // кольцо касается краёв viewBox вплотную (по макету) — без этого браузер клипует обводку по границе
   pointer-events: none;
-  background: var(--c-burger-line);
-  border-radius: 0.2rem;
+}
+
+.burger__circle {
+  transition: opacity var(--tr);
+}
+
+.burger__line {
   transition: var(--tr);
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-.burger__line:nth-child(1) {
-  transform: translate(-50%, calc(-50% - var(--line-offset)));
+// Раскрытое меню — кольцо прячем (у открытого состояния своя плашка-подложка),
+// три полосы сходятся в центр и превращаются в крестик.
+.burger.is-active .burger__circle {
+  opacity: 0;
 }
 
-.burger__line:nth-child(2) {
-  transform: translate(-50%, -50%);
+// CSS-свойство y (как и другие SVG-геометрические — x, cx, cy, r) прод-минификатор считает
+// невалидным и молча вырезает из style.min.css — сводить полосы в общую ось нужно чисто
+// transform'ом. Пивот (transform-origin) — центр САМОЙ полосы (fill-box), поэтому сначала
+// translate уводит его на центр viewBox, потом rotate крутит уже вокруг него — иначе полосы
+// сходятся не в точку.
+.burger.is-active .burger__line:nth-of-type(1) {
+  transform: rotate(45deg) translate(3.536px, 3.536px);
 }
 
-.burger__line:nth-child(3) {
-  transform: translate(-50%, calc(-50% + var(--line-offset)));
+.burger.is-active .burger__line:nth-of-type(2) {
+  transform: scaleX(0);
 }
 
-.burger.is-active .burger__line:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.burger.is-active .burger__line:nth-child(2) {
-  width: 0;
-}
-
-.burger.is-active .burger__line:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(-45deg);
+.burger.is-active .burger__line:nth-of-type(3) {
+  transform: rotate(-45deg) translate(3.536px, -3.536px);
 }
 
 .header--dark-burger .burger {

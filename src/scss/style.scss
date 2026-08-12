@@ -37,7 +37,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  // clip, а не hidden: hidden превращает wrapper в scroll-контейнер и ломает
+  // position: sticky/fixed у шапки (сверяется с этим предком вместо вьюпорта),
+  // clip даёт то же обрезание бликов/декора по горизонтали без этого побочного эффекта
+  overflow: clip;
 }
 
 .main {

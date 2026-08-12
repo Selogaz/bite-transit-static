@@ -562,7 +562,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .main {
@@ -1531,14 +1531,21 @@ body {
 }
 
 .burger {
-  --line-width: 60%;
-  --line-height: 0.2rem;
-  --line-offset: 0.7rem;
   --c-burger-line: var(--fg-app-dark);
   position: relative;
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: var(--burger-width, 4rem);
   height: var(--burger-height, 4rem);
+  color: var(--c-burger-line);
   cursor: pointer;
   -webkit-transition: var(--tr);
   transition: var(--tr);
@@ -1549,52 +1556,48 @@ body {
   }
 }
 
-.burger__line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: var(--line-width);
-  height: var(--line-height);
+.burger__icon {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: visible;
   pointer-events: none;
-  background: var(--c-burger-line);
-  border-radius: 0.2rem;
+}
+
+.burger__circle {
+  -webkit-transition: opacity var(--tr);
+  transition: opacity var(--tr);
+}
+
+.burger__line {
   -webkit-transition: var(--tr);
   transition: var(--tr);
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
-.burger__line:nth-child(1) {
-  -webkit-transform: translate(-50%, calc(-50% - var(--line-offset)));
-      -ms-transform: translate(-50%, calc(-50% - var(--line-offset)));
-          transform: translate(-50%, calc(-50% - var(--line-offset)));
+.burger.is-active .burger__circle {
+  opacity: 0;
 }
 
-.burger__line:nth-child(2) {
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.burger.is-active .burger__line:nth-of-type(1) {
+  -webkit-transform: rotate(45deg) translate(3.536px, 3.536px);
+      -ms-transform: rotate(45deg) translate(3.536px, 3.536px);
+          transform: rotate(45deg) translate(3.536px, 3.536px);
 }
 
-.burger__line:nth-child(3) {
-  -webkit-transform: translate(-50%, calc(-50% + var(--line-offset)));
-      -ms-transform: translate(-50%, calc(-50% + var(--line-offset)));
-          transform: translate(-50%, calc(-50% + var(--line-offset)));
+.burger.is-active .burger__line:nth-of-type(2) {
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
-.burger.is-active .burger__line:nth-child(1) {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-      -ms-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.burger.is-active .burger__line:nth-child(2) {
-  width: 0;
-}
-
-.burger.is-active .burger__line:nth-child(3) {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-      -ms-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+.burger.is-active .burger__line:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg) translate(3.536px, -3.536px);
+      -ms-transform: rotate(-45deg) translate(3.536px, -3.536px);
+          transform: rotate(-45deg) translate(3.536px, -3.536px);
 }
 
 .header--dark-burger .burger {
@@ -3594,6 +3597,22 @@ span.breadcrumbs__item {
 }
 
 @media (max-width: 991px) {
+  .header {
+    -webkit-transition: -webkit-transform var(--tr) ease;
+    transition: -webkit-transform var(--tr) ease;
+    transition: transform var(--tr) ease;
+    transition: transform var(--tr) ease, -webkit-transform var(--tr) ease;
+  }
+  .header--hidden {
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .header--burger-opened.header--hidden {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
   .header__bar {
     border-bottom: 0.1rem solid var(--c-divider);
     border-radius: 0;
@@ -3637,7 +3656,6 @@ span.breadcrumbs__item {
   top: 0.6rem;
   right: 1rem;
   --c-burger-line: var(--fg-app-dark);
-  --line-width: 1.6rem;
 }
 
 .header--burger-opened .header__burger::before {
