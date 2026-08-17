@@ -1,13 +1,17 @@
 <li class="review-card swiper-slide">
   <div class="review-card__header">
+    @@if (typeof avatar != 'undefined') {
     <div class="review-card__avatar media media--cover">
       <picture class="media__pic">
         <img class="media__img" src="@img/reviews.bit/@@avatar" alt="@@name" loading="lazy">
       </picture>
     </div>
+    }
     <div class="review-card__author">
       <p class="review-card__name">@@name</p>
+      @@if (typeof quote != 'undefined') {
       <p class="review-card__quote">@@quote</p>
+      }
     </div>
   </div>
 
