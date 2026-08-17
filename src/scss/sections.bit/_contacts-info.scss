@@ -10,7 +10,21 @@
 
 .contacts-info__map {
   flex: 1 1 auto;
+  overflow: hidden;
   border-radius: var(--radius-card);
+}
+
+// Высота задаётся контекстом (десктоп — flex-stretch по высоте карточки контактов,
+// мобайл — aspect-ratio ниже): iframe без атрибутов width/height добирает её через
+// min-height 100%, без хардкода height.
+.contacts-info__map-frame {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  border: 0;
+  // iframe рисуется в своём композитном слое: клип по overflow:hidden родителя
+  // на него не распространяется, скругление нужно ставить на сам элемент.
+  border-radius: inherit;
 }
 
 .contacts-info__legal {
