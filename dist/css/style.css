@@ -9023,62 +9023,51 @@ span.breadcrumbs__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 2.7rem;
-     -moz-column-gap: 2.7rem;
-          column-gap: 2.7rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media (max-width: 991px) {
-  .team__grid {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    row-gap: 4rem;
-  }
-}
-@media (max-width: 991px) {
-  .team__grid {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
+.team-card:not(:last-child) {
+  margin-right: 2.7rem;
+}
 @media (max-width: 991px) {
   .team-card:not(:last-child) {
     margin-right: 5.6rem;
   }
+}
+
+@media (max-width: 991px) {
   .team-card:first-child {
     margin-left: 2.75rem;
   }
 }
 .team__nav {
-  display: none;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
 }
 @media (max-width: 991px) {
   .team__nav {
-    position: relative;
-    z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 1.2rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-top: 1.4rem;
   }
 }
 
 .team__arrow {
-  --size: 4.5rem;
+  --size: 5.6rem;
   --border-color: rgba(var(--border-app-light-rgb), 0.2);
+}
+@media (max-width: 991px) {
+  .team__arrow {
+    --size: 4.5rem;
+  }
 }
 
 .team__arrow .nav-arrow__icon {
@@ -9110,39 +9099,6 @@ span.breadcrumbs__item {
     width: 15.3rem;
     height: 18.3rem;
   }
-}
-
-.team-card__deco {
-  position: absolute;
-  top: -4rem;
-  left: -5.5rem;
-  z-index: 0;
-  width: 27.38rem;
-  height: 32.76rem;
-  background-color: var(--c-primary);
-  -webkit-mask: url("../img/team.bit/deco-swoosh.svg") center/contain no-repeat;
-  mask: url("../img/team.bit/deco-swoosh.svg") center/contain no-repeat;
-  -webkit-transform: rotate(-0.93deg);
-      -ms-transform: rotate(-0.93deg);
-          transform: rotate(-0.93deg);
-}
-@media (max-width: 991px) {
-  .team-card__deco {
-    top: -2.43rem;
-    left: -3.76rem;
-    width: 18.7rem;
-    height: 22.37rem;
-  }
-}
-
-.team-card__media .media__pic {
-  position: relative;
-  z-index: 1;
-}
-
-.team-card__media .media__img {
-  -o-object-position: top;
-     object-position: top;
 }
 
 .team-card__name {

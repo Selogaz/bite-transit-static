@@ -81,18 +81,16 @@
 
 .team__grid {
   display: flex;
-  column-gap: 2.7rem;
-  justify-content: center;
+  justify-content: flex-start;
+}
 
-  @media (max-width: $tablet) {
-    flex-wrap: wrap;
-    row-gap: 4rem;
-  }
+// Свайпер (slidesPerView:"auto") не читает flex-`gap` на враппере — интервал между
+// карточками держим margin-right у самих слайдов.
+.team-card:not(:last-child) {
+  margin-right: 2.7rem;
 
   @media (max-width: $mobile) {
-    flex-wrap: nowrap;
-    column-gap: 0;
-    justify-content: flex-start;
+    margin-right: 5.6rem;
   }
 }
 
@@ -100,31 +98,31 @@
 // margin слайда в maxTranslate (padding враппера — нет), иначе последняя карточка при досвайпе
 // перелетает правый край экрана ровно на величину инсета.
 @media (max-width: $mobile) {
-  .team-card:not(:last-child) {
-    margin-right: 5.6rem;
-  }
-
   .team-card:first-child {
     margin-left: 2.75rem;
   }
 }
 
 .team__nav {
-  display: none;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 3rem;
 
   @media (max-width: $mobile) {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
     margin-top: 1.4rem;
   }
 }
 
 .team__arrow {
-  --size: 4.5rem;
+  --size: 5.6rem;
   --border-color: rgba(var(--border-app-light-rgb), 0.2);
+
+  @media (max-width: $mobile) {
+    --size: 4.5rem;
+  }
 }
 
 .team__arrow .nav-arrow__icon {
@@ -143,9 +141,9 @@
 .team-card__media {
   position: relative;
   width: 22.4rem;
-  // height, не min-height: .media__img{height:100%} не резолвится без явной высоты родителя —
-  // натуральный аспект фото (480×589) даёт 27.49rem вместо макетных 26.8rem, карточка
-  // растягивала ряд выше макета.
+  // height, не min-height: .media__img{height:100%} не резолвится без явной высоты родителя,
+  // а фото могут прийти не точно в пропорции слота — без фиксированной высоты карточка
+  // растягивала бы ряд.
   height: 26.8rem;
   overflow: hidden;
   background: var(--bg-app-light);
@@ -155,37 +153,6 @@
     width: 15.3rem;
     height: 18.3rem;
   }
-}
-
-.team-card__deco {
-  position: absolute;
-  top: -4rem;
-  left: -5.5rem;
-  z-index: 0;
-  width: 27.38rem;
-  height: 32.76rem;
-  background-color: var(--c-primary);
-  -webkit-mask: url("@img/team.bit/deco-swoosh.svg") center / contain no-repeat;
-  mask: url("@img/team.bit/deco-swoosh.svg") center / contain no-repeat;
-  transform: rotate(-0.93deg);
-
-  @media (max-width: $mobile) {
-    top: -2.43rem;
-    left: -3.76rem;
-    width: 18.7rem;
-    height: 22.37rem;
-  }
-}
-
-// Фото — тот же плейсхолдер-снимок у всех карточек (макет), сверху пусто —
-// сквозь прозрачный фон проступает декоративный росчерк.
-.team-card__media .media__pic {
-  position: relative;
-  z-index: 1;
-}
-
-.team-card__media .media__img {
-  object-position: top;
 }
 
 .team-card__name {
