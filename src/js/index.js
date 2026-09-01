@@ -30,4 +30,5 @@ import "./sections.bit/_team.js";
 import "./sections.bit/_reviews.js";
 import "./sections.bit/_videos.js";
 import "./sections.bit/_modals.js";
+import "./sections.bit/_form-redirect.js";
 import "./sections.bit/_case-modal.js";
