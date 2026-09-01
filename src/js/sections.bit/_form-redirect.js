@@ -1,5 +1,23 @@
 (() => {
-  const FALLBACK = "thanks.html";
+  // Первое совпадение сверху вниз; селекторы идут от частного к общему —
+  // карточки услуг, курса и футера тоже несут класс `audit__card`.
+  const ROUTES = [
+    [".quiz__card", "thanks-audit"],
+    [".audit-b__form-card", "thanks-audit"],
+    [".footer__tour-card", "thanks-tour"],
+    [".course-cta__form-card", "thanks-course"],
+  ];
+  const FALLBACK = "thanks";
+
+  function resolveSlug(form) {
+    const route = ROUTES.find(([selector]) => form.matches(selector));
+    return route ? route[1] : FALLBACK;
+  }
+
+  // В вёрстке страницы лежат файлами, в CMS — папками с адресом вида `/thanks/`.
+  function resolveUrl(slug) {
+    return window.location.pathname.endsWith(".html") ? `${slug}.html` : `/${slug}/`;
+  }
 
   document.addEventListener("submit-success", (event) => {
     const { form, result } = event.detail;
@@ -16,6 +34,6 @@
 
     if (!payload || payload.success !== true) return;
 
-    window.location.assign(payload.redirect || form.dataset.thanks || FALLBACK);
+    window.location.assign(payload.redirect || resolveUrl(resolveSlug(form)));
   });
 })();
